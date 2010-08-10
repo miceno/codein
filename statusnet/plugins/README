@@ -1,1 +1,16 @@
 Custom statusnet plugins: sudoer and websvn.
+
+Configuration guidelines:
+
+addPlugin('SudoAuthentication', array(
+  'sudoer'    => 'sudo',
+  'password'  => '<sudoer_passwd>',
+  'separator' => '#',
+  'register'  => true,
+  'emailSuffix' => '<email_suffix>',
+));
+
+addPlugin('SvnLinks', array(
+  'separator' => '~',
+  'url'       => 'http://<path_to_websvn>/{REPOSITORY}/?op=revision&rev={REVISION}',
+));
