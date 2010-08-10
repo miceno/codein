@@ -12,5 +12,5 @@ addPlugin('SudoAuthentication', array(
 
 addPlugin('SvnLinks', array(
   'separator' => '~',
-  'url'       => 'http://%3Cpath_to_websvn%3E/{REPOSITORY}/?op=revision&rev={REVISION}',
+  'url'       => 'http://path_to_websvn/{REPOSITORY}/?op=revision&rev={REVISION}',
 ));
