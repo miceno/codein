@@ -17,7 +17,7 @@ object httpclient
 	def main(args: Array[String]) {
 
 		//set up post params
-                val params = new ArrayList[BasicNameValuePair]
+                val params: ArrayList[BasicNameValuePair] = new ArrayList
                 params.add(new BasicNameValuePair(SOURCE_PARAM,"scala"))
                 params.add(new BasicNameValuePair(STATUS_PARAM,args(1)))
 		
@@ -35,7 +35,8 @@ object httpclient
 		client.setCredentialsProvider(provider)
 
 		try {
-			val responseBody = client.execute(post,context)
+			val responseBody:org.apache.http.HttpResponse = client.execute(post,context)
+
 			println(responseBody)
 		} catch {
 			case e =>  {
