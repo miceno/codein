@@ -1,1 +1,3 @@
+hooks ... Hooks for SVN on python
 pullfeed ... Download a feed and map feed fields to codein fields
+scripts ... PHP scripts
