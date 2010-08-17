@@ -8,6 +8,9 @@ import scala.io.Source
 
 object PullFeed {
 
+    
+
+
   /**
    * @param args the command line arguments
    *    String: source to read
@@ -16,6 +19,10 @@ object PullFeed {
    *    String: API key
    */
   def main(args: Array[String]): Unit = {
+      var url = "file://localhost/readme"
+      var expression = "//author/name"
+      var APIkey = "secret"
+   
     println("Hello, world!")
     
     // TODO Algorithm:
@@ -28,18 +35,36 @@ object PullFeed {
     // val url = "file://localhost/Users/orestes/devel/git/examples/scala/github.xml"
     // val url = "http://techcamp.hi.inet//statusnet/index.php/rss"
 
-val url = if ( args.length < 1 ) "file://localhost/readme" else args( 0 );
-val expression= if ( args.length < 2 ) "//author/name" else args( 1 );
-var APIkey= if ( args.length < 3 ) "secret" else args( 2 );
+    // 1. read parameters: url, mapping expression, secret
+    if ( args.length > 0 ) url= args( 0 )
+    if ( args.length > 1 ) expression = args( 1 )
+    if ( args.length > 2 ) APIkey= args( 2 )
 
     println ( "Reading " + ( url, expression, APIkey))
     
-    // println ( url )
-    val data = XML.loadString( Source.fromURL(url).mkString )
+    // 2. read the file from the url
+    var data = XML.loadString( Source.fromURL(url).mkString )
 
-    data \\ "author" \\ "name" foreach( a=> println( a text))
+    // 3. map xpath fields to codein fields
+    filter(data, expression) map ( _ text) foreach println
+    // data \\ expression map ( _ text) foreach println
+
     // data \ "channel" \ "items" foreach ( a => println( a \ "rdf:Seq" \ "rdf:li"  \ "@rdf:resource" text ))
     // data \ "channel" \ "items" \ "rdf:Seq" \ "rdf:li" foreach ( a => println( a text))
+
+  }
+  var counter= 1;
+  
+  def filter( data: NodeSeq, e: String): NodeSeq ={
+      // Parse expression
+      val tokens= e split "//"
+      counter= counter +1;
+      println( counter + " data=" + (data) + " expression= " + e)
+      println( "tokens=" + (tokens mkString ("", ",", "")) )
+
+      if( counter > 20) exit()
+      if( tokens.length == 1) return data \\ tokens.head
+      filter( data \\ tokens.head, tokens.tail mkString ("", "//", ""))
 
   }
 
