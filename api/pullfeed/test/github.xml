@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/miceno/codein/commits/master</id>
+  <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="http://github.com/miceno/codein/commits/master.atom"/>
+  <title>Recent Commits to codein:master</title>
+  <updated>2010-08-12T05:03:05-07:00</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/975e379737e6b46e9e7a1e31a60fd48a51b65378</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/975e379737e6b46e9e7a1e31a60fd48a51b65378"/>
+    <title>Source code reformatted.</title>
+    <updated>2010-08-12T05:03:05-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m api/src/codein/httpclient.scala
+
+Source code reformatted.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/53f84dd8a6632f02a3cb948185695700c2a90b7f</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/53f84dd8a6632f02a3cb948185695700c2a90b7f"/>
+    <title>Folder renamed</title>
+    <updated>2010-08-12T04:56:28-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m api/src/scala/httpclient.scala
+
+Folder renamed&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/25b9ecdd0216326b196c120f8d63bdcd040104ea</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/25b9ecdd0216326b196c120f8d63bdcd040104ea"/>
+    <title>some minor changes</title>
+    <updated>2010-08-11T05:17:39-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/296b0985e6c4b3e6283ac64983ab77a8?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergio</name>
+    </author>
+    <content type="html">&lt;pre>m api/src/scala/httpclient.scala
+
+some minor changes&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f9ffd771bf17135862760d1fc9acd4a730fea144</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/f9ffd771bf17135862760d1fc9acd4a730fea144"/>
+    <title>Scala implementation of statusnet api</title>
+    <updated>2010-08-11T04:56:09-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/296b0985e6c4b3e6283ac64983ab77a8?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergio</name>
+    </author>
+    <content type="html">&lt;pre>+ api/src/scala/httpclient.scala
+
+Scala implementation of statusnet api&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2b82c71d4601b46d36af2762ea19bd92a1d18cf7</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/2b82c71d4601b46d36af2762ea19bd92a1d18cf7"/>
+    <title>Merge branch 'master' of https://github.com/miceno/codein</title>
+    <updated>2010-08-10T08:35:13-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <content type="html">&lt;pre>+ frontend/wireframes/README
+m statusnet/plugins/README
+
+Merge branch 'master' of https://github.com/miceno/codein&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7225695d0444e2ae659cfaf2ddc0d6c42e477c0f</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/7225695d0444e2ae659cfaf2ddc0d6c42e477c0f"/>
+    <title>Script to create database and user for StatusNet.</title>
+    <updated>2010-08-10T08:25:23-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <content type="html">&lt;pre>+ scripts/statusnet-db.sql
+
+Script to create database and user for StatusNet.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/796e2e7732de4ed7862e32e0c362fdf5a1e2f4fe</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/796e2e7732de4ed7862e32e0c362fdf5a1e2f4fe"/>
+    <title></title>
+    <updated>2010-08-10T07:03:57-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d286bd0f438fd28d9fbfd86484cc493935db1c41</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/d286bd0f438fd28d9fbfd86484cc493935db1c41"/>
+    <title>Merge branch 'master' of https://github.com/miceno/codein</title>
+    <updated>2010-08-10T06:58:09-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+Merge branch 'master' of https://github.com/miceno/codein&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/444cc97e346bef282eea62323c717954f97b6f00</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/444cc97e346bef282eea62323c717954f97b6f00"/>
+    <title>Wireframes subfolder added.</title>
+    <updated>2010-08-10T06:55:59-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>+ frontend/wireframes/README
+
+Wireframes subfolder added.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/024c77da5c98953b3abb7e28df341ba537e98be5</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/024c77da5c98953b3abb7e28df341ba537e98be5"/>
+    <title></title>
+    <updated>2010-08-10T06:51:01-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/dad321c0bdb17b292a151645cea8e7e72d63ba31</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/dad321c0bdb17b292a151645cea8e7e72d63ba31"/>
+    <title>Escaped characters.</title>
+    <updated>2010-08-10T06:50:31-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+Escaped characters.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cd69dc1c7562422509acb990bd4ed9bc5737afac</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/cd69dc1c7562422509acb990bd4ed9bc5737afac"/>
+    <title>Added configuration examples.</title>
+    <updated>2010-08-10T06:48:51-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+Added configuration examples.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/faf4a00d53a191115eeebd75d65ece0b8be09a89</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/faf4a00d53a191115eeebd75d65ece0b8be09a89"/>
+    <title>Adding some documentation.</title>
+    <updated>2010-08-10T06:40:23-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>+ api/hooks/README
++ api/scripts/README
+
+Adding some documentation.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/be07562e41ddea083e783c73d7344696ef126df7</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/be07562e41ddea083e783c73d7344696ef126df7"/>
+    <title>just testing</title>
+    <updated>2010-08-10T06:35:55-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/b65db5a8396b7747c5adc7d3f7126107?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+      <uri>http://github.com/sergioa</uri>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+just testing&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/76303ffec64d1dd75b6d26693ce0a4fea739efc6</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/76303ffec64d1dd75b6d26693ce0a4fea739efc6"/>
+    <title>More detail.</title>
+    <updated>2010-08-10T06:33:24-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+    </author>
+    <content type="html">&lt;pre>m statusnet/plugins/README
+
+More detail.&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/408a22266ffad9908517c5443c06228f5f2def14</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/408a22266ffad9908517c5443c06228f5f2def14"/>
+    <title>README file added</title>
+    <updated>2010-08-10T06:30:01-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>sergioa</name>
+    </author>
+    <content type="html">&lt;pre>+ statusnet/plugins/README
+
+README file added&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5f815e9b29f5b761e96f7a9d333d9911f111055c</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/5f815e9b29f5b761e96f7a9d333d9911f111055c"/>
+    <title>Subversion hooks templates</title>
+    <updated>2010-08-10T06:02:27-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>SERGIO ARTERO MARTINEZ</name>
+    </author>
+    <content type="html">&lt;pre>+ api/hooks/svn/post-commit.tmpl
++ api/hooks/svn/post-lock.tmpl
++ api/hooks/svn/post-revprop-change.tmpl
++ api/hooks/svn/post-unlock.tmpl
++ api/hooks/svn/pre-commit.tmpl
++ api/hooks/svn/pre-lock.tmpl
++ api/hooks/svn/pre-revprop-change.tmpl
++ api/hooks/svn/pre-unlock.tmpl
++ api/hooks/svn/start-commit.tmpl
++ api/scripts/svntweet.php
+
+Subversion hooks templates&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d2cbc089b4a5b263d32c33d45319c16178e48e0d</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/d2cbc089b4a5b263d32c33d45319c16178e48e0d"/>
+    <title>Recommended README file</title>
+    <updated>2010-08-10T05:57:41-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>SERGIO ARTERO MARTINEZ</name>
+    </author>
+    <content type="html">&lt;pre>+ README
+
+Recommended README file&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ced3fcc7a995c1dd5bc9925e9ce2c1cbf24c3d34</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/ced3fcc7a995c1dd5bc9925e9ce2c1cbf24c3d34"/>
+    <title>Sudoer and links to websvn repositories plugins</title>
+    <updated>2010-08-10T05:55:21-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>SERGIO ARTERO MARTINEZ</name>
+    </author>
+    <content type="html">&lt;pre>+ statusnet/plugins/SudoAuthenticationPlugin.php
++ statusnet/plugins/SvnLinksPlugin.php
+
+Sudoer and links to websvn repositories plugins&lt;/pre></content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0e9564ced0156351e24c618dc6ce78909734fff5</id>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/commit/0e9564ced0156351e24c618dc6ce78909734fff5"/>
+    <title>Repository folder structure</title>
+    <updated>2010-08-10T05:48:53-07:00</updated>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/ae118ae89e040117edfac57a5f7e7c91?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>SERGIO ARTERO MARTINEZ</name>
+    </author>
+    <content type="html">&lt;pre>+ api/README
++ frontend/README
++ statusnet/README
+
+Repository folder structure&lt;/pre></content>
+  </entry>
+</feed>
+

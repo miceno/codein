@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:ctag="http://commontag.org/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:statusnet="http://status.net/ont/" xmlns="http://purl.org/rss/1.0/">
+ <sioc:Site rdf:about="http://techcamp.hi.inet//statusnet/">
+  <sioc:name>techcamp</sioc:name>
+  <sioc:space_of>
+   <sioc:Container rdf:about="http://techcamp.hi.inet//statusnet/index.php/rss"></sioc:Container>
+  </sioc:space_of>
+ </sioc:Site>
+ <channel rdf:about="http://techcamp.hi.inet//statusnet/index.php/rss">
+  <title>techcamp public timeline</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/</link>
+  <description>techcamp updates from everyone!</description>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <items>
+   <rdf:Seq>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2256"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2255"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2254"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2253"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2252"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2251"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2250"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2249"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2248"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2247"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2246"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2245"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2244"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2243"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2242"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2241"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2240"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2239"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2238"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2237"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2236"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2235"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2234"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2233"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2232"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2231"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2230"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2229"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2228"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2227"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2226"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2225"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2224"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2223"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2222"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2221"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2220"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2219"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2218"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2217"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2216"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2215"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2214"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2213"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2212"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2211"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2210"></rdf:li>
+    <rdf:li rdf:resource="http://techcamp.hi.inet//statusnet/index.php/notice/2209"></rdf:li>
+   </rdf:Seq>
+  </items>
+ </channel>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2256" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7638 Minor css changes</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2256</link>
+  <description>franp's status on Thursday, 12-Aug-10 14:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7638 Minor css changes</content:encoded>
+  <dc:date>2010-08-12T14:05:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2242"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2255" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7637 svn:ignore bd*</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2255</link>
+  <description>franp's status on Thursday, 12-Aug-10 14:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7637 svn:ignore bd*</content:encoded>
+  <dc:date>2010-08-12T14:05:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2241"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2254" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>sergioa: from eclipse!</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2254</link>
+  <description>sergioa's status on Thursday, 12-Aug-10 14:04:05 CEST</description>
+  <content:encoded>from eclipse!</content:encoded>
+  <dc:date>2010-08-12T14:04:05+02:00</dc:date>
+  <dc:creator>sergioa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/1"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2240"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2253" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7636 New goodies (our offer)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2253</link>
+  <description>franp's status on Thursday, 12-Aug-10 13:55:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7636 New goodies (our offer)</content:encoded>
+  <dc:date>2010-08-12T13:55:01+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2239"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2252" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7635 [MINOR] Minor comments.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2252</link>
+  <description>fjcs's status on Thursday, 12-Aug-10 12:10:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7635 [MINOR] Minor comments.</content:encoded>
+  <dc:date>2010-08-12T12:10:01+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2238"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2251" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7634 [FIXED] Fixed bug that allowed a user (Selenium) to buy a bundle from balance even when there was not enough balance. NAPA-1569.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2251</link>
+  <description>fjcs's status on Thursday, 12-Aug-10 11:40:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7634 [FIXED] Fixed bug that allowed a user (Selenium) to buy a bundle from balance even when there was not enough balance. NAPA-1569.</content:encoded>
+  <dc:date>2010-08-12T11:40:01+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2237"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2250" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7633 New goodies (homepage)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2250</link>
+  <description>franp's status on Thursday, 12-Aug-10 11:25:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7633 New goodies (homepage)</content:encoded>
+  <dc:date>2010-08-12T11:25:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2236"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2249" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7632 New goodies (buy and info)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2249</link>
+  <description>franp's status on Wednesday, 11-Aug-10 14:55:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7632 New goodies (buy and info)</content:encoded>
+  <dc:date>2010-08-11T14:55:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2235"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2248" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7631 Fixed NAPA-1566 - merged to trunk</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2248</link>
+  <description>franp's status on Wednesday, 11-Aug-10 14:55:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7631 Fixed NAPA-1566 - merged to trunk</content:encoded>
+  <dc:date>2010-08-11T14:55:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2234"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2247" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>orestes: from command line 2</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2247</link>
+  <description>orestes's status on Wednesday, 11-Aug-10 14:06:46 CEST</description>
+  <content:encoded>from command line 2</content:encoded>
+  <dc:date>2010-08-11T14:06:46+02:00</dc:date>
+  <dc:creator>orestes</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/20"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/20#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2233"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2246" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>orestes: from command line 2</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2246</link>
+  <description>orestes's status on Wednesday, 11-Aug-10 13:56:09 CEST</description>
+  <content:encoded>from command line 2</content:encoded>
+  <dc:date>2010-08-11T13:56:09+02:00</dc:date>
+  <dc:creator>orestes</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/20"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/20#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2232"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2245" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>orestes: from command line 2</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2245</link>
+  <description>orestes's status on Wednesday, 11-Aug-10 13:55:50 CEST</description>
+  <content:encoded>from command line 2</content:encoded>
+  <dc:date>2010-08-11T13:55:50+02:00</dc:date>
+  <dc:creator>orestes</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/20"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/20#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2231"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2244" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>orestes: from command line 2</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2244</link>
+  <description>orestes's status on Wednesday, 11-Aug-10 13:40:36 CEST</description>
+  <content:encoded>from command line 2</content:encoded>
+  <dc:date>2010-08-11T13:40:36+02:00</dc:date>
+  <dc:creator>orestes</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/20"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/20#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2230"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2243" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>sergioa: from command line 2</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2243</link>
+  <description>sergioa's status on Wednesday, 11-Aug-10 13:40:25 CEST</description>
+  <content:encoded>from command line 2</content:encoded>
+  <dc:date>2010-08-11T13:40:25+02:00</dc:date>
+  <dc:creator>sergioa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/1"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2229"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2242" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>sergioa: from command line</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2242</link>
+  <description>sergioa's status on Wednesday, 11-Aug-10 13:39:26 CEST</description>
+  <content:encoded>from command line</content:encoded>
+  <dc:date>2010-08-11T13:39:26+02:00</dc:date>
+  <dc:creator>sergioa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/1"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2228"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2241" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>sergioa: from scala!</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2241</link>
+  <description>sergioa's status on Wednesday, 11-Aug-10 13:30:49 CEST</description>
+  <content:encoded>from scala!</content:encoded>
+  <dc:date>2010-08-11T13:30:49+02:00</dc:date>
+  <dc:creator>sergioa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/1"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2227"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2240" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>sergioa: from scala!</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2240</link>
+  <description>sergioa's status on Wednesday, 11-Aug-10 13:26:04 CEST</description>
+  <content:encoded>from scala!</content:encoded>
+  <dc:date>2010-08-11T13:26:04+02:00</dc:date>
+  <dc:creator>sergioa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/1"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2226"></sioc:has_discussion>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2239" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7630 [MINOR] Exception not thrown if queued bundle is present when expiring the current one.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2239</link>
+  <description>fjcs's status on Wednesday, 11-Aug-10 12:05:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7630 [MINOR] Exception not thrown if queued bundle is present when expiring the current one.</content:encoded>
+  <dc:date>2010-08-11T12:05:01+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2225"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2238" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7629 PRELIVE: Current bundle expiration not processed now if a queued bundle is present. [FIXED] Fixed paths and parameters for delet—</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2238</link>
+  <description>fjcs's status on Wednesday, 11-Aug-10 12:00:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7629 PRELIVE: Current bundle expiration not processed now if a queued bundle is present. [FIXED] Fixed paths and parameters for delet—</content:encoded>
+  <dc:date>2010-08-11T12:00:02+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2224"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2237" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7628 Fixed NAPA-1566 - changed removeCreditCard path to pass card id as a query parameter (fix)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2237</link>
+  <description>franp's status on Wednesday, 11-Aug-10 11:25:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7628 Fixed NAPA-1566 - changed removeCreditCard path to pass card id as a query parameter (fix)</content:encoded>
+  <dc:date>2010-08-11T11:25:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2223"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2236" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>roa: #napa~7627 RELEASE: Last Copy file from KIM!</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2236</link>
+  <description>roa's status on Wednesday, 11-Aug-10 10:40:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7627 RELEASE: Last Copy file from KIM!</content:encoded>
+  <dc:date>2010-08-11T10:40:01+02:00</dc:date>
+  <dc:creator>roa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/14"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/14#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2222"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2235" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7626 Fixed NAPA-1566 - changed removeCreditCard path to pass card id as a query parameter</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2235</link>
+  <description>franp's status on Wednesday, 11-Aug-10 09:50:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7626 Fixed NAPA-1566 - changed removeCreditCard path to pass card id as a query parameter</content:encoded>
+  <dc:date>2010-08-11T09:50:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2221"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2234" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7625 Fixed NAPA-1565</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2234</link>
+  <description>franp's status on Tuesday, 10-Aug-10 14:45:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7625 Fixed NAPA-1565</content:encoded>
+  <dc:date>2010-08-10T14:45:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2220"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2233" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7624 [FEATURE] Added retries to avoid the error &quot;outOfBound exception&quot; getting the ssn's from the bpm source code [FIX] Ordering and —</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2233</link>
+  <description>amg03's status on Tuesday, 10-Aug-10 14:45:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7624 [FEATURE] Added retries to avoid the error &amp;quot;outOfBound exception&amp;quot; getting the ssn's from the bpm source code [FIX] Ordering and —</content:encoded>
+  <dc:date>2010-08-10T14:45:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2219"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2232" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7623 [FIX] New mock service to request the GetServiceStatus call (USSD)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2232</link>
+  <description>amg03's status on Tuesday, 10-Aug-10 14:30:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7623 [FIX] New mock service to request the GetServiceStatus call (USSD)</content:encoded>
+  <dc:date>2010-08-10T14:30:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2218"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2231" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7622 [FEATURE] New mock service to request the GetServiceStatus call (USSD)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2231</link>
+  <description>amg03's status on Tuesday, 10-Aug-10 14:20:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7622 [FEATURE] New mock service to request the GetServiceStatus call (USSD)</content:encoded>
+  <dc:date>2010-08-10T14:20:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2217"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2230" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>jara: #napa~7621 [FIX] Switch CommonOrderSaveCC to CommonOrder</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2230</link>
+  <description>jara's status on Tuesday, 10-Aug-10 13:50:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7621 [FIX] Switch CommonOrderSaveCC to CommonOrder</content:encoded>
+  <dc:date>2010-08-10T13:50:01+02:00</dc:date>
+  <dc:creator>jara</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/32"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2216"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2229" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7620 [FIXED] Check for existing queued bundle done when ordering, and not when applying the topup.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2229</link>
+  <description>fjcs's status on Tuesday, 10-Aug-10 13:40:01 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7620 [FIXED] Check for existing queued bundle done when ordering, and not when applying the topup.</content:encoded>
+  <dc:date>2010-08-10T13:40:01+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2215"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2228" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>ebc: #napa~7619 SVN - Merged backend folder of branch b3.3.3 rev7556-7618 to trunk.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2228</link>
+  <description>ebc's status on Tuesday, 10-Aug-10 13:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7619 SVN - Merged backend folder of branch b3.3.3 rev7556-7618 to trunk.</content:encoded>
+  <dc:date>2010-08-10T13:05:02+02:00</dc:date>
+  <dc:creator>ebc</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/10"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/10#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2214"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2227" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>jara: #napa~7618 [FIX] Remove pound simbol from check</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2227</link>
+  <description>jara's status on Tuesday, 10-Aug-10 12:30:03 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7618 [FIX] Remove pound simbol from check</content:encoded>
+  <dc:date>2010-08-10T12:30:03+02:00</dc:date>
+  <dc:creator>jara</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/32"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2213"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2226" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7617 PRELIVE: First 1p/1p bundle functionality, buying a current and a queued one. [FEATURE] Added order_id to bundles. [IMPROVEMENT]—</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2226</link>
+  <description>fjcs's status on Tuesday, 10-Aug-10 12:30:03 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7617 PRELIVE: First 1p/1p bundle functionality, buying a current and a queued one. [FEATURE] Added order_id to bundles. [IMPROVEMENT]—</content:encoded>
+  <dc:date>2010-08-10T12:30:03+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2212"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2225" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7616 PRELIVE: First 1p/1p bundle functionality, buying a current and a queued one. [FEATURE] Added order_id to bundles. [IMPROVEMENT]—</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2225</link>
+  <description>fjcs's status on Tuesday, 10-Aug-10 12:30:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7616 PRELIVE: First 1p/1p bundle functionality, buying a current and a queued one. [FEATURE] Added order_id to bundles. [IMPROVEMENT]—</content:encoded>
+  <dc:date>2010-08-10T12:30:02+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2211"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2224" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7615 [FEATURE] Added retries to avoid the error &quot;outOfBound exception&quot; getting the ssn's from the bpm source code [FIX] Ordering and —</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2224</link>
+  <description>amg03's status on Tuesday, 10-Aug-10 12:30:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7615 [FEATURE] Added retries to avoid the error &amp;quot;outOfBound exception&amp;quot; getting the ssn's from the bpm source code [FIX] Ordering and —</content:encoded>
+  <dc:date>2010-08-10T12:30:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2210"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2223" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7614 Merged branch b3.3.3 from rev7580 to rev7599</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2223</link>
+  <description>franp's status on Tuesday, 10-Aug-10 12:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7614 Merged branch b3.3.3 from rev7580 to rev7599</content:encoded>
+  <dc:date>2010-08-10T12:05:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2209"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2222" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7613 Merged branch b3.3.3 from rev7569 to rev7578</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2222</link>
+  <description>franp's status on Tuesday, 10-Aug-10 12:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7613 Merged branch b3.3.3 from rev7569 to rev7578</content:encoded>
+  <dc:date>2010-08-10T12:05:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2208"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2221" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>jara: #napa~7612 FIX Símbolo libra</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2221</link>
+  <description>jara's status on Tuesday, 10-Aug-10 10:10:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7612 FIX Símbolo libra</content:encoded>
+  <dc:date>2010-08-10T10:10:02+02:00</dc:date>
+  <dc:creator>jara</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/32"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2207"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2220" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>jara: #napa~7611 Fixes</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2220</link>
+  <description>jara's status on Tuesday, 10-Aug-10 09:30:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7611 Fixes</content:encoded>
+  <dc:date>2010-08-10T09:30:02+02:00</dc:date>
+  <dc:creator>jara</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/32"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2206"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2219" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7610 [FEATURE] New common functionalities: - Get more MGMs - Update Max SIMs Limit [FEATURE] New test (maxSIMLimit)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2219</link>
+  <description>amg03's status on Monday, 09-Aug-10 17:40:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7610 [FEATURE] New common functionalities: - Get more MGMs - Update Max SIMs Limit [FEATURE] New test (maxSIMLimit)</content:encoded>
+  <dc:date>2010-08-09T17:40:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2205"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2218" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>fjcs: #napa~7609 [FIXED] Checking queued bundle when trying to buy a bundle and for the widget when no current bundle is present. This prevents a—</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2218</link>
+  <description>fjcs's status on Monday, 09-Aug-10 16:55:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7609 [FIXED] Checking queued bundle when trying to buy a bundle and for the widget when no current bundle is present. This prevents a—</content:encoded>
+  <dc:date>2010-08-09T16:55:02+02:00</dc:date>
+  <dc:creator>fjcs</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/27"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2204"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2217" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>jara: #napa~7608 FIX Button id</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2217</link>
+  <description>jara's status on Monday, 09-Aug-10 14:05:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7608 FIX Button id</content:encoded>
+  <dc:date>2010-08-09T14:05:02+02:00</dc:date>
+  <dc:creator>jara</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/32"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2203"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2216" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7607 Removed validate.js. Validator Defaults are set in main-beta layout if $.validator is detected</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2216</link>
+  <description>franp's status on Monday, 09-Aug-10 13:55:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7607 Removed validate.js. Validator Defaults are set in main-beta layout if $.validator is detected</content:encoded>
+  <dc:date>2010-08-09T13:55:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2202"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2215" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7606 Added validate.js to set validator defaults (submitHandler to avoid double click)</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2215</link>
+  <description>franp's status on Monday, 09-Aug-10 13:35:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7606 Added validate.js to set validator defaults (submitHandler to avoid double click)</content:encoded>
+  <dc:date>2010-08-09T13:35:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2201"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2214" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>franp: #napa~7605 Fixed legend titles CSS</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2214</link>
+  <description>franp's status on Monday, 09-Aug-10 13:30:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7605 Fixed legend titles CSS</content:encoded>
+  <dc:date>2010-08-09T13:30:02+02:00</dc:date>
+  <dc:creator>franp</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/11"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2200"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2213" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>amg03: #napa~7604 [FEAURE] MD5 comparation for the each file copied remotely to check if it is corrupted</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2213</link>
+  <description>amg03's status on Monday, 09-Aug-10 13:10:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7604 [FEAURE] MD5 comparation for the each file copied remotely to check if it is corrupted</content:encoded>
+  <dc:date>2010-08-09T13:10:02+02:00</dc:date>
+  <dc:creator>amg03</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/31"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2199"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2212" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>gp231: #napa~7603 Fix bug in case of change of topup bettween both and only one product</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2212</link>
+  <description>gp231's status on Friday, 06-Aug-10 15:20:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7603 Fix bug in case of change of topup bettween both and only one product</content:encoded>
+  <dc:date>2010-08-06T15:20:02+02:00</dc:date>
+  <dc:creator>gp231</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/43"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/43#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2198"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2211" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>gp231: #napa~7602 Fix bug on back to autotopup</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2211</link>
+  <description>gp231's status on Friday, 06-Aug-10 14:00:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7602 Fix bug on back to autotopup</content:encoded>
+  <dc:date>2010-08-06T14:00:02+02:00</dc:date>
+  <dc:creator>gp231</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/43"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/43#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2197"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2210" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>ebc: #napa~7601 MINOR - MVNE-Order-ID not found writes a log code of INTERNAL_ERR_FJS, instead of INCONSISTENCY.</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2210</link>
+  <description>ebc's status on Friday, 06-Aug-10 13:25:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7601 MINOR - MVNE-Order-ID not found writes a log code of INTERNAL_ERR_FJS, instead of INCONSISTENCY.</content:encoded>
+  <dc:date>2010-08-06T13:25:02+02:00</dc:date>
+  <dc:creator>ebc</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/10"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/10#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2196"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <item rdf:about="http://techcamp.hi.inet//statusnet/index.php/notice/2209" rdf:type="http://rdfs.org/sioc/types#MicroblogPost">
+  <title>roa: #napa~7600 Now the current month in the payback widget when in points period are configurable via CSV</title>
+  <link>http://techcamp.hi.inet//statusnet/index.php/notice/2209</link>
+  <description>roa's status on Friday, 06-Aug-10 13:20:02 CEST</description>
+  <content:encoded>#&lt;span class=&quot;tag&quot;&gt;&lt;a href=&quot;http://techcamp.hi.inet//statusnet/index.php/tag/napa&quot; rel=&quot;tag&quot;&gt;napa&lt;/a&gt;&lt;/span&gt;~7600 Now the current month in the payback widget when in points period are configurable via CSV</content:encoded>
+  <dc:date>2010-08-06T13:20:02+02:00</dc:date>
+  <dc:creator>roa</dc:creator>
+  <foaf:maker rdf:resource="http://techcamp.hi.inet/statusnet/user/14"></foaf:maker>
+  <sioc:has_creator rdf:resource="http://techcamp.hi.inet/statusnet/user/14#acct"></sioc:has_creator>
+  <statusnet:postIcon rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></statusnet:postIcon>
+  <cc:licence rdf:resource="http://creativecommons.org/licenses/by/3.0/"></cc:licence>
+  <sioc:has_discussion rdf:resource="http://techcamp.hi.inet//statusnet/index.php/conversation/2195"></sioc:has_discussion>
+  <ctag:tagged>
+   <ctag:Tag rdf:about="http://techcamp.hi.inet//statusnet/index.php/tag/napa#concept" ctag:label="napa">
+    <foaf:page rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa"></foaf:page>
+    <rdfs:seeAlso rdf:resource="http://techcamp.hi.inet//statusnet/index.php/tag/napa/rss"></rdfs:seeAlso>
+   </ctag:Tag>
+  </ctag:tagged>
+ </item>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/11">
+  <foaf:nick>franp</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/11#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/1">
+  <foaf:nick>sergioa</foaf:nick>
+  <foaf:name>sergioa</foaf:name>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/1#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://www.gravatar.com/avatar.php?gravatar_id=b65db5a8396b7747c5adc7d3f7126107&amp;default=http%3A%2F%2Ftechcamp.hi.inet%2Fstatusnet%2Ftheme%2Fdefault%2Fdefault-avatar-profile.png&amp;size=96"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/27">
+  <foaf:nick>fjcs</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/27#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/20">
+  <foaf:nick>orestes</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/20#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/14">
+  <foaf:nick>roa</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/14#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/31">
+  <foaf:nick>amg03</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/31#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/32">
+  <foaf:nick>jara</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/32#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/10">
+  <foaf:nick>ebc</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/10#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+ <foaf:Agent rdf:about="http://techcamp.hi.inet/statusnet/user/43">
+  <foaf:nick>gp231</foaf:nick>
+  <foaf:holdsAccount rdf:resource="http://techcamp.hi.inet/statusnet/user/43#acct"></foaf:holdsAccount>
+  <foaf:depiction rdf:resource="http://techcamp.hi.inet/statusnet/theme/default/default-avatar-profile.png"></foaf:depiction>
+ </foaf:Agent>
+</rdf:RDF>
