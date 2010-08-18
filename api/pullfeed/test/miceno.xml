@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/miceno</id>
+  <link type="text/html" rel="alternate" href="http://github.com/miceno"/>
+  <link type="application/atom+xml" rel="self" href="http://github.com/miceno.atom"/>
+  <title>miceno's Activity</title>
+  <updated>2010-08-18T02:00:48-07:00</updated>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/282779983</id>
+    <published>2010-08-18T02:00:48-07:00</published>
+    <updated>2010-08-18T02:00:48-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/robey/configgy"/>
+    <title>miceno started watching robey/configgy</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      configgy's description:
+      &lt;blockquote&gt;
+        simple config and logging setup for scala
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/281716504</id>
+    <published>2010-08-17T01:54:04-07:00</published>
+    <updated>2010-08-17T01:54:04-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/eleybourn/Book-Catalogue"/>
+    <title>miceno started watching eleybourn/Book-Catalogue</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      Book-Catalogue's description:
+      &lt;blockquote&gt;
+        A book cataloging tool for Android phones. 
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/281064323</id>
+    <published>2010-08-16T11:40:34-07:00</published>
+    <updated>2010-08-16T11:40:34-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/intervigilium/MicDroid"/>
+    <title>miceno started watching intervigilium/MicDroid</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      MicDroid's description:
+      &lt;blockquote&gt;
+        Pitch-Correction App for Android, automatically tune your voice!
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/281063152</id>
+    <published>2010-08-16T11:38:36-07:00</published>
+    <updated>2010-08-16T11:38:36-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/divineprog/droidscript"/>
+    <title>miceno started watching divineprog/droidscript</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      droidscript's description:
+      &lt;blockquote&gt;
+        JavaScript for Android
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/278431530</id>
+    <published>2010-08-13T06:44:31-07:00</published>
+    <updated>2010-08-13T06:44:31-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/nolanlawson/OfflineBrowser"/>
+    <title>miceno started watching nolanlawson/OfflineBrowser</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      OfflineBrowser was created &lt;abbr class="relatize" title="2010-06-05 21:04:26"&gt;Sat Jun 05 21:04:26 -0700 2010&lt;/abbr&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/275007452</id>
+    <published>2010-08-10T03:57:11-07:00</published>
+    <updated>2010-08-10T03:57:11-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein"/>
+    <title>miceno started watching miceno/codein</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      codein's description:
+      &lt;blockquote&gt;
+        Social coding proof of concept
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:FollowEvent/274999639</id>
+    <published>2010-08-10T03:26:26-07:00</published>
+    <updated>2010-08-10T03:26:26-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/sergioa"/>
+    <title>miceno started following sergioa</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+  
+  &lt;div class="details"&gt;
+    
+      
+    
+    &lt;div class="message"&gt;
+      sergioa has
+      0
+      public repos
+      and 1
+     follower.
+    &lt;/div&gt;
+  &lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CreateEvent/274997737</id>
+    <published>2010-08-10T03:16:34-07:00</published>
+    <updated>2010-08-10T03:16:34-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein/compare/gh-pages"/>
+    <title>miceno created branch gh-pages at miceno/codein</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+
+
+
+
+
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      New branch is at
+      &lt;a href="http://github.com/miceno/codein/tree/gh-pages"&gt;miceno/codein/tree/gh-pages&lt;/a&gt;
+      
+        &lt;br/&gt;
+        &lt;a href="http://github.com/miceno/codein/compare/gh-pages" class="compare-link"&gt;Compare gh-pages branch with master &amp;raquo;&lt;/a&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:MemberEvent/274997477</id>
+    <published>2010-08-10T03:14:49-07:00</published>
+    <updated>2010-08-10T03:14:49-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein"/>
+    <title>miceno added sergioa to codein</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    codein is at &lt;a href="http://github.com/miceno/codein"&gt;miceno/codein&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CreateEvent/274997204</id>
+    <published>2010-08-10T03:14:20-07:00</published>
+    <updated>2010-08-10T03:14:20-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/miceno/codein"/>
+    <title>miceno created repository codein</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+
+
+
+
+
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      Social coding proof of concept
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/237822237</id>
+    <published>2010-06-27T11:20:57-07:00</published>
+    <updated>2010-06-27T11:20:57-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/gallery/gallery3-vendor"/>
+    <title>miceno started watching gallery/gallery3-vendor</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gallery3-vendor's description:
+      &lt;blockquote&gt;
+        Vendor repository for 3rd Party scripts used in Gallery 3
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/237822221</id>
+    <published>2010-06-27T11:20:56-07:00</published>
+    <updated>2010-06-27T11:20:56-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/gallery/gallery3-contrib"/>
+    <title>miceno started watching gallery/gallery3-contrib</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gallery3-contrib's description:
+      &lt;blockquote&gt;
+        Community contributions to Gallery 3
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/237822199</id>
+    <published>2010-06-27T11:20:20-07:00</published>
+    <updated>2010-06-27T11:20:20-07:00</updated>
+    <link type="text/html" rel="alternate" href="http://github.com/gallery/gallery3"/>
+    <title>miceno started watching gallery/gallery3</title>
+    <author>
+      <name>miceno</name>
+      <uri>http://github.com/miceno</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="http://www.gravatar.com/avatar/077a95e490ea98269de83bd11479a76b?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <content type="html">
+&lt;div class="details"&gt;
+  
+  &lt;div class="message"&gt;
+    
+      gallery3's description:
+      &lt;blockquote&gt;
+        The simplest, most intuitive way to host your photos on your website.
+      &lt;/blockquote&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
+
