@@ -43,14 +43,40 @@ object PullFeed {
     var data = XML.loadString( Source.fromURL(url).mkString )
 
     // 3. map xpath fields to codein fields
-    filter(data, expression) map ( _ text) foreach println
+    // 3.1 Get the project name
+    var project = (data \ "id").text split "/"
+    var projectname= project(1) + "/" +project(2)
+    println ( "projectname= " + projectname )
+
+    // 3.2 Get a sequence of XML elements
+    var n= filter(data, expression)
+    
+    // 3.3 Process each element
+    // TODO: Use Scala Extractors and Classes to get the data
+    n foreach { 
+        a => {
+            var entry= Array( (a \ "id").text split "/" last, (a \ "title").text, (a \ "author" \ "name").text )
+            println( "-----begin")
+            println( "#" + projectname + "~" + entry(0))
+            println( "commit=" + entry(0) + ", url=http://github.com/" + projectname + "/commit/" + entry(0))
+            println( "content=" + entry(1) )
+            println( "author=" + entry(2) )
+            println( "-----end")
+            println( "")
+          }
+    }
+    // println( "salida")
+    // n map ( _ text) foreach println
 
   }
   
+  var counter=1;
   def filter( data: NodeSeq, e: String): NodeSeq ={
       // Parse expression
       val tokens= e split "//"
 
+      // counter= counter + 1
+      // println( counter + " tokens=" + (tokens mkString( "", "-", "")) + " data=" + (data toString))
       if( tokens.length == 1) return data \\ tokens.head
       filter( data \\ tokens.head, tokens.tail mkString ("", "//", ""))
   }
