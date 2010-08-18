@@ -23,8 +23,6 @@ object PullFeed {
       var expression = "//author/name"
       var APIkey = "secret"
    
-    println("Hello, world!")
-    
     // TODO Algorithm:
     // 1. read parameters: url, mapping expression, secret
     // 2. read the file from the url
@@ -47,25 +45,15 @@ object PullFeed {
 
     // 3. map xpath fields to codein fields
     filter(data, expression) map ( _ text) foreach println
-    // data \\ expression map ( _ text) foreach println
-
-    // data \ "channel" \ "items" foreach ( a => println( a \ "rdf:Seq" \ "rdf:li"  \ "@rdf:resource" text ))
-    // data \ "channel" \ "items" \ "rdf:Seq" \ "rdf:li" foreach ( a => println( a text))
 
   }
-  var counter= 1;
   
   def filter( data: NodeSeq, e: String): NodeSeq ={
       // Parse expression
       val tokens= e split "//"
-      counter= counter +1;
-      println( counter + " data=" + (data) + " expression= " + e)
-      println( "tokens=" + (tokens mkString ("", ",", "")) )
 
-      if( counter > 20) exit()
       if( tokens.length == 1) return data \\ tokens.head
       filter( data \\ tokens.head, tokens.tail mkString ("", "//", ""))
-
   }
 
 }
