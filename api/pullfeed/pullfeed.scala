@@ -8,7 +8,6 @@ import scala.io.Source
 
 object PullFeed {
 
-    
 
 
   /**
