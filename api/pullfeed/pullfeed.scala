@@ -5,6 +5,7 @@
 
 import scala.xml._
 import scala.io.Source
+import Codein._
 
 object PullFeed {
 
@@ -37,6 +38,10 @@ object PullFeed {
     if ( args.length > 1 ) expression = args( 1 )
     if ( args.length > 2 ) APIkey= args( 2 )
 
+    // Starting the Actor
+    println( "Starting the actor")
+    APIActor.start()
+
     println ( "Reading " + ( url, expression, APIkey))
     
     // 2. read the file from the url
@@ -55,14 +60,20 @@ object PullFeed {
     // TODO: Use Scala Extractors and Classes to get the data
     n foreach { 
         a => {
-            var entry= Array( (a \ "id").text split "/" last, (a \ "title").text, (a \ "author" \ "name").text )
+            // List: commitID, title, author
+            val entry= List( (a \ "id").text split "/" last, (a \ "title").text, (a \ "author" \ "name").text )
+            // Message body= #projectname~commitID url=commitURL -- description
+            val message= "#" + projectname + "~" + entry(0) + "url=http://github.com/" + projectname + "/commit/" + entry(0) + "--" + entry(1);
             println( "-----begin")
-            println( "#" + projectname + "~" + entry(0))
-            println( "commit=" + entry(0) + ", url=http://github.com/" + projectname + "/commit/" + entry(0))
-            println( "content=" + entry(1) )
+            println( message);
             println( "author=" + entry(2) )
             println( "-----end")
             println( "")
+            
+            // Build a PostEntry object
+            val post= new PostEntry( entry(2), message)
+            
+            APIActor ! post
           }
     }
     // println( "salida")
