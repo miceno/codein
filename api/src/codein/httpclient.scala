@@ -6,37 +6,38 @@ import org.apache.http.auth._
 import org.apache.http.protocol._
 import org.apache.http.message._
 
+// httpclient singleton
 object httpclient {
 
   val SUDO = "sudo"
   val PASSWD = "secret"
-  val URL = "http://techcamp.hi.inet/statusnet/api/statuses/update.xml"
   val SOURCE_PARAM = "source"
+  val SOURCE_VALUE = "codein"
   val STATUS_PARAM = "status"
 
-  def main(args: Array[String]) {
+  val API_ROOT = "http://techcamp.hi.inet/statusnet/api/statuses/"
+  val UPDATE_SUFFIX = "update.xml"
+  val PUBLIC_TIMELINE_SUFFIX = "public_timeline.xml"
+  val FRIENDS_TIMELINE_SUFFIX = "friends_timeline.xml"
 
-    //set up post params
-    val params: ArrayList[BasicNameValuePair] = new ArrayList
-    params.add(new BasicNameValuePair(SOURCE_PARAM, "scala"))
-    params.add(new BasicNameValuePair(STATUS_PARAM, args(1)))
-
-    val client = new DefaultHttpClient()
-    val context = new BasicHttpContext()
-    val post = new HttpPost(URL)
-    post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+  private def doPOST(url: String, auth: String, params: ArrayList[BasicNameValuePair]) {
 
     //set up http basic authentication
     val provider = new BasicCredentialsProvider()
-    val creds = new UsernamePasswordCredentials(SUDO + "#" + args(0), PASSWD)
-    val scope = new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT, AuthScope.ANY_REALM)
-    provider.setCredentials(scope, creds)
+    provider.setCredentials(
+      new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT, AuthScope.ANY_REALM),
+      new UsernamePasswordCredentials(SUDO + "#" + auth, PASSWD))
+
+    //set up http client
+    val client = new DefaultHttpClient
+    val post = new HttpPost(url)
+    post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
     client.setCredentialsProvider(provider)
 
+    //do request
     try {
-      val responseBody: org.apache.http.HttpResponse = client.execute(post, context)
-
-      println(responseBody)
+      val res: org.apache.http.HttpResponse = client.execute(post, new BasicHttpContext)
+      println(res)
     } catch {
       case e => {
         println("exception:" + e.getMessage())
@@ -46,6 +47,22 @@ object httpclient {
 
     //free resources
     client.getConnectionManager().shutdown()
+  }
 
+  /**
+   * Updates the authenticating user's status.
+   */
+  def update(auth: String, msg: String) {
+    doPOST(API_ROOT + UPDATE_SUFFIX,
+      auth,
+      params = new ArrayList[BasicNameValuePair]() {
+        add(new BasicNameValuePair(SOURCE_PARAM, SOURCE_VALUE))
+        add(new BasicNameValuePair(STATUS_PARAM, msg))
+      }
+      )
+  }
+
+  def main(args: Array[String]) {
+    update(args(0), args(1))
   }
 }
