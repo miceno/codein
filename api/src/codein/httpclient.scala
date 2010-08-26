@@ -1,5 +1,6 @@
 package codein
 import codein.logger.Logs
+import codein.config.Properties
 import io.Source
 import java.util._
 import java.io._
@@ -16,24 +17,13 @@ import org.apache.http.message._
 // httpclient singleton
 object httpclient extends Logs {
 
-  val SUDO = "sudo"
-  val PASSWD = "secret"
-  val SOURCE_PARAM = "source"
-  val SOURCE_VALUE = "codein"
-  val STATUS_PARAM = "status"
-
-  val API_ROOT = "http://techcamp.hi.inet/statusnet/api/statuses/"
-  val UPDATE_SUFFIX = "update.xml"
-  val PUBLIC_TIMELINE_SUFFIX = "public_timeline.xml"
-  val FRIENDS_TIMELINE_SUFFIX = "friends_timeline.xml"
-
-  private def doPOST(url: String, auth: String, params: ArrayList[BasicNameValuePair]) {
+  private def doPOST(url: String, auth: String, pass: String, params: ArrayList[BasicNameValuePair]) {
 
     //set up http basic authentication
     val provider = new BasicCredentialsProvider
     provider.setCredentials(
       new AuthScope(ANY_HOST, ANY_PORT, ANY_REALM),
-      new UsernamePasswordCredentials(SUDO + "#" + auth, PASSWD)
+      new UsernamePasswordCredentials(auth, pass)
       )
 
     //set up http client
@@ -70,11 +60,12 @@ object httpclient extends Logs {
    * Updates the authenticating user's status.
    */
   def update(auth: String, msg: String) {
-    doPOST(API_ROOT + UPDATE_SUFFIX,
-      auth,
+    doPOST(Properties.get("API_ROOT") + Properties.get("UPDATE_SUFFIX"),
+      Properties.get("SUDOER") + "#" + auth,
+      Properties.get("PASSWD"),
       params = new ArrayList[BasicNameValuePair]() {
-        add(new BasicNameValuePair(SOURCE_PARAM, SOURCE_VALUE))
-        add(new BasicNameValuePair(STATUS_PARAM, msg))
+        add(new BasicNameValuePair("source", Properties.get("SOURCE_VALUE")))
+        add(new BasicNameValuePair("status", msg))
       }
       )
   }

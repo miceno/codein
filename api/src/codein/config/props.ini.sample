@@ -1,0 +1,7 @@
+SUDOER = sudo
+PASSWD = secret
+STATUS_PARAM = status
+API_ROOT = http://techcamp.hi.inet/statusnet/api/statuses/
+UPDATE_SUFFIX = update.xml
+PUBLIC_TIMELINE_SUFFIX = public_timeline.xml
+FRIENDS_TIMELINE_SUFFIX = friends_timeline.xml
