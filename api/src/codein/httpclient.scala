@@ -1,13 +1,20 @@
 package codein
+import codein.logger.Logs
+import io.Source
 import java.util._
+import java.io._
+import org.apache.http.{ HttpResponse, HttpEntity }
+import org.apache.http.HttpStatus._
 import org.apache.http.client._, methods._, params._, entity._
 import org.apache.http.impl._, client._
 import org.apache.http.auth._
+import org.apache.http.auth.AuthScope._
 import org.apache.http.protocol._
+import org.apache.http.protocol.HTTP._
 import org.apache.http.message._
 
 // httpclient singleton
-object httpclient {
+object httpclient extends Logs {
 
   val SUDO = "sudo"
   val PASSWD = "secret"
@@ -23,30 +30,41 @@ object httpclient {
   private def doPOST(url: String, auth: String, params: ArrayList[BasicNameValuePair]) {
 
     //set up http basic authentication
-    val provider = new BasicCredentialsProvider()
+    val provider = new BasicCredentialsProvider
     provider.setCredentials(
-      new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT, AuthScope.ANY_REALM),
-      new UsernamePasswordCredentials(SUDO + "#" + auth, PASSWD))
+      new AuthScope(ANY_HOST, ANY_PORT, ANY_REALM),
+      new UsernamePasswordCredentials(SUDO + "#" + auth, PASSWD)
+      )
 
     //set up http client
     val client = new DefaultHttpClient
     val post = new HttpPost(url)
-    post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+    post.setEntity(new UrlEncodedFormEntity(params, UTF_8));
     client.setCredentialsProvider(provider)
 
     //do request
     try {
-      val res: org.apache.http.HttpResponse = client.execute(post, new BasicHttpContext)
-      println(res)
+      val res: HttpResponse = client.execute(post, new BasicHttpContext)
+      val status = res getStatusLine
+
+      //check return code and log result
+      status getStatusCode match {
+        case SC_OK => {
+          debug("OK")
+          val istream: InputStream = res.getEntity.getContent
+          val content: String = Source.fromInputStream(istream).getLines.mkString
+          debug(content)
+        }
+        case _ => debug("NOK");
+      }
     } catch {
       case e => {
-        println("exception:" + e.getMessage())
-        e.printStackTrace()
+        error(e)
       }
     }
 
     //free resources
-    client.getConnectionManager().shutdown()
+    client.getConnectionManager.shutdown
   }
 
   /**
