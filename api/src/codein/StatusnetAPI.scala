@@ -15,7 +15,7 @@ import org.apache.http.protocol.HTTP._
 import org.apache.http.message._
 
 // httpclient singleton
-object httpclient extends Logs {
+object StatusnetAPI extends Logs {
 
   private def doPOST(url: String, auth: String, pass: String, params: ArrayList[BasicNameValuePair]) {
 
