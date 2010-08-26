@@ -53,9 +53,8 @@ object httpclient extends Logs {
           debug("OK")
           val istream: InputStream = res.getEntity.getContent
           val content: String = Source.fromInputStream(istream).getLines.mkString
-          debug(content)
         }
-        case _ => debug("NOK");
+        case _ => debug("NOK")
       }
     } catch {
       case e => {

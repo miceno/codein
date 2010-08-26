@@ -5,7 +5,14 @@ import org.apache.log4j.Level._
 
 trait Logs {
   private[this] val logger = Logger.getLogger(getClass().getName());
-
+  
+  //quick logger configuration
+  BasicConfigurator.configure()
+  
+  
+  def trace(message: => String) = if (logger.isEnabledFor(TRACE)) logger.info(message)
+  def trace(message: => String, ex: Throwable) = if (logger.isEnabledFor(TRACE)) logger.trace(message, ex)
+  
   def debug(message: => String) = if (logger.isEnabledFor(DEBUG)) logger.debug(message)
   def debug(message: => String, ex: Throwable) = if (logger.isEnabledFor(DEBUG)) logger.debug(message, ex)
   def debugValue[T](valueName: String, value: => T): T = {
