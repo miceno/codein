@@ -17,7 +17,29 @@ import org.apache.http.message._
 // httpclient singleton
 object StatusnetAPI extends Logs {
 
-  private def doPOST(url: String, auth: String, pass: String, params: ArrayList[BasicNameValuePair]) {
+  val STATUS = "status"
+  val SOURCE = "source"
+  val IN_REPLY_TO_STATUS_ID = "in_reply_to_status_id"
+  val LAT = "lat"
+  val LONG = "long"
+  val MEDIA = "media"
+  val USER_ID = "user_id"
+
+  val XML = "xml"
+  val JSON = "json"
+  val RSS = "rss"
+
+  val UPDATE_SUFFIX = "udpate"
+  val FRIENDS_TIMELINE_SUFFIX = "friends_timeline"
+  val PUBLIC_TIMELINE_SUFFIX = "public_timeline"
+
+  val API_ROOT = Properties.get("API_ROOT")
+  val SUDOER = Properties.get("SUDOER")
+  val PASSWD = Properties.get("PASSWD")
+
+  private def doGET(url: String, params: scala.collection.mutable.Map[String, String]) {}
+
+  private def doPOST(url: String, auth: String, pass: String, map: scala.collection.mutable.Map[String, String]) {
 
     //set up http basic authentication
     val provider = new BasicCredentialsProvider
@@ -29,7 +51,11 @@ object StatusnetAPI extends Logs {
     //set up http client
     val client = new DefaultHttpClient
     val post = new HttpPost(url)
-    post.setEntity(new UrlEncodedFormEntity(params, UTF_8));
+    post.setEntity(new UrlEncodedFormEntity(
+      new ArrayList[BasicNameValuePair]() {
+        map foreach { case (key, value) => add(new BasicNameValuePair(key, value)) }
+      },
+      UTF_8));
     client.setCredentialsProvider(provider)
 
     //do request
@@ -58,19 +84,63 @@ object StatusnetAPI extends Logs {
 
   /**
    * Updates the authenticating user's status.
+   *  @param status The URL-encoded text of the status update.
+   *  @param optional Parameter map. Supported params:
+   *	source 	(Optional) The source of the status.
+   *	in_reply_to_status_id 	(Optional) The ID of an existing status that the update is in reply to.
+   *	lat 	(Optional) The latitude the status refers to.
+   *	long 	(Optional) The longitude the status refers to.
+   *	media 	(Optional) a media upload, such as an image or movie file.
    */
-  def update(auth: String, msg: String) {
-    doPOST(Properties.get("API_ROOT") + Properties.get("UPDATE_SUFFIX"),
-      Properties.get("SUDOER") + "#" + auth,
-      Properties.get("PASSWD"),
-      params = new ArrayList[BasicNameValuePair]() {
-        add(new BasicNameValuePair("source", Properties.get("SOURCE_VALUE")))
-        add(new BasicNameValuePair("status", msg))
-      }
-      )
+  def update(auth: String, status: String, optional: scala.collection.mutable.Map[String, String], format: String) {
+    doPOST(
+      API_ROOT + UPDATE_SUFFIX + "." + format,
+      SUDOER + "#" + auth,
+      PASSWD,
+      optional += (STATUS -> status))
+  }
+
+  /**
+   * Returns the 20 most recent notices from users throughout the system who have uploaded their own avatars. 
+   * Depending on configuration, it may or may not not include notices from automatic posting services.
+   *  
+   *  @param optional Parameter map. Supported params:
+   *	since_id 	(Optional) Returns only statuses with an ID greater than (that is, more recent than) the specified ID.
+   *	max_id 	(Optional) Returns only statuses with an ID less than (that is, older than) or equal to the specified ID.
+   *	count 	(Optional) Specifies the number of statuses to retrieve.
+   *	page 	(Optional) Specifies the page of results to retrieve.
+   */
+  def publicTimeline(optional: scala.collection.mutable.Map[String, String], format: String) {
+    doGET(
+      API_ROOT + PUBLIC_TIMELINE_SUFFIX + "." + format,
+      optional)
+  }
+
+  /**
+   * Returns the 20 most recent notices from users throughout the system who have uploaded their own avatars. 
+   * Depending on configuration, it may or may not not include notices from automatic posting services.
+   *  
+   *  @param optional Parameter map. Supported params:
+   *  	user_id 	(Optional) Specifies a user by ID
+   *  	screen_name 	(Optional) Specifies a user by screename (nickname) 
+   *	since_id 	(Optional) Returns only statuses with an ID greater than (that is, more recent than) the specified ID.
+   *	max_id 	(Optional) Returns only statuses with an ID less than (that is, older than) or equal to the specified ID.
+   *	count 	(Optional) Specifies the number of statuses to retrieve.
+   *	page 	(Optional) Specifies the page of results to retrieve.
+   */
+  def friendsTimeline(optional: scala.collection.mutable.Map[String, String], format: String) {
+    doGET(
+      API_ROOT + FRIENDS_TIMELINE_SUFFIX + "." + format,
+      optional)
+  }
+
+  def friendsTimeline(user: String, optional: scala.collection.mutable.Map[String, String], format: String) {
+    doGET(
+      API_ROOT + FRIENDS_TIMELINE_SUFFIX + "/" + user + "." + format,
+      optional += (USER_ID -> user))
   }
 
   def main(args: Array[String]) {
-    update(args(0), args(1))
+    update(args(0), args(1), scala.collection.mutable.Map.empty, XML)
   }
 }
