@@ -29,7 +29,7 @@ object StatusnetAPI extends Logs {
   val JSON = "json"
   val RSS = "rss"
 
-  val UPDATE_SUFFIX = "udpate"
+  val UPDATE_SUFFIX = "update"
   val FRIENDS_TIMELINE_SUFFIX = "friends_timeline"
   val PUBLIC_TIMELINE_SUFFIX = "public_timeline"
 
@@ -51,6 +51,7 @@ object StatusnetAPI extends Logs {
     //set up http client
     val client = new DefaultHttpClient
     val post = new HttpPost(url)
+    
     post.setEntity(new UrlEncodedFormEntity(
       new ArrayList[BasicNameValuePair]() {
         map foreach { case (key, value) => add(new BasicNameValuePair(key, value)) }
