@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:re="http://purl.org/atompub/rank/1.0">
+    <title type="text">hot questions tagged scala - Stack Overflow</title>
+    <link rel="self" href="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot" type="application/atom+xml" />
+    <link rel="alternate" href="http://stackoverflow.com/questions/tagged/?tagnames=scala&amp;sort=hot" type="text/html" />
+    <subtitle>most recent 30 from stackoverflow.com</subtitle>
+    <updated>2010-09-23T13:32:56Z</updated>
+    <id>http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot</id>
+    <creativeCommons:license>http://www.creativecommons.org/licenses/by-nc/2.5/rdf</creativeCommons:license> 
+
+    <entry>
+        <id>http://stackoverflow.com/questions/3777469/in-java-code-getting-a-scala-iterable-from-a-java-util-list</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">In java code, getting a scala.Iterable from a java.util.List</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>enguerran</name>
+            <uri>http://stackoverflow.com/users/178575</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3777469/in-java-code-getting-a-scala-iterable-from-a-java-util-list" />
+        <published>2010-09-23T10:34:00Z</published>
+        <updated>2010-09-23T10:57:44Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I knew this &#39;&lt;a href=&quot;http://stackoverflow.com/questions/1072784/how-can-i-convert-a-java-iterable-to-a-scala-iterable&quot;&gt;How can I convert a Java Iterable to a Scala Iterable?&lt;/a&gt;&#39;&lt;/p&gt;
+
+&lt;p&gt;But I am working on &lt;strong&gt;java 1.4.2&lt;/strong&gt; code with a scala API.&lt;/p&gt;
+
+&lt;p&gt;How can I get a &lt;code&gt;scala.Iterable&lt;/code&gt; from a &lt;code&gt;java.util.List&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Thank you for your suggestion.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3776010/applying-cases-to-act-in-scala</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Applying cases to act() in scala</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>thetuxracer</name>
+            <uri>http://stackoverflow.com/users/174936</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3776010/applying-cases-to-act-in-scala" />
+        <published>2010-09-23T06:50:23Z</published>
+        <updated>2010-09-23T07:01:35Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello,
+I was wondering how to apply a match and case to my act() method. This is my tempObject class&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;case class tempObject(typeOfData: Int) {} 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And this is my Actor:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;object StorageActor extends Actor {
+
+  def act(TO: tempObject) = TO match {
+
+    case TO(0) =&amp;gt; println(&quot;True&quot;)
+    case TO(1) =&amp;gt; println(&quot;False&quot;)
+
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, what should happen is, when I pass an object to act(), it calls the desired method, depending upon the values inside of the object. Is the above code correct to perform what I desire?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3776020/apache-commonsvfs-connect-to-https-server</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Apache CommonsVFS connect to https server.</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="https"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="commons-vfs"/>
+        <author>
+            <name>Brian Hsu</name>
+            <uri>http://stackoverflow.com/users/242644</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3776020/apache-commonsvfs-connect-to-https-server" />
+        <published>2010-09-23T06:53:27Z</published>
+        <updated>2010-09-23T09:59:08Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello,&lt;/p&gt;
+
+&lt;p&gt;Currently I use Apache CommonsVFS to fetch images from other sites and it works well.&lt;/p&gt;
+
+&lt;p&gt;The website of CommonsVFS says it supports HTTPS protocol, but I found I could not access those URL starts with https:// using CommonVFS, while I could &lt;a href=&quot;https://na.archives.gov.tw/archives/chinese/98/search/popup.jsp?res=/export/home/xdcm/do/ScaleDoFiles/jpg/00/00/01/21/07/A313480000K=0089=577=1=1=003=0002-i.jpg&quot; rel=&quot;nofollow&quot;&gt;browse it&lt;/a&gt; from my Firefox normally.&lt;/p&gt;
+
+&lt;p&gt;For example, the following code will yield an exception says could not connect to HTTP server..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; import org.apache.commons.vfs.VFS                                                  
+import org.apache.commons.vfs.VFS
+
+scala&amp;gt; val fsManager = VFS.getManager();
+fsManager: org.apache.commons.vfs.FileSystemManager = org.apache.commons.vfs.impl.StandardFileSystemManager@16a0733
+
+scala&amp;gt; val file1 = fsManager.resolveFile (&quot;http://bone.twbbs.org.tw/Images/desk.jpg&quot;)
+file1: org.apache.commons.vfs.FileObject = http://bone.twbbs.org.tw/Images/desk.jpg
+
+scala&amp;gt; val file2 = fsManager.resolveFile (&quot;https://na.archives.gov.tw/archives/chinese/98/search/popup.jsp?res=/export/home/xdcm/do/ScaleDoFiles/jpg/00/00/01/21/07/A313480000K=0089=577=1=1=003=0002-i.jpg&quot;)
+org.apache.commons.vfs.FileSystemException: Could not connect to HTTP server on &quot;na.archives.gov.tw&quot;.
+    at org.apache.commons.vfs.provider.http.HttpClientFactory.createConnection(HttpClientFactory.java:105)
+    at org.apache.commons.vfs.provider.http.HttpFileProvider.doCreateFileSystem(HttpFileProvider.java:81)
+    at org.apache.commons.vfs.provider.AbstractOriginatingFileProvider.findFile(AbstractOriginatingFileProvider.java:81)
+    at org.apache.commons.vfs.provider.AbstractOriginatingFileProvider.findFile(AbstractOriginatingFileProvider.java:62)
+    at org.apache.commons.vfs.impl.DefaultFileSystemManager.resolveFile(DefaultFileSystemManager.java:641)
+    at org.apache.commons.vfs.impl.DefaultFileSystemManager.resolveFile(DefaultFileSystemManager.java:602)
+    at org.apache.commons.vfs.impl.DefaultFileS...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also tried to add HTTPS provider for FileManager, but still has no luck, it says URL scheme &quot;https&quot; is already registered.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; fsManager.asInstanceOf[org.apache.commons.vfs.impl.StandardFileSystemManager].addProvider(&quot;https&quot;, new org.apache.commons.vfs.provider.https.HttpsFileProvider)
+org.apache.commons.vfs.FileSystemException: Multiple providers registered for URL scheme &quot;https&quot;.
+    at org.apache.commons.vfs.impl.DefaultFileSystemManager.addProvider(DefaultFileSystemManager.java:174)
+    at org.apache.commons.vfs.impl.DefaultFileSystemManager.addProvider(DefaultFileSystemManager.java:152)
+    at .&amp;lt;init&amp;gt;(&amp;lt;console&amp;gt;:8)
+    at .&amp;lt;clinit&amp;gt;(&amp;lt;console&amp;gt;)
+    at RequestResult$.&amp;lt;init&amp;gt;(&amp;lt;console&amp;gt;:9)
+    at RequestResult$.&amp;lt;clinit&amp;gt;(&amp;lt;console&amp;gt;)
+    at RequestResult$scala_repl_result(&amp;lt;console&amp;gt;)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:616)
+    at scala.tools.nsc.Interpr...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, how could I use commonVFS to access https server?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3770974/scala-or-python-to-build-a-comet-server-to-support-a-php-application</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Scala or Python to Build a Comet server to support a PHP application?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="php"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="python"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="zend-framework"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="comet"/>
+        <author>
+            <name>Omar Dolaimy</name>
+            <uri>http://stackoverflow.com/users/161278</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3770974/scala-or-python-to-build-a-comet-server-to-support-a-php-application" />
+        <published>2010-09-22T15:37:20Z</published>
+        <updated>2010-09-23T12:39:12Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I have a currently running PHP application that I want to add real-time feed (Google search latest result feeds), I have an implementation in PHP that does the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;An AJAX request to the server.&lt;/li&gt;
+&lt;li&gt;The PHP responds.&lt;/li&gt;
+&lt;li&gt;After 15000ms (15 seconds) using setTimeout(), we repeat the steps.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I knew this have very much overhead on the server and will cause the C10K problems.&lt;/p&gt;
+
+&lt;p&gt;After researching I figured out that PHP as an Apache2 module is incompetent to implement the Comet solutions which is unfortunate!&lt;/p&gt;
+
+&lt;p&gt;I have two options, to use Scala, or Use Python to implement this part of my website since it&#39;s all complete and there is no time for rewriting it.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t care for anything as I care for performance since I use VPS200 from &lt;a href=&quot;http://www.servergrove.com/vps&quot; rel=&quot;nofollow&quot;&gt;ServerGrove&lt;/a&gt;, And I&#39;m going to install JVM or Python side-by-side with PHP.&lt;/p&gt;
+
+&lt;p&gt;So what you think has less memory/CPU consumption in this case JVM with Scala, Or Python?&lt;/p&gt;
+
+&lt;p&gt;Thanks in advance&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;
+I guess I&#39;ll use &lt;a href=&quot;http://akkasource.org/&quot; rel=&quot;nofollow&quot;&gt;Akka Project&lt;/a&gt;, I&#39;m going to test it.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3770989/purpose-of-return-statement-in-scala</id>
+        <re:rank scheme="http://stackoverflow.com">5</re:rank>
+        <title type="text">Purpose of &quot;return&quot; statement in Scala?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="return"/>
+        <author>
+            <name>Jus12</name>
+            <uri>http://stackoverflow.com/users/243233</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3770989/purpose-of-return-statement-in-scala" />
+        <published>2010-09-22T15:39:18Z</published>
+        <updated>2010-09-22T23:11:09Z</updated>
+        <summary type="html">
+            &lt;p&gt;Is there any real reason of providing the &lt;code&gt;return&lt;/code&gt; statement in Scala? (aside from being more &quot;Java-friendly&quot;)&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3774653/in-scala-plural-object-name-for-a-container-of-public-static-methods</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">In Scala, plural object name for a container of public static methods?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>Blair Zajac</name>
+            <uri>http://stackoverflow.com/users/80731</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3774653/in-scala-plural-object-name-for-a-container-of-public-static-methods" />
+        <published>2010-09-23T00:42:50Z</published>
+        <updated>2010-09-23T02:07:41Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;ve written a Scala trait, named Cache[A,B], to provide a caching API.  The Cache has the following methods, asyncGet(), asyncPut(), asyncPutIfAbsent(), asyncRemove().&lt;/p&gt;
+
+&lt;p&gt;I&#39;m going to have a few static methods, such as getOrElseUpdate(key: A)(op: =&gt; B).  I don&#39;t want methods like this as abstract defs in the Cache trait because I don&#39;t want each Cache implementation to have to provide an implementation for it, when it can be written once using the async*() methods.&lt;/p&gt;
+
+&lt;p&gt;In looking at Google Guava and parts of the Java library, they place public static functions in a class that is the plural of the interface name, so &quot;Caches&quot; would be the name I would use.&lt;/p&gt;
+
+&lt;p&gt;I like this naming scheme actually, even though I could use a Cache companion object.  In looking at much of my code, many of my companion objects contain private val&#39;s or def&#39;s, so users of my API then need to look through the companion object to see what they can use from there, or anything for that matter.&lt;/p&gt;
+
+&lt;p&gt;By having a object named &quot;Caches&quot; is consistent with Java and also makes it clear that there&#39;s only public functions in there.  I&#39;m leaning towards using &quot;object Caches&quot; instead of &quot;object Cache&quot;.&lt;/p&gt;
+
+&lt;p&gt;So what do people think?  &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3769373/some-languages-and-uses-for-monads</id>
+        <re:rank scheme="http://stackoverflow.com">6</re:rank>
+        <title type="text">Some languages and uses for monads</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="functional-programming"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="clojure"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="lisp"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="monads"/>
+        <author>
+            <name>Ishihara</name>
+            <uri>http://stackoverflow.com/users/455043</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3769373/some-languages-and-uses-for-monads" />
+        <published>2010-09-22T12:52:39Z</published>
+        <updated>2010-09-22T18:30:32Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi guys,&lt;/p&gt;
+
+&lt;p&gt;According to you, which language do you think would be the best for implementing monads (Python/Ruby/LISP)?,also can anyone tell me some possible uses of monads (please give examples),like exceptions?&lt;/p&gt;
+
+&lt;p&gt;Thanks in advance&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3772991/is-constructor-use-allowed-with-case-classes</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Is constructor use allowed with case classes?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="traits"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="case-class"/>
+        <author>
+            <name>Max A.</name>
+            <uri>http://stackoverflow.com/users/152619</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3772991/is-constructor-use-allowed-with-case-classes" />
+        <published>2010-09-22T19:41:32Z</published>
+        <updated>2010-09-22T22:16:28Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a case class (let&#39;s name it &lt;code&gt;Stuff&lt;/code&gt;) that I want to be able to create anonymous subclasses of at run time by extending a trait (call it &lt;code&gt;Marker&lt;/code&gt;). Here&#39;s a snippet of a REPL session that illustrates what I&#39;m trying to do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; trait Marker
+defined trait Marker
+
+scala&amp;gt; case class Stuff(i: Int)
+defined class Stuff
+
+scala&amp;gt; val a = Stuff(1)
+a: Stuff = Stuff(1)
+
+scala&amp;gt; val b = new Stuff(1) with Marker
+b: Stuff with Marker = Stuff(1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note how &lt;code&gt;a&lt;/code&gt; is instantiated using &lt;code&gt;Stuff.apply()&lt;/code&gt;, while in &lt;code&gt;b&lt;/code&gt;&#39;s case I&#39;m calling the case class&#39; constructor.&lt;/p&gt;
+
+&lt;p&gt;My question is: &lt;strong&gt;is instantiating case classes using a constructor kosher?&lt;/strong&gt; It appears to me that it is, since the usual conveniences provided by case classes, such as &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;.equals()&lt;/code&gt;, and &lt;code&gt;.hashCode()&lt;/code&gt;, all work. Am I missing anything that would brand what I&#39;m doing a &lt;em&gt;Bad Thing (TM)&lt;/em&gt;?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; a == b
+res0: Boolean = true
+
+scala&amp;gt; a.equals(b)
+res1: Boolean = true
+
+scala&amp;gt; a.hashCode == b.hashCode
+res2: Boolean = true
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3769624/annotating-constructor-parameters-in-scala</id>
+        <re:rank scheme="http://stackoverflow.com">6</re:rank>
+        <title type="text">Annotating constructor parameters in Scala</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="annotations"/>
+        <author>
+            <name>ponzao</name>
+            <uri>http://stackoverflow.com/users/206020</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3769624/annotating-constructor-parameters-in-scala" />
+        <published>2010-09-22T13:19:56Z</published>
+        <updated>2010-09-22T13:37:03Z</updated>
+        <summary type="html">
+            &lt;p&gt;Annotating constructor parameters seems to do nothing when compiled to bytecode. I get no compiler warnings either.&lt;/p&gt;
+
+&lt;p&gt;The following works. &lt;code&gt;getAnnotations&lt;/code&gt; for the &lt;code&gt;name&lt;/code&gt; field returns &lt;code&gt;javax.annotation.Nullable&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Person {
+    @Nullable var name: String = _;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The following doesn&#39;t, neither with &lt;code&gt;val&lt;/code&gt; or &lt;code&gt;var&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Person(@Nullable var name: String)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is probably not intentional, so is there something I am missing or should I go file a bug report?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3770125/how-do-i-get-sbt-to-use-a-local-maven-proxy-repository-nexus</id>
+        <re:rank scheme="http://stackoverflow.com">4</re:rank>
+        <title type="text">how do I get sbt to use a local maven proxy repository (Nexus)?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="maven"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="ivy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="nexus"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="sbt"/>
+        <author>
+            <name>Harlan</name>
+            <uri>http://stackoverflow.com/users/135944</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3770125/how-do-i-get-sbt-to-use-a-local-maven-proxy-repository-nexus" />
+        <published>2010-09-22T14:14:53Z</published>
+        <updated>2010-09-22T19:50:09Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello, I&#39;ve got an sbt (Scala) project that currently pulls artifacts from the web. We&#39;d like to move towards a corporate-standardized Nexus repository that would cache artifacts. From the Nexus documentation, I understand how to do that for Maven projects. But sbt obviously uses a different approach. (I understand Ivy is involved somehow, but I&#39;ve never used it and don&#39;t understand how it works.)&lt;/p&gt;
+
+&lt;p&gt;How do I tell sbt and/or the underlying Ivy to use the corporate Nexus repository system for all dependencies? I&#39;d like the answer to use some sort of project-level configuration file, so that new clones of our source repository will automatically use the proxy. (I.e., mucking about with per-user config files in a dot-directory is not viable.) &lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3767808/how-to-force-interpreter-show-complete-stack-trace</id>
+        <re:rank scheme="http://stackoverflow.com">6</re:rank>
+        <title type="text">How to force interpreter show complete stack trace?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="interpreter"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="sbt"/>
+        <author>
+            <name>Vasil Remeniuk</name>
+            <uri>http://stackoverflow.com/users/354067</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3767808/how-to-force-interpreter-show-complete-stack-trace" />
+        <published>2010-09-22T09:14:08Z</published>
+        <updated>2010-09-22T13:40:39Z</updated>
+        <summary type="html">
+            &lt;p&gt;Is there any way to force Scala interpreter (started through SBT) to print complete stack trace. By default, less than 10 lines are displayed: &lt;br/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; new CacheMonitoringClient
+javax.management.InstanceNotFoundException: com.bea:Name=DomainRuntimeService,Type=weblogic.management.beanservers.domainrun
+time.DomainRuntimeServiceMBean
+        at weblogic.rjvm.ResponseImpl.unmarshalReturn(ResponseImpl.java:195)
+        at weblogic.rmi.internal.BasicRemoteRef.invoke(BasicRemoteRef.java:224)
+        at javax.management.remote.rmi.RMIConnectionImpl_921_WLStub.getAttribute(Unknown Source)
+        at weblogic.management.remote.common.RMIConnectionWrapper$11.run(ClientProviderBase.java:498)
+        at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+        at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+        at weblogic.security.Security.runAs(Security.java:61)
+        at weblogic.management.remote.common.RMIConnectionWrapper.getAttribute(ClientProviderBas...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As a workaround I&#39;m using &lt;code&gt;try { new CacheMonitoringClient } catch { case ex =&amp;gt; ex.printStackTrace}&lt;/code&gt; (explicitly wrapping the calls that throw the exceptions I&#39;m interested in),  but that really ugly...&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3770569/how-to-combine-regexp-and-keywords-in-scala-parser-combinators</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">How to combine Regexp and keywords in Scala parser combinators</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="parsing"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="keywords"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="lexical-analysis"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="lexical"/>
+        <author>
+            <name>Michael Tiller</name>
+            <uri>http://stackoverflow.com/users/105389</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3770569/how-to-combine-regexp-and-keywords-in-scala-parser-combinators" />
+        <published>2010-09-22T14:59:19Z</published>
+        <updated>2010-09-22T16:24:56Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;ve seen two approaches to building parsers in Scala.&lt;/p&gt;
+
+&lt;p&gt;The first is to extends from RegexParsers and define your won lexical patterns.  The issue I see with this is that I don&#39;t really understand how it deals with keyword ambiguities.  For example, if my keyword match the same pattern as idents, then it processes the keywords as idents.&lt;/p&gt;
+
+&lt;p&gt;To counter that, I&#39;ve seen posts like &lt;a href=&quot;http://stackoverflow.com/questions/1528333/parser-combinator-how-to-terminate-repetition-on-keyword&quot;&gt;this one&lt;/a&gt; that show how to use the StandardTokenParsers to specify keywords.  But then, I don&#39;t understand how to specify the regexp patterns!  Yes, StandardTokenParsers comes with &quot;ident&quot; but it doesn&#39;t come with the other ones I need (complex floating point number representations, specific string literal patterns and rules for escaping, etc).&lt;/p&gt;
+
+&lt;p&gt;How do you get both the ability to specify keywords and the ability to specify token patterns with regular expressions?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3765376/could-not-find-implicit-value-for-parameter-ordering</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Could not find implicit value for parameter ordering</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala-2.8"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="implicit-conversion"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="type-parameter"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="implicits"/>
+        <author>
+            <name>Adam</name>
+            <uri>http://stackoverflow.com/users/454537</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3765376/could-not-find-implicit-value-for-parameter-ordering" />
+        <published>2010-09-22T00:04:30Z</published>
+        <updated>2010-09-22T03:10:00Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I get the following error when trying to compile this:&lt;/p&gt;
+
+&lt;p&gt;Btree.scala:9: error: could not find implicit value for parameter ordering: Ordering[K]
+        abstract class Node[K,V] extends TreeMap[K,V]&lt;/p&gt;
+
+&lt;p&gt;TreeMap is supposed to accept an implicit Ordering[A] val which I provide. Perhaps the implicit parameter needs to be in object Tester where the Btree(TreeMap) is instantiated?
+I would prefer to keep the implicit declaration inside of the Btree class because I would like Ordering to have a type K that implements Comparable[K].  Make sense? &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package disttree {
+    import scala.collection.immutable.TreeMap
+
+    class Btree[K &amp;lt;: Comparable[K],V](fanout:Int) {
+        implicit object DefaultOrder extends Ordering[K] {
+            def compare(k1: K, k2: K) = k1 compareTo k2
+        }
+
+        abstract class Node[K,V] extends TreeMap[K,V]
+
+        class InnerNode[K,V] extends Node[K,V]
+
+        class LeafNode[K,V] extends Node[K,V]
+
+        val root = new InnerNode[K,V]()
+
+        def search(n: Node[K,V], key: K): Option[(K,V)] = {
+            return n.find(_ == key)
+        }
+
+        def insert(key: K, value: V) { }
+
+        def delete(key: K) { }
+    }
+}
+
+import disttree._;
+object Tester {
+    def main(args: List[String]) = {
+        var t = new Btree[Int, Any](2)
+        t.insert(1, &quot;goodbye&quot;)
+        Console.println(t)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3765606/scala-class-members-and-constructor-parameters-name-clash</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Scala class members and constructor parameters name clash</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="properties"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="constructor"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="fields"/>
+        <author>
+            <name>Bruno Reis</name>
+            <uri>http://stackoverflow.com/users/150339</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3765606/scala-class-members-and-constructor-parameters-name-clash" />
+        <published>2010-09-22T01:01:59Z</published>
+        <updated>2010-09-22T01:31:52Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi.&lt;/p&gt;
+
+&lt;p&gt;Consider the following class written in Java:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class NonNegativeDouble {
+    private final double value;
+    public NonNegativeDouble(double value) {
+        this.value = Math.abs(value);
+    }
+    public double getValue() { return value; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It defines a final field called &lt;code&gt;value&lt;/code&gt; that is initialized in the constructor, by taking its parameter called alike and applying a function to it.&lt;/p&gt;
+
+&lt;p&gt;I want to write something similar to it in Scala. At first, I tried:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class NonNegativeDouble(value: Double) {
+  def value = Math.abs(value)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But the compiler complains: &lt;em&gt;error: overloaded method value needs result type&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously the compiler thinks that the expression &lt;code&gt;value&lt;/code&gt; inside the expression &lt;code&gt;Math.abs(value)&lt;/code&gt; refers to the method being defined. Therefore, the method being defined is recursive, so I need to state its return type. So, the code I wrote does not do what I expected it to do: I wanted &lt;code&gt;value&lt;/code&gt; inside &lt;code&gt;Math.abs(value)&lt;/code&gt; to refer to the constructor parameter &lt;code&gt;value&lt;/code&gt;, and not to the method being defined. It is as if the compiler implicitly added a &lt;code&gt;this.&lt;/code&gt; to &lt;code&gt;Math.abs(this.value)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adding &lt;code&gt;val&lt;/code&gt; or &lt;code&gt;var&lt;/code&gt; (or &lt;code&gt;private ...&lt;/code&gt; variants) to the constructor parameter doesn&#39;t seem to help.&lt;/p&gt;
+
+&lt;p&gt;So, my question is: can I define a property with the same name as a constructor parameter, but maybe a different value? If so, how? If not, why?&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3765954/how-to-extract-from-dispatch-json-jsobject</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">how to extract from dispatch.json.JsObject </title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="json"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="twitter"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="lift"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="dispatch"/>
+        <author>
+            <name>kengimel</name>
+            <uri>http://stackoverflow.com/users/365916</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3765954/how-to-extract-from-dispatch-json-jsobject" />
+        <published>2010-09-22T02:40:10Z</published>
+        <updated>2010-09-22T13:28:26Z</updated>
+        <summary type="html">
+            &lt;p&gt;What do i need to do to extract the value for friends_count. i noticed that screen_name are already define in the Status object and case class. Do still require to extends Js or JsObject different &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;object TweetDetails extends Js { val friends_count = &#39;friends_count ? num }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and then pattern match it against each json object in the list of JsObjects as represented below. The symbols are confusing: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; val friends_count = &#39;friends_count ! num  // I wish SO understood Scala&#39;s symbols
+val twtJsonList = http(Status(&quot;username&quot;).timeline)
+twtJsonList foreach {
+      js =&amp;gt;
+        val Status.user.screen_name(screen_name) = js
+        val Status.text(text) = js
+        val friends_counts(friends_count) = js //i cannot figure out how to extract this
+        println(friends_count)
+        println(screen_name)
+        println(text)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3760645/in-scala-is-it-possible-to-write-a-script-which-refers-to-another-script</id>
+        <re:rank scheme="http://stackoverflow.com">5</re:rank>
+        <title type="text">In Scala, is it possible to write a script which refers to another script.</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scripting"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="import"/>
+        <author>
+            <name>Guillaume</name>
+            <uri>http://stackoverflow.com/users/453932</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3760645/in-scala-is-it-possible-to-write-a-script-which-refers-to-another-script" />
+        <published>2010-09-21T13:17:44Z</published>
+        <updated>2010-09-21T15:12:51Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hey all, &lt;/p&gt;
+
+&lt;p&gt;I am currently looking at using Scala scripts to control the life-cycle of a MySQL database instead of using MS-DOS scripts (I am on Windows XP). &lt;/p&gt;
+
+&lt;p&gt;I want to have a configuration script which only holds configuration information, and 1 or more management scripts which use the configuration information to perform various operations such as start, stop, show status, etc .....&lt;/p&gt;
+
+&lt;p&gt;Is it possible to write a Scala script which includes/imports/references another Scala script? &lt;/p&gt;
+
+&lt;p&gt;I had a look at the -i option of the scala interpreter, but this launches an interactive session which is not what I want. &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3754971/strange-syntax-in-lambda-expression</id>
+        <re:rank scheme="http://stackoverflow.com">4</re:rank>
+        <title type="text">strange syntax in lambda expression</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>user5248896</name>
+            <uri>http://stackoverflow.com/users/453139</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3754971/strange-syntax-in-lambda-expression" />
+        <published>2010-09-20T19:51:53Z</published>
+        <updated>2010-09-21T14:04:06Z</updated>
+        <summary type="html">
+            &lt;pre&gt;&lt;code&gt;val (xa, xb) = xs partition ( a &amp;gt; )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What is &lt;code&gt;a &amp;gt;&lt;/code&gt; in above code and how is it different from &lt;code&gt;a &amp;gt; _&lt;/code&gt;? (assume &lt;code&gt;a&lt;/code&gt; is some predefined value)&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3762579/problem-with-creating-java-anonymous-class-with-generics-in-scala</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Problem with creating java anonymous class with generics in scala</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="generics"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>Alexander Kuznetsov</name>
+            <uri>http://stackoverflow.com/users/454219</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3762579/problem-with-creating-java-anonymous-class-with-generics-in-scala" />
+        <published>2010-09-21T16:53:34Z</published>
+        <updated>2010-09-21T19:39:17Z</updated>
+        <summary type="html">
+            &lt;p&gt;For example I have following Java inteface&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public interface Test&amp;lt;T,M&amp;gt; {
+       public M get(T t);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if I whant create ananymoys class in java with this interface &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;val t = new Test[Int,Boolean](){
+     def get(t: Boolean) = 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I have following error &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Scala.scala:15: error:
+  scal.test.example.Test does not take
+  type parameters val t = new Test[Int,Boolean](){&lt;/p&gt;
+&lt;/blockquote&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3751823/two-type-parameters-with-the-same-name</id>
+        <re:rank scheme="http://stackoverflow.com">6</re:rank>
+        <title type="text">two type parameters with the same name</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="generics"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="type-parameter"/>
+        <author>
+            <name>Brent Lundberg</name>
+            <uri>http://stackoverflow.com/users/203968</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3751823/two-type-parameters-with-the-same-name" />
+        <published>2010-09-20T13:18:49Z</published>
+        <updated>2010-09-21T09:30:04Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am wondering why the two type parameters (named &quot;A&quot;)  with the same name (&quot;A&quot;) is allowed as per the example below. I know this is a POOR naming of type parameters, don&#39;t do this.&lt;/p&gt;
+
+&lt;p&gt;(My guess is that they are on a on a different scope level, e.g. class level and function level, and the compiler is using some kind of name mangling)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class  MyTest[A](){
+    type MyType  = A
+
+    def checkString[A](value:A, x:MyType):A = { 
+       value match {
+         case x:String =&amp;gt; println(&quot;Value is a String&quot;)
+         case _ =&amp;gt; println(&quot;Value is not a String&quot;)
+       }
+
+       x match {
+          case x:String =&amp;gt; println(&quot;x is a String&quot;)
+          case _ =&amp;gt; println(&quot;x is not a String&quot;)
+       }
+
+       value
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example output from 2.8.0&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scala&amp;gt; val test = new MyTest[Int]
+test: MyTest[Int] = MyTest@308ff65f
+
+scala&amp;gt; test.checkString(&quot;String&quot;,1)
+Value is a String
+x is not a String
+res7: java.lang.String = String
+
+scala&amp;gt; test.checkString(1,1)
+Value is not a String
+x is not a String
+res8: Int = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3755453/scala-listener-observer</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Scala Listener/Observer</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="listener"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="observer"/>
+        <author>
+            <name>Jeb</name>
+            <uri>http://stackoverflow.com/users/31830</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3755453/scala-listener-observer" />
+        <published>2010-09-20T20:58:43Z</published>
+        <updated>2010-09-20T21:27:32Z</updated>
+        <summary type="html">
+            &lt;p&gt;Typically, in Java, when I&#39;ve got an object who&#39;s providing some sort of notification to other objects, I&#39;ll employ the Listener/Observer pattern. &lt;/p&gt;
+
+&lt;p&gt;Is there a more Scala-like way to do this? Should I be using this pattern in Scala, or is there something else baked into the language I should be taking advantage of? &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3754089/scala-for-comprehension</id>
+        <re:rank scheme="http://stackoverflow.com">4</re:rank>
+        <title type="text">Scala &quot;&lt;-&quot; for comprehension</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="loops"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="compiler-theory"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="for-comprehension"/>
+        <author>
+            <name>Felix</name>
+            <uri>http://stackoverflow.com/users/238100</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3754089/scala-for-comprehension" />
+        <published>2010-09-20T17:59:21Z</published>
+        <updated>2010-09-20T19:37:35Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello guys,&lt;/p&gt;
+
+&lt;p&gt;I have found that Scala always has a &quot;natural explanation&quot; to anything. Always something like &quot;ohh, but that&#39;s just a function being called on this and that object with this and that parameter&quot;. In a sense, nothing is really compiler-magic as we know it from other languages.&lt;/p&gt;
+
+&lt;p&gt;My question is on the &lt;strong&gt;&lt;em&gt;&amp;lt;-&lt;/em&gt;&lt;/strong&gt; operator as used in the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for(i &amp;lt;- 0 to 10) println(i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example I can see it being rewritten to something like: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0.to(10).foreach((i:Int)=&amp;gt;println(i))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but this doesn&#39;t explain how the &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; got carried into the anonymous function inside the foreach function. At the point where you write &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; it is not an object, and not yet a declared variable. So what is it, and how is it being carried over to the inside of foreach?&lt;/p&gt;
+
+&lt;p&gt;My guess is that I finally discovered something which is in fact &lt;em&gt;compiler magic&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for your time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To clarify,&lt;/strong&gt; my question is: how does the &amp;lt;- operator work in the 1st line of code since i is not an object on which it can be called as a function.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3757248/scala-types-and-inheritance-misunderstanding</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">scala types and inheritance misunderstanding</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>kolchanov</name>
+            <uri>http://stackoverflow.com/users/448692</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3757248/scala-types-and-inheritance-misunderstanding" />
+        <published>2010-09-21T04:13:47Z</published>
+        <updated>2010-09-21T06:36:54Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello,&lt;/p&gt;
+
+&lt;p&gt;could you explain me what is incorrect in this trivial example?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class C1 (val id: Int) 
+
+abstract class C2 [T] {
+    def m1 [T] 
+}
+
+class C3 [C1] extends C2
+{
+    override 
+    def m1 (obj: C1) {
+        println (obj.id)        
+    }           
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I have got: value id is not a member of type parameter C1
+Why?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3754599/scala-create-structure-xml-from-lists-of-lists</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Scala: Create structure (XML) from Lists of Lists</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="xml"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="list"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>Bjorn J</name>
+            <uri>http://stackoverflow.com/users/285049</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3754599/scala-create-structure-xml-from-lists-of-lists" />
+        <published>2010-09-20T19:04:02Z</published>
+        <updated>2010-09-21T23:17:53Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a structure from java, a List &amp;lt; List &amp;lt; String &gt; &gt; containing
+elements like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[ &quot;Node0&quot;, &quot;Node00&quot;, &quot;Leaf0&quot;],
+ [ &quot;Node0&quot;, &quot;Node00&quot;, &quot;Leaf1&quot;],
+ [ &quot;Node1&quot;, &quot;Leaf2&quot;],
+ [ &quot;Node0&quot;, &quot;Leaf3&quot;],
+ [ &quot;Node2&quot;, &quot;Node20&quot;, &quot;Node200&quot;, &quot;Leaf4&quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What I want to do is to create a XML structure (using Scala) in
+the most simple way, ending in something like the below.
+I could do this is many ways, iterating, recursive calls etc.&lt;/p&gt;
+
+&lt;p&gt;Any suggestions for a compact readable way of solving this?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;node&amp;gt; Node0 
+      &amp;lt;node&amp;gt; Node00 
+            &amp;lt;node&amp;gt; Leaf0 &amp;lt;/node&amp;gt;
+            &amp;lt;node&amp;gt; Leaf1 &amp;lt;/node&amp;gt;
+      &amp;lt;/node&amp;gt;
+      &amp;lt;node&amp;gt; Leaf3 &amp;lt;/node&amp;gt;
+&amp;lt;/node&amp;gt;
+&amp;lt;node&amp;gt; Node1
+      &amp;lt;node&amp;gt; Leaf2 &amp;lt;/node&amp;gt;
+&amp;lt;/node&amp;gt;
+&amp;lt;node&amp;gt; Node2
+      &amp;lt;node&amp;gt; Node20
+            &amp;lt;node&amp;gt; Node200
+                  &amp;lt;node&amp;gt; Leaf4 &amp;lt;/node&amp;gt;
+            &amp;lt;/node&amp;gt;
+      &amp;lt;/node&amp;gt;
+&amp;lt;/node&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3753899/hiding-non-java-classes-from-findbugs</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Hiding non-java classes from findbugs</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="maven-2"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="findbugs"/>
+        <author>
+            <name>sblundy</name>
+            <uri>http://stackoverflow.com/users/4893</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3753899/hiding-non-java-classes-from-findbugs" />
+        <published>2010-09-20T17:32:47Z</published>
+        <updated>2010-09-22T18:33:30Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a mixed scala/java project - mostly java. I would like to use Findbugs on my java code, but the scala classes are giving it trouble. So I&#39;d like to exclude them from Findbugs. So far I&#39;ve tried listing the scala classes in an exclude filter, but that&#39;s not helping. I&#39;m using the maven codehaus findbugs plugin version 2.3.1.&lt;/p&gt;
+
+&lt;p&gt;The exceptions I&#39;m getting mostly take this form:&lt;/p&gt;
+
+&lt;pre&gt;
+Exception analyzing some.scala.Class using detector edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer
+  java.lang.NullPointerException
+    At edu.umd.cs.findbugs.classfile.engine.ClassParserUsingASM$1$2.visitEnd(ClassParserUsingASM.java:319)
+    At org.objectweb.asm.ClassReader.accept(Unknown Source)
+    At edu.umd.cs.findbugs.asm.FBClassReader.accept(FBClassReader.java:44)
+    At org.objectweb.asm.ClassReader.accept(Unknown Source)
+    At edu.umd.cs.findbugs.classfile.engine.ClassParserUsingASM.parse(ClassParserUsingASM.java:93)
+    At edu.umd.cs.findbugs.classfile.engine.ClassParserUsingASM.parse(ClassParserUsingASM.java:414)
+    At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:65)
+    At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:39)
+    At edu.umd.cs.findbugs.classfile.impl.AnalysisCache.getClassAnalysis(AnalysisCache.java:214)
+    At edu.umd.cs.findbugs.ba.XFactory.getXClass(XFactory.java:581)
+    At edu.umd.cs.findbugs.ba.AnalysisCacheToAnalysisContextAdapter.setAppClassList(AnalysisCacheToAnalysisContextAdapter.java:319)
+    At edu.umd.cs.findbugs.FindBugs2.createAnalysisContext(FindBugs2.java:785)
+    At edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:187)
+    At edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:348)
+    At edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1057)
+&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3760928/ensime-doesnt-show-source-code-of-downloaded-libraries</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Ensime doesn&#39;t show source code of downloaded libraries</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="emacs"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="ensime"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala-ide"/>
+        <author>
+            <name>Jeriho</name>
+            <uri>http://stackoverflow.com/users/316563</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3760928/ensime-doesnt-show-source-code-of-downloaded-libraries" />
+        <published>2010-09-21T13:45:44Z</published>
+        <updated>2010-09-21T15:56:57Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;m currently a &lt;a href=&quot;http://stackoverflow.com/questions/3626203/text-editor-for-scala&quot;&gt;happy user of emacs-ensime&lt;/a&gt;. Wholly it&#39;s a good IDE but there is an issue - I can&#39;t view scaladoc when I choose some method of a class in type inspector. I use ivy for dependency management, it downloads libs that I need with source code and doc jars (sometimes only with docs/sources). &lt;/p&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;http://aemon.com/file_dump/ensime_manual.html#tth_sEc4.9&quot; rel=&quot;nofollow&quot;&gt;ensime manual&lt;/a&gt; it should work.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If ENSIME cannot find the source for a type or member, it will instead try to browse to the www documentation. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Any suggestions why it can&#39;t find source and how to fix it?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3744016/what-type-to-use-to-store-a-single-char-in-scala</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">What type to use to store a single char in Scala? </title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="datatypes"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="char"/>
+        <author>
+            <name>Ivan</name>
+            <uri>http://stackoverflow.com/users/274627</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3744016/what-type-to-use-to-store-a-single-char-in-scala" />
+        <published>2010-09-19T00:07:48Z</published>
+        <updated>2010-09-20T12:23:48Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am writing a function which is meant to take a character as an argument and return a character. Using String for this looks a bit strange for me. Should I, or there is something like a char type in Scala 2.8?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3716321/is-java-really-less-complex-than-scala</id>
+        <re:rank scheme="http://stackoverflow.com">13</re:rank>
+        <title type="text">Is Java *really* less complex than Scala? [closed]</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="programming-languages"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="language-features"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="language-design"/>
+        <author>
+            <name>Kevin Wright</name>
+            <uri>http://stackoverflow.com/users/165009</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3716321/is-java-really-less-complex-than-scala" />
+        <published>2010-09-15T09:27:14Z</published>
+        <updated>2010-09-15T14:34:36Z</updated>
+        <summary type="html">
+            &lt;p&gt;I frequently hear claims that Scala is much more &quot;complex&quot; than Java.&lt;/p&gt;
+
+&lt;p&gt;Can anyone therefore provide an example of Java code that can&#39;t be improved by writing it in Scala, or Scala code that &lt;em&gt;can&lt;/em&gt; be improved by writing it in Java (but not by just rewriting within Scala)&lt;/p&gt;
+
+&lt;p&gt;By &quot;improve&quot;, I mean that the code is better with regards to one (or more) of the following characteristics:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;readability - &lt;em&gt;how quickly can another developer, familiar with the language, understand the code&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;maintainability - &lt;em&gt;how much work is involved in a simple refactoring&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;thread safety&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;... but doesn&#39;t sacrifice any of the above qualities.&lt;/p&gt;
+
+&lt;p&gt;It must be a plausible example, something that could potentially exist in a real program.&lt;/p&gt;
+
+&lt;p&gt;I also don&#39;t expect the API to match 100% after the transformation, and would prefer that Scala code sticks to Scala idioms, while Java sticks to Java idioms.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3740505/scala-analogues-of-qtconcurrent</id>
+        <re:rank scheme="http://stackoverflow.com">5</re:rank>
+        <title type="text">Scala analogues of QtConcurrent</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="mapreduce"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="parallel-programming"/>
+        <author>
+            <name>baleog</name>
+            <uri>http://stackoverflow.com/users/451235</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3740505/scala-analogues-of-qtconcurrent" />
+        <published>2010-09-18T05:25:57Z</published>
+        <updated>2010-09-21T17:28:54Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello!
+What are the analogues of QtConcurrent for Scala (or Java)? Ie simplified implementation of MapReduce, the parallel map and foldl.
+Thank you&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3751062/editor-does-not-contain-main-type</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Editor does not contain main type</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/>
+        <author>
+            <name>thetuxracer</name>
+            <uri>http://stackoverflow.com/users/174936</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3751062/editor-does-not-contain-main-type" />
+        <published>2010-09-20T11:37:51Z</published>
+        <updated>2010-09-20T21:36:52Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello,
+first of all, i like to say that i have read the other two questions regarding the same problem, and the solutions outlined in them did not help me. i tried cleaning, rebuilding, re-opening but it ddnt work out. I use eclipse for scala dev. This is the sample prog that i am trying to get an output from, its just casbah.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.examples.casbah
+
+import com.novus.casbah.mongodb.MongoConnection
+
+object newObject {
+  def main(args: Array[String]): Unit = {
+
+    val mongoConn = MongoConnection()
+    val mongoDB = mongoConn(&quot;casbah_test&quot;)
+
+    val builder = MongoDBObject.newBuilder
+    builder += &quot;foo&quot; -&amp;gt; &quot;bar&quot;
+    builder += &quot;x&quot; -&amp;gt; &quot;y&quot;
+    builder += (&quot;pie&quot; -&amp;gt; 3.14)
+    builder += (&quot;spam&quot; -&amp;gt; &quot;eggs&quot;, &quot;mmm&quot; -&amp;gt; &quot;bacon&quot;)
+    // You must explicitly cast the result to a DBObject
+    // to receive it as such; you can also request it &#39;asDBObject&#39;
+    val newObj = builder.result.asDBObject
+
+    Console.println((&quot;A&quot;, &quot;ProGGram&quot;))
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I get the following error in the eclipse error log:&lt;/p&gt;
+
+&lt;p&gt;An unexpected exception was thrown&lt;/p&gt;
+
+&lt;p&gt;this is the &lt;a href=&quot;http://pastebin.ca/1944928&quot; rel=&quot;nofollow&quot;&gt;stack trace&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;i read one comment about trying to run via clicking on the root of source project. But i only see Run as Java Applet and Run as Java Application. There is no option to run as Scala application. I have to run it using Alt+Shift+X S&lt;/p&gt;
+
+&lt;p&gt;TIA.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/3753964/improve-sbt-doc-generation</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Improve sbt doc generation</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="scala"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="documentation-generation"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="lift"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=scala&amp;sort=hot/tags" term="sbt"/>
+        <author>
+            <name>Debilski</name>
+            <uri>http://stackoverflow.com/users/200266</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/3753964/improve-sbt-doc-generation" />
+        <published>2010-09-20T17:44:32Z</published>
+        <updated>2010-09-20T20:26:16Z</updated>
+        <summary type="html">
+            &lt;p&gt;When I run &lt;code&gt;sbt doc&lt;/code&gt;, it results in a nice but nonetheless pretty basic documentation. Is it possible to &lt;/p&gt;
+
+&lt;p&gt;a) include the source files for the class definition and&lt;/p&gt;
+
+&lt;p&gt;b) inherit the docstrings for inherited members?&lt;/p&gt;
+
+&lt;p&gt;What do I need to add to my project definition?&lt;/p&gt;
+
+&lt;p&gt;(It’s a Lift project, so most important would be to have the inherited Lift docstrings present.)&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+</feed>
