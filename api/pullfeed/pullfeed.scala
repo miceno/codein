@@ -36,6 +36,7 @@ object PullFeed {
     val arguments = getArgs(args)
 
     // 2.1. Read the XML file
+    println ( "arguments= " + arguments( "url"))
     var data = XML.loadString(Source.fromURL(arguments("url")) mkString)
 
 /*
