@@ -138,9 +138,13 @@ a,
 color:#47C3D3;
 }
 
-#header a,
+#header a {
+color:#47C3D3;
+}
+
 #footer a {
 color:#47C3D3;
+display:none;
 }
 
 
@@ -156,6 +160,7 @@ border-color:#AAAAAA;
 }
 
 #aside_primary {
+display: none;
 background-color:#144A6E;
 }
 
