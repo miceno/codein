@@ -496,3 +496,14 @@ background-position:90% 47%;
 .pagination .nav_prev a.processing {
 background-position:10% 47%;
 }
+
+/* Begin changes for Socialcoding */
+#content { width: 70% }
+
+#form_notice label {
+color: white;
+}
+
+#anon_notice{ display: none; }
+
+/* END CHANGES SOCIALCODING */
