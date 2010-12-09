@@ -205,3 +205,28 @@ object PullFeed {
 
 }
 
+case class Analizador ( url: String, expression: String, last_update : Date, max_elements : Integer, sort_order: Boolean ){
+
+    
+    val expressions= tokenize( arguments( "expression"))
+    var mapa = new HashMap[ String, Array[String]]
+
+    expressions foreach { v =>
+    // Subelements
+        println( "variable= " + v(0))
+        val s= v(1) split "//" filter (x=> x.length > 0)
+        println( "subelementos")
+        s foreach ( x=> { print( "\""); print(x); print( "\" "); } )
+        println( "")
+
+        val z= extractSubElements( data, s)
+        println( "sub\n+++++++")
+        mapa += ( v(0)-> (z  map ( x => x.text) ).toArray)
+    }
+
+    mapa foreach { v=> println( v._1 + " -> "); v._2 foreach println; println("----") }
+
+    
+}
+
+
