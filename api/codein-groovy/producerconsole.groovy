@@ -1,5 +1,6 @@
 //
-//  jms-producer
+//  Producer console injects messages in a queue
+//  Reads the standard input and compose messages
 //
 //  Created by Orestes Sanchez on 2010-12-06.
 //  Copyright (c) 2010 Telefónica I+D. All rights reserved.

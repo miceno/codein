@@ -1,3 +1,10 @@
+/**
+ * Process a feed from a queue:
+ * 1. Read a queue 
+ * 2. Get a message containing a feed 
+ * 3. parses the feed
+ * 4. inserts new events in the database (TODO)
+ */
 
 import groovy.jms.*
 import javax.jms.Message

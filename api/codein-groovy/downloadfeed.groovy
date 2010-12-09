@@ -1,3 +1,6 @@
+/**
+* Download a feed in raw format and send it to a queue
+*/
 
 import groovy.jms.*
 import javax.jms.Message

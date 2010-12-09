@@ -1,3 +1,6 @@
+/**
+* A consumer console that consumes all the message in a queue
+*/
 
 import groovy.jms.*
 import javax.jms.Message
