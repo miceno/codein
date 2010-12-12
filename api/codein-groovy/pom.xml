@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Generated from archetype; please customize.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.tid.socialcoding</groupId>
+    <artifactId>codein-groovy</artifactId>
+    <name>Example Project</name>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+
+	
+        <dependency>
+            <groupId>org.codehaus.groovy.maven.runtime</groupId>
+            <artifactId>gmaven-runtime-1.6</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.6.1</version>
+        </dependency>
+
+        <dependency>
+          <groupId>commons-lang</groupId>
+          <artifactId>commons-lang</artifactId>
+          <version>2.3</version>
+        </dependency>
+
+<dependency>
+  <groupId>org.lpny</groupId>
+  <artifactId>groovyrestlet</artifactId>
+  <version>0.3-SNAPSHOT</version>
+</dependency>
+
+        <dependency>
+          <groupId>org.restlet</groupId>
+          <artifactId>org.restlet</artifactId>
+          <version>1.1.10</version>
+        </dependency>
+
+        <dependency>
+          <groupId>org.codehaus.groovy.modules.http-builder</groupId>
+          <artifactId>http-builder</artifactId>
+          <version>0.5.1</version>
+        </dependency>
+        
+        <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring</artifactId>
+          <version>2.5.6</version>
+        </dependency>
+        
+        <dependency>
+          <groupId>javax.ws.rs</groupId>
+          <artifactId>jsr311-api</artifactId>
+          <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+          <resource>
+          </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateStubs</goal>
+                            <goal>compile</goal>
+                            <goal>generateTestStubs</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+<repositories>
+<repository>  
+   <id>maven-restlet</id>  
+   <name>Public online Restlet repository</name>  
+   <url>http://maven.restlet.org</url>  
+</repository>  
+
+</repositories>
+</project>
