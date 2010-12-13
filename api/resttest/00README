@@ -1,0 +1,34 @@
+Restlet to produce an ATOM representation of the Activity Stream
+
+Installing
+==========
+
+File pom.xml includes all the dependencies. One all the jars are download, link
+them to directory .groovy/lib
+
+For instance, run:
+
+cd ~/.groovy/lib
+find $MAVEN_REPO -name "*.jar" | xargs -J xxx ln -s xxx .
+
+Make sure you read the Logging section to properly configure logging.
+
+Run
+===
+To run:
+   groovy s.groovy
+
+
+s.groovy contains a script to use GroovyRestlet DSL and launch a Restlet.
+
+Logging
+=======
+
+Logging of GroovyRestlet is based on SLF4J, but logging of Restlet is based on
+JDK. You should read instructions in http://www.slf4j.org/legacy.html to 
+properly configure logging.
+
+To configure SLF4J logging make sure you read:
+   http://www.slf4j.org/manual.html#binding
+
+
