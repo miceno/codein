@@ -87,13 +87,13 @@ public class CodeinJMS
      */
     Message createMessage( String type, def input){            
         //Mandamos en funcion de la cola necesaria.
-        Message msg = session.createMessage()
+        Message msg = session.createMapMessage()
 
         // Set msg type
-        msg.setStringProperty( MSG_TYPE, type)
+        msg.setString( MSG_TYPE, type)
     
         // Set message body
-        msg.setStringProperty( MSG_PAYLOAD, input.toString())
+        msg.setString( MSG_PAYLOAD, input.toString())
         return msg
     }
 

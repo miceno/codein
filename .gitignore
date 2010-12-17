@@ -1,0 +1,7 @@
+*.log
+*.swp
+.classpath
+.scala_dependencies
+.project
+.settings/
+target/

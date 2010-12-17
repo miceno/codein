@@ -12,6 +12,7 @@ import static groovyx.net.http.ContentType.*
 
 
 
+import es.tid.socialcoding.*
 import es.tid.socialcoding.producer.*
 
 /**
@@ -50,6 +51,8 @@ def cli = new CliBuilder( usage: 'groovy ' )
 cli.h(longOpt: 'help', 'usage information')
 cli.u(argName:'url', longOpt:'url', required: true,
       args: 1, 'URL of an RSS/Atom feed')
+cli.c(argName:'config', longOpt:'config', required: true,
+      args: 1, 'configuration file')
 
 def opt = cli.parse(args)
 if (!opt) return
@@ -57,9 +60,6 @@ if (opt.h) {
    cli.usage()
    return
 }
-
-
-
 
 // FeedReader resultado= new FeedReader()
 RemoteReader resultado= new RemoteReader()
@@ -70,10 +70,9 @@ strResultado= new StringWriter()
 
 println "resultado: " + strResultado.toString()
 
-p= new Producer( 'producer.config')
+p= new Producer( opt.c)
 
-msgType= 'feed'
-Message msg= p.createMessage( msgType, strResultado)
+Message msg= p.createMessage( FeedType.FEED, strResultado)
 p.sendMessage( msg )
 
 System.exit(0)

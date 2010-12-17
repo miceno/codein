@@ -31,8 +31,15 @@ Message msg = c.getNextMessage( waitTime)
 
    if( msg != null) {
            println "mensaje recibido : " + msg
-           println "message type: " + msg.getString( CodeinJMS.MSG_TYPE)
-           println "message payload: " + msg.getString( CodeinJMS.MSG_PAYLOAD)
+    def messageType= msg.getString( CodeinJMS.MSG_TYPE)
+    def messagePayload= msg.getString( CodeinJMS.MSG_PAYLOAD)
+           println "message type: " + messageType
+           println "message payload: " + messagePayload
+
+           def feed= new XmlSlurper().parseText( messagePayload)
+
+            println "Feed".center( 40, "-") + feed
+
    }
 
 }
