@@ -56,8 +56,6 @@ public class CodeinJMS
      * Load configuration for Logging and for the application
      */
     private void loadConfig( String configFile){
-        //Carga de la configuracion de los logs
-        PropertyConfigurator.configure(new File('log4j.properties').toURL())
         // Carga propertyFile
         config = new ConfigSlurper().parse(new File( configFile).toURL())
         // Get brokerUrl from config
