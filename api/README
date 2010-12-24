@@ -1,3 +1,6 @@
-hooks ... Hooks for SVN on python
-pullfeed ... Download a feed and map feed fields to codein fields
-scripts ... PHP scripts
+hooks ........... Hooks for SVN on python
+pullfeed ........ Download a feed and map feed fields to codein fields
+scripts ......... PHP scripts
+atomfeedexample.. Atom Feed generator
+codein-groovy.... Codein Groovy port
+resttest......... REST mockup for the activity stream in Groovy
