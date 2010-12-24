@@ -33,7 +33,7 @@ public class AtomFeedGenerator {
 	protected String authorName;
 	protected String authorMail;
 
-	protected int SUMMARY_LENGTH = 10;
+	protected int SUMMARY_LENGTH = 100;
 	
 	public AtomFeedGenerator(String feedId, String feedTitle, String authorName, String authorMail){
 		this.feedId = feedId;
@@ -49,7 +49,7 @@ public class AtomFeedGenerator {
 		entries = new Vector<Entry>();
 	}
 	
-	public void addEntry(String title, String text, String category, Date date){
+	public void addEntry(String id, String title, String text, String category, Date date){
 		// Retrieve existing category or add it to the feed
 		Category c = null;
 
@@ -72,8 +72,8 @@ public class AtomFeedGenerator {
 			entry.getCategories().add( c );
 
 		entry.setContent( getContent(text) );
-		entry.setId( "entry#" + categories.size() );
-		entry.setPublished( new Date() );
+		entry.setId( "entry#" + id );
+		entry.setPublished( date);
 		entry.setTitle( new Text(MediaType.TEXT_PLAIN, title) );
 		entry.setSummary( summarize(text) );
 		

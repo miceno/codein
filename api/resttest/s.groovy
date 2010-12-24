@@ -9,12 +9,46 @@ import org.apache.log4j.PropertyConfigurator
 
 PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
+
+class GlobalFeed {
+    def username
+    private AtomFeedGenerator generator_
+
+    GlobalFeed( ){
+        generator_ = new AtomFeedGenerator( 
+                          "GlobalFeed", 
+                          "Global Feed of SocialCoding", 
+                          "socialcoding", 
+                          "socialcoding@example.com");
+    }
+
+    Feed getFeed(){
+        return generator_.getFeed()
+    }
+
+    public void test() throws IOException{
+        def seed = System.currentTimeMillis() + Runtime.runtime.freeMemory()
+        Random r= new Random( seed)
+        for (int c = 0; c < 3; c++) {
+            for (int i = 0; i < 15; i++) {
+                generator_.authorName= "autor$c-$i"
+                generator_.authorMail= "autor$c-$i@example.com"
+                generator_.addEntry("$c,$i", "Global Title #$c,$i", getText("$c-$i"), "Category #"+i, new Date() - r.nextInt( 300) );
+            }
+        }
+    }
+    String getText(String i){
+            return "Global This is the text to read for entry number " + i;
+    }
+}
+
 class UserFeed {
     def username
     private AtomFeedGenerator generator_
 
-    UserFeed(){
-    generator_ = new AtomFeedGenerator("FieldID", "FeedTitle", "AuthorName", "author@mail");
+    UserFeed( username){
+    this.username = username
+    generator_ = new AtomFeedGenerator("FieldID", "FeedTitle", this.username, this.username + "@mail.com");
     }
 
     Feed getFeed(){
@@ -24,9 +58,15 @@ class UserFeed {
     public void test() throws IOException{
         for (int c = 0; c < 3; c++) {
             for (int i = 0; i < 5; i++) {
-                generator_.addEntry("Title #" +i, getText(i), "Category #"+i, new Date());
+                generator_.authorName= username
+                generator_.authorMail= "$username@example.com"
+                generator_.addEntry("$c,$i", "Title #$c,$i", getText("$c-$i"), "Category #"+i, new Date());
             }
         }
+    }
+
+    String getText(String i){
+            return "This is the User text to read for entry number " + i;
     }
 
 }
@@ -38,25 +78,30 @@ class UserFeed {
 
 String script= '''
 
+final Integer PORT=8182
+
+def activityHandle = { req,resp->
+    def g= new GlobalFeed()
+    g.test()
+    resp.setEntity( g.getFeed() )
+}
+
 def userHandle = { req,resp->
-    resp.setEntity( 
-         new UserFeed( username: req.attributes.get('user')).getFeed() 
-                     )
-    // resp.setEntity( new UserFeed( username: req.attributes.get('user')).getFeed() ,mediaType.TEXT_PLAIN )
+    def u= new UserFeed( req.attributes.get('user'))
+    u.test()
+    resp.setEntity( u.getFeed())
 }
 
 builder.component{
 final String USER= "scott"
 final String PASSWORD= "tiger"
-    current.servers.add(protocol.HTTP, 8182)
+    current.servers.add(protocol.HTTP, PORT)
     // The REST Application with an initial URI
     application(uri:"/activity"){
         router{
             // The main activity stream
-            def activityRestlet= restlet(uri:"/", handle:{req, resp->
-                resp.setEntity("Global activity of the site",
-                        mediaType.TEXT_PLAIN)
-            })
+            def activityRestlet= restlet(uri:"/", handle: activityHandle )
+
             // The User activity stream
             restlet(uri:"/{user}", handle: userHandle)
 
