@@ -11,7 +11,7 @@
  Target Server Version : 50144
  File Encoding         : utf-8
 
- Date: 12/23/2010 20:49:31 PM
+ Date: 12/27/2010 12:45:55 PM
 */
 
 SET NAMES utf8;
@@ -53,7 +53,7 @@ CREATE TABLE `User` (
   `domain` varchar(255) DEFAULT NULL COMMENT 'Domain name',
   UNIQUE KEY `id` (`UUID`,`domain`),
   KEY `userid` (`userId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `UserFeed`
@@ -65,4 +65,10 @@ CREATE TABLE `UserFeed` (
   UNIQUE KEY `user feeds` (`userId`,`feedId`),
   KEY `feedid` (`feedId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  View structure for `userfeedview`
+-- ----------------------------
+DROP VIEW IF EXISTS `userfeedview`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `userfeedview` AS select `user`.`userId` AS `userId`,`feed`.`feedId` AS `feedId`,`user`.`UUID` AS `UUID`,`user`.`domain` AS `domain`,`feed`.`name` AS `name`,`feed`.`url` AS `url`,`feed`.`frequency` AS `frequency` from ((`userfeed` join `user`) join `feed` on(((`userfeed`.`userId` = `user`.`userId`) and (`userfeed`.`feedId` = `feed`.`feedId`))));
 
