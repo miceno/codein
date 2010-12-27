@@ -72,7 +72,7 @@ println "resultado: " + strResultado.toString()
 
 p= new Producer( opt.c)
 
-Message msg= p.createMessage( FeedType.FEED, strResultado)
+Message msg= p.createMessage( MessageType.FEED, strResultado)
 p.sendMessage( msg )
 
 System.exit(0)

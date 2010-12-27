@@ -91,7 +91,7 @@ public class CodeinJMS
         msg.setString( MSG_TYPE, type)
     
         // Set message body
-        msg.setString( MSG_PAYLOAD, input.toString())
+        input.each{ key,value -> msg.setString( key, value.toString()) }
         return msg
     }
 
