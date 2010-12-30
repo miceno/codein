@@ -53,24 +53,29 @@ log.debug "feed begin dump".center( 30, '=')
 log.debug  f.text
 log.debug "feed end dump".center( 20, '=')
 
-xpath.split( ",").each{ xexpression ->
-    log.debug "begin parsing feed with ${xexpression}"
+def xp = XPathFactory.newInstance().newXPath()
+def xpInner = XPathFactory.newInstance().newXPath()
+def expr     = xp.compile(XPATH_EXPRESSION)
+def nodes    = expr.evaluate(doc, XPathConstants.NODESET)
 
-    def xp = XPathFactory.newInstance().newXPath()
-    def expr     = xp.compile(xexpression)
-    def nodes    = expr.evaluate(doc, XPathConstants.NODESET)
+ 
+def lexpression= xpath.split( ",")
 
-    /* Print each element */
-    nodes.each{ 
-       log.debug "${it.nodeName}: $it.textContent"
-    }
+    // For each node, extract all the expressions
+    nodes.collect{
+        element ->
+        // For each expression extract data
+        lexpression.collect{ xexpression ->
+           log.debug "begin parsing feed with ${xexpression}"
+           def result= xp.evaluate( xexpression, element)
+
+           /* Print each element */
+           log.debug "${xexpression}: ${result}"
+           result
+        }
+    }.each{ log.debug "texto: " + it }
     
-    /* Builds a collection with the text content */
-    nodes.collect{ it.textContent }.each{ log.debug "texto: " + it }
-
     log.debug "end parsing feed"
-
-}
 
 System.exit(0)
 
