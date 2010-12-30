@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:github.com,2008:/robey/configgy/comments</id>
+  <link type="text/html" rel="alternate" href="https://github.com"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/robey/configgy/comments.atom"/>
+  <title>Comments for configgy</title>
+  <updated>2010-12-30T12:32:32-08:00</updated>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/229364</id>
+    <published>2010-12-30T12:32:32-08:00</published>
+    <updated>2010-12-30T12:32:32-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10"/>
+    <title>robey commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10&quot;&gt;project/build/ConfiggyProject.scala&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#comments&quot;&gt;6390d09&lt;/a&gt;:
+        &lt;blockquote title=&quot;hm, yeah, i ran into the same problem. i'll do a new json release and bump this version. i think that's what he meant.&quot;&gt;&lt;p&gt;hm, yeah, i ran into the same problem. i'll do a new json release and bump this version. i think that's what he meant.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>robey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/229326</id>
+    <published>2010-12-30T11:36:53-08:00</published>
+    <updated>2010-12-30T11:36:53-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10&quot;&gt;project/build/ConfiggyProject.scala&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#project/build/ConfiggyProject.scala-P10&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/6390d09c64874a1b6dee7fb7d4b0c3b04f02300a#comments&quot;&gt;6390d09&lt;/a&gt;:
+        &lt;blockquote title=&quot;As far as I can see, there is no scala-json 2.1.5 for 2.8.1, only for 2.8.0
+
+http://maven.twttr.com/com/twitter/json_2.8.0/
+http://maven.twttr.com/com/twitter/json_2.8.1/&quot;&gt;&lt;p&gt;As far as I can see, there is no scala-json 2.1.5 for 2.8.1, only for 2.8.0&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://maven.twttr.com/com/twitter/json_2.8.0/%20%20&quot;&gt;http://maven.twttr.com/com/twitter/json_2.8.0/  &lt;/a&gt;
+&lt;a href=&quot;http://maven.twttr.com/com/twitter/json_2.8.1/&quot;&gt;http://maven.twttr.com/com/twitter/json_2.8.1/&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/206489</id>
+    <published>2010-11-30T18:30:08-08:00</published>
+    <updated>2010-11-30T18:30:08-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#-P0"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#comments&quot;&gt;ac136b0&lt;/a&gt;:
+        &lt;blockquote title=&quot;I see, thanks.&quot;&gt;&lt;p&gt;I see, thanks.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/206486</id>
+    <published>2010-11-30T18:22:45-08:00</published>
+    <updated>2010-11-30T18:22:45-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#-P0"/>
+    <title>robey commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#comments&quot;&gt;ac136b0&lt;/a&gt;:
+        &lt;blockquote title=&quot;everything should be on http://maven.twttr.com/ now. i would erase the leftovers from scala-tools but i don't know how...&quot;&gt;&lt;p&gt;everything should be on &lt;a href=&quot;http://maven.twttr.com/&quot;&gt;http://maven.twttr.com/&lt;/a&gt; now. i would erase the leftovers from scala-tools but i don't know how...&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>robey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/191575</id>
+    <published>2010-11-11T10:50:02-08:00</published>
+    <updated>2010-11-11T10:50:02-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#-P0"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/ac136b06f4527752651011e5b9d16e86475ac8fc#comments&quot;&gt;ac136b0&lt;/a&gt;:
+        &lt;blockquote title=&quot;Any chance this could be pushed to scala-tools? Only 2.0.0 seems to be there:
+
+http://scala-tools.org/repo-releases/net/lag/configgy/&quot;&gt;&lt;p&gt;Any chance this could be pushed to scala-tools? Only 2.0.0 seems to be there:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://scala-tools.org/repo-releases/net/lag/configgy/&quot;&gt;http://scala-tools.org/repo-releases/net/lag/configgy/&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/190538</id>
+    <published>2010-11-10T10:24:11-08:00</published>
+    <updated>2010-11-10T10:24:11-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#-P0"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#comments&quot;&gt;29c8cb8&lt;/a&gt;:
+        &lt;blockquote title=&quot;I see. Thanks for the explanation.&quot;&gt;&lt;p&gt;I see. Thanks for the explanation.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/190533</id>
+    <published>2010-11-10T10:20:16-08:00</published>
+    <updated>2010-11-10T10:20:16-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#-P0"/>
+    <title>robey commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#comments&quot;&gt;29c8cb8&lt;/a&gt;:
+        &lt;blockquote title=&quot;1.5 years later, and nobody is using it. the typesafe config files won't support changing a single value on the fly, so that removes any advantage jmx had over ostrich. i don't regret trying it tho.
+&quot;&gt;&lt;p&gt;1.5 years later, and nobody is using it. the typesafe config files won't support changing a single value on the fly, so that removes any advantage jmx had over ostrich. i don't regret trying it tho.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>robey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/190301</id>
+    <published>2010-11-10T07:06:36-08:00</published>
+    <updated>2010-11-10T07:06:36-08:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#-P0"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment  in &lt;a href=&quot;/robey/configgy/commit/29c8cb8a3dae0e85936cf1d530832669e590e169#comments&quot;&gt;29c8cb8&lt;/a&gt;:
+        &lt;blockquote title=&quot;Out of curiosity, what is the reasoning for removing JMX support?&quot;&gt;&lt;p&gt;Out of curiosity, what is the reasoning for removing JMX support?&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/68986</id>
+    <published>2010-04-21T12:09:00-07:00</published>
+    <updated>2010-04-21T12:09:00-07:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;ivy/ivysettings.xml&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#comments&quot;&gt;deeca37&lt;/a&gt;:
+        &lt;blockquote title=&quot;See the following for details: http://code.google.com/p/specs/issues/detail?id=138
+
+&quot;&gt;&lt;p&gt;See the following for details: &lt;a href=&quot;http://code.google.com/p/specs/issues/detail?id=138&quot;&gt;http://code.google.com/p/specs/issues/detail?id=138&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/68983</id>
+    <published>2010-04-21T12:02:03-07:00</published>
+    <updated>2010-04-21T12:02:03-07:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4"/>
+    <title>eaceaser commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;ivy/ivysettings.xml&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#comments&quot;&gt;deeca37&lt;/a&gt;:
+        &lt;blockquote title=&quot;we've just upgraded our version of specs. what sorts of errors are you seeing with the tests in ant?&quot;&gt;&lt;p&gt;we've just upgraded our version of specs. what sorts of errors are you seeing with the tests in ant?&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/c9e13fcffc1b5722268eaa4d9b0073c8?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>eaceaser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/68981</id>
+    <published>2010-04-21T11:59:51-07:00</published>
+    <updated>2010-04-21T11:59:51-07:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;ivy/ivysettings.xml&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#comments&quot;&gt;deeca37&lt;/a&gt;:
+        &lt;blockquote title=&quot;Yeah, I already merged the sbt branch into the scala-2.8 branch in my configgy tree and it works better than ant/ivy. For some reason, the tests don't run with ant/ivy and scala 2.8.0.RC1, but they run and pass with sbt.&quot;&gt;&lt;p&gt;Yeah, I already merged the sbt branch into the scala-2.8 branch in my configgy tree and it works better than ant/ivy. For some reason, the tests don't run with ant/ivy and scala 2.8.0.RC1, but they run and pass with sbt.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/68980</id>
+    <published>2010-04-21T11:55:12-07:00</published>
+    <updated>2010-04-21T11:55:12-07:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4"/>
+    <title>eaceaser commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;ivy/ivysettings.xml&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#comments&quot;&gt;deeca37&lt;/a&gt;:
+        &lt;blockquote title=&quot;no, I'll fix that.
+
+things are a bit goofy since we're trying to add support for building with sbt, so I wasn't really paying attention.&quot;&gt;&lt;p&gt;no, I'll fix that.&lt;/p&gt;
+
+&lt;p&gt;things are a bit goofy since we're trying to add support for building with sbt, so I wasn't really paying attention.&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/c9e13fcffc1b5722268eaa4d9b0073c8?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>eaceaser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:CommitComment/68721</id>
+    <published>2010-04-21T00:07:27-07:00</published>
+    <updated>2010-04-21T00:07:27-07:00</updated>
+    <link type="text/html" rel="alternate" href="/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4"/>
+    <title>ijuma commented on robey/configgy</title>
+    <content type="html">
+
+
+
+&lt;div class=&quot;details&quot;&gt;
+  
+  &lt;div class=&quot;message&quot;&gt;
+    
+      
+        
+        Comment on &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;ivy/ivysettings.xml&lt;/a&gt; &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#ivy/ivysettings.xml-P4&quot;&gt;L9&lt;/a&gt; in &lt;a href=&quot;/robey/configgy/commit/deeca37625c4cd29ce5c3ae41dd314ad35e096da#comments&quot;&gt;deeca37&lt;/a&gt;:
+        &lt;blockquote title=&quot;Even though the name is testing.scala-tools.org, it has the exact same address as scala-tools.org. Is that intended?&quot;&gt;&lt;p&gt;Even though the name is testing.scala-tools.org, it has the exact same address as scala-tools.org. Is that intended?&lt;/p&gt;&lt;/blockquote&gt;
+      
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <media:thumbnail url="https://secure.gravatar.com/avatar/0eb053bf15b0a3669c973bc50be45a7c?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>ijuma</name>
+    </author>
+  </entry>
+</feed>

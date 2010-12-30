@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/robey/configgy/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/robey/configgy/commits/master.atom"/>
+  <title>Recent Commits to configgy:master</title>
+  <updated>2010-12-14T20:44:40-08:00</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/508d8676e42b9a65d1d40ca65d6ee2e2e15c32e2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/508d8676e42b9a65d1d40ca65d6ee2e2e15c32e2"/>
+    <title>periodically check for swallowed messages we haven't reported yet.</title>
+    <updated>2010-12-14T20:44:40-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/logging/ThrottledHandler.scala
+m src/test/scala/net/lag/logging/ThrottledHandlerSpec.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>periodically check for swallowed messages we haven't reported yet.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c53637a637ab4a7ed849a52d66431b980e893c69</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/c53637a637ab4a7ed849a52d66431b980e893c69"/>
+    <title>remove dead code. ijuma pointed out that it doesn't work anyway.</title>
+    <updated>2010-11-30T17:58:32-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/configgy/EnvironmentAttributes.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>remove dead code. ijuma pointed out that it doesn't work anyway.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4d1cee5aaf5d8db79d6d157190ec30e4a24a9913</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/4d1cee5aaf5d8db79d6d157190ec30e4a24a9913"/>
+    <title>Merge remote branch 'jamesiry/master'</title>
+    <updated>2010-11-30T17:38:08-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build/ConfiggyProject.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>Merge remote branch 'jamesiry/master'&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/27a4d3c5634939f5b87bc49d6916a601660fe46c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/27a4d3c5634939f5b87bc49d6916a601660fe46c"/>
+    <title>fix bug in scala 2.7 version.</title>
+    <updated>2010-11-30T17:25:52-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/logging/Logger.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>fix bug in scala 2.7 version.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/42b11adafba7eb3f95dc80dbb8a0c58478ef6b37</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/42b11adafba7eb3f95dc80dbb8a0c58478ef6b37"/>
+    <title>Fix for Issue#35: Removed dependency on LogManager because it is not on Google AppEngine's white list.</title>
+    <updated>2010-11-30T17:22:29-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/806036990cad14edd9fbe70eaf41c0ba?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Eric Pabst</name>
+      <uri>https://github.com/epabst</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/logging/Logger.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>Fix for Issue#35: Removed dependency on LogManager because it is not on Google AppEngine's white list.
+
+The elements method now simply returns all of the loggers in Logger's cache.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2e6d2d44df289e9b471e4d182e47d18acb68af0d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/2e6d2d44df289e9b471e4d182e47d18acb68af0d"/>
+    <title>Removed unneeded dependency on vscaladoc</title>
+    <updated>2010-11-12T07:58:57-08:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/cbec28a0ef387d23a75833814524efce?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>James Iry</name>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build/ConfiggyProject.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>Removed unneeded dependency on vscaladoc&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f9c1639208e51f0b9a0db65f396ad37310292aae</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/f9c1639208e51f0b9a0db65f396ad37310292aae"/>
+    <title>1.6.9-SNAPSHOT</title>
+    <updated>2010-11-03T14:27:48-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.9-SNAPSHOT&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/07b801f10531ae53f66008a7a6e40df877766ec6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/07b801f10531ae53f66008a7a6e40df877766ec6"/>
+    <title>1.6.8</title>
+    <updated>2010-11-03T14:27:47-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.8&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cef3003c10d7094e7bb90c3a22fda647b12ea717</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/cef3003c10d7094e7bb90c3a22fda647b12ea717"/>
+    <title>allow a config roll=&quot;hup&quot; to turn off logfile rolling and turn on the sighup handler.</title>
+    <updated>2010-11-03T14:24:48-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/logging/Logger.scala
+m src/test/scala/net/lag/logging/LoggingSpec.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>allow a config roll=&quot;hup&quot; to turn off logfile rolling and turn on the sighup handler.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e8a1e2859e9c97e15edc6cc0be71cf2e95296b00</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/e8a1e2859e9c97e15edc6cc0be71cf2e95296b00"/>
+    <title>1.6.8-SNAPSHOT</title>
+    <updated>2010-11-02T17:41:47-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.8-SNAPSHOT&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/956c1ab54ebffe640ad25862d73b82c908cf4b31</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/956c1ab54ebffe640ad25862d73b82c908cf4b31"/>
+    <title>1.6.7</title>
+    <updated>2010-11-02T17:41:44-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.7&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/93726c442b6c85d36f631ae005f39bec10ca7423</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/93726c442b6c85d36f631ae005f39bec10ca7423"/>
+    <title>Merge branch 'master' of github.com:robey/configgy</title>
+    <updated>2010-11-02T17:06:41-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/configgy/RuntimeEnvironment.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>Merge branch 'master' of github.com:robey/configgy&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0af1745eb9a9d00c519fc2dad160f324cf5713e4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/0af1745eb9a9d00c519fc2dad160f324cf5713e4"/>
+    <title>don't log a separate line for the exception if there's no backtrace.</title>
+    <updated>2010-11-02T17:06:32-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/logging/Formatter.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>don't log a separate line for the exception if there's no backtrace.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3e96104ae032ee8723ee731a529b1fb87f2dae4a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/3e96104ae032ee8723ee731a529b1fb87f2dae4a"/>
+    <title>Handle the case whare parentFile returns null gracefully.</title>
+    <updated>2010-10-25T12:04:20-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/c9e13fcffc1b5722268eaa4d9b0073c8?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>eaceaser</name>
+      <uri>https://github.com/eaceaser</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/configgy/RuntimeEnvironment.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>Handle the case whare parentFile returns null gracefully.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/faddd423d46c68a7d78543da42a7e39d0051b2db</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/faddd423d46c68a7d78543da42a7e39d0051b2db"/>
+    <title>1.6.7-SNAPSHOT</title>
+    <updated>2010-10-19T18:58:51-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.7-SNAPSHOT&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bab9655c94b7e065a32688290d4d432b18fc230e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/bab9655c94b7e065a32688290d4d432b18fc230e"/>
+    <title>1.6.6</title>
+    <updated>2010-10-19T18:58:50-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.6&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/802041c74a573e60d3551a00941b7b9b4a1c467e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/802041c74a573e60d3551a00941b7b9b4a1c467e"/>
+    <title>oops. sigh.</title>
+    <updated>2010-10-19T18:58:29-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/configgy/RuntimeEnvironment.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>oops. sigh.&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b728ede8e5a5f0d41faa55224ba2438b699b04ed</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/b728ede8e5a5f0d41faa55224ba2438b699b04ed"/>
+    <title>1.6.6-SNAPSHOT</title>
+    <updated>2010-10-19T18:40:40-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.6-SNAPSHOT&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d25c2c111894718526172660147b98972d3702ba</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/d25c2c111894718526172660147b98972d3702ba"/>
+    <title>1.6.5</title>
+    <updated>2010-10-19T18:40:40-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m project/build.properties
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>1.6.5&lt;/pre>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9939ee9566f0618f298cc8ddfe8230b478c321b8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/robey/configgy/commit/9939ee9566f0618f298cc8ddfe8230b478c321b8"/>
+    <title>factor out candidate jar detection and add a test.</title>
+    <updated>2010-10-19T18:40:15-07:00</updated>
+    <media:thumbnail height="30" width="30" url="https://secure.gravatar.com/avatar/26f512b6630dd1f92bae3676577ba046?s=30&amp;d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png"/>
+    <author>
+      <name>Robey Pointer</name>
+      <uri>https://github.com/robey</uri>
+    </author>
+    <content type="html">
+      &lt;pre>m src/main/scala/net/lag/configgy/RuntimeEnvironment.scala
+m src/test/scala/net/lag/configgy/RuntimeEnvironmentSpec.scala
+&lt;/pre>
+      &lt;pre style='white-space:pre-wrap;width:81ex'>factor out candidate jar detection and add a test.&lt;/pre>
+    </content>
+  </entry>
+</feed>
+
