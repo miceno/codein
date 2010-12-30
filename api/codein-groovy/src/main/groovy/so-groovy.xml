@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:re="http://purl.org/atompub/rank/1.0">
+    <title type="text">hot questions tagged groovy - Stack Overflow</title>
+    <link rel="self" href="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot" type="application/atom+xml" />
+    <link rel="alternate" href="http://stackoverflow.com/questions/tagged/?tagnames=groovy&amp;sort=hot" type="text/html" />
+    <subtitle>most recent 30 from stackoverflow.com</subtitle>
+    <updated>2010-12-20T08:56:00Z</updated>
+    <id>http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot</id>
+    <creativeCommons:license>http://www.creativecommons.org/licenses/by-nc/2.5/rdf</creativeCommons:license> 
+
+    <entry>
+        <id>http://stackoverflow.com/questions/4481306/ast-transforms-not-working-with-groovy-eclipse-plugin</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">AST transforms not working with groovy eclipse plugin</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="metaprogramming"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4481306/ast-transforms-not-working-with-groovy-eclipse-plugin" />
+        <published>2010-12-19T02:25:03Z</published>
+        <updated>2010-12-20T03:48:49Z</updated>
+        <summary type="html">
+            &lt;p&gt;I wrote a simple AST transform to add logging around annotated methods.  It correctly adds logging around methods when I compile my program with &lt;code&gt;groovyc&lt;/code&gt; on the command line.  However, it doesn&#39;t have any effect when I compile my program in eclipse with the groovy eclipse plugin.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4481948/upgrading-from-groovy-1-3-5-to-1-7-5</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Upgrading from Groovy 1.3.5 to 1.7.5</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Aki Iskandar</name>
+            <uri>http://stackoverflow.com/users/90465</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4481948/upgrading-from-groovy-1-3-5-to-1-7-5" />
+        <published>2010-12-19T06:51:52Z</published>
+        <updated>2010-12-19T10:21:40Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi folks - I&#39;ve just inherited an application written in Groovy (version 1.3.5) and would like to upgrade it to the newest release (version 1.7.5).  &lt;/p&gt;
+
+&lt;p&gt;I can&#39;t seem to find a reference that enumerates the differences in syntax, etc., which I would need to be aware of ... and yes, I looked at &lt;a href=&quot;http://groovy.codehaus.org&quot; rel=&quot;nofollow&quot;&gt;http://groovy.codehaus.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Does anyone know of a good place that lists version changes?  &lt;/p&gt;
+
+&lt;p&gt;Many thanks, &lt;/p&gt;
+
+&lt;p&gt;~Aki&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4482093/mapping-enums-onto-database-in-grails</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Mapping enums onto database in grails</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="enums"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="gorm"/>
+        <author>
+            <name>b4283</name>
+            <uri>http://stackoverflow.com/users/283042</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4482093/mapping-enums-onto-database-in-grails" />
+        <published>2010-12-19T08:02:15Z</published>
+        <updated>2010-12-19T08:54:43Z</updated>
+        <summary type="html">
+            &lt;p&gt;My grails app uses a lot of enums, but current GORM solution for enums isn&#39;t very satisfactory because it implies the data is in the codes, since GORM doesn&#39;t map enums onto database.&lt;/p&gt;
+
+&lt;p&gt;Previously we used a big table containing differnt types of enumerations, e.g.: county and city selection in one table. Hence the table in database would contain 3 columns: the enum type (county or city), id and name (which county or city).&lt;/p&gt;
+
+&lt;p&gt;Right now I&#39;d like to switch them to real enums, but it just seems unlikely with GORM. Tried to do it with transients in domain class, but AFAIK it still requires you to have a static enum already present for the class to refer to.&lt;/p&gt;
+
+&lt;p&gt;Completely lost here, could anybody hint me from where or which function I might get what I wanted ?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4476306/error-with-groovy-ast-transformations-when-cleaning-project-in-eclipse</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Error with Groovy AST transformations when cleaning project in Eclipse</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4476306/error-with-groovy-ast-transformations-when-cleaning-project-in-eclipse" />
+        <published>2010-12-18T02:38:04Z</published>
+        <updated>2010-12-18T20:36:16Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;m trying to work through groovy&#39;s &lt;a href=&quot;http://groovy.codehaus.org/Local+AST+Transformations&quot; rel=&quot;nofollow&quot;&gt;Implementing Local AST Transformations&lt;/a&gt; tutorial, but whenever I clean my project I get this error in each file that has the @WithLogging annotation in it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Groovy:Could not find class for Transformation Processor AC.LoggingASTTransformation declared by AC.WithLogging&lt;/p&gt;
+&lt;/blockquote&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4474649/in-groovy-how-do-you-dynamically-call-a-static-method-of-a-class</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">In groovy, how do you dynamically call a static method of a class?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4474649/in-groovy-how-do-you-dynamically-call-a-static-method-of-a-class" />
+        <published>2010-12-17T20:49:44Z</published>
+        <updated>2010-12-17T20:59:46Z</updated>
+        <summary type="html">
+            &lt;p&gt;In groovy, how do you dynamically call a static method of a class?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;void callMethod(Class c, String staticmethodname){
+     //what goes here to call the static method of class c?
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4475880/cant-set-breakpoint-in-eclipse</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Can&#39;t set breakpoint in eclipse</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4475880/cant-set-breakpoint-in-eclipse" />
+        <published>2010-12-18T00:22:14Z</published>
+        <updated>2010-12-18T00:22:14Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;m using eclipse (and also the groovy-eclipse plugin), and sometimes I can&#39;t set breakpoints on lines.  I&#39;ll double click the gutter, and the breakpoint will flash on then off, and it will set the breakpoint somewhere else, lower in the code.&lt;/p&gt;
+
+&lt;p&gt;I&#39;ll be able to set breakpoints fine for certain parts of the code, but some sections of the code will exhibit the above described behavior.&lt;/p&gt;
+
+&lt;p&gt;When this happens I have to restart eclipse, or cut the code i want to set the breakpoint on, and paste it lower in the file.&lt;/p&gt;
+
+&lt;p&gt;Anyone else experience this, or have an idea what causes it?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4464026/how-usable-is-groovy</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">How usable is Groovy++?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4464026/how-usable-is-groovy" />
+        <published>2010-12-16T18:16:32Z</published>
+        <updated>2010-12-16T22:35:22Z</updated>
+        <summary type="html">
+            &lt;p&gt;How usable is &lt;a href=&quot;http://code.google.com/p/groovypptest/wiki/Welcome&quot; rel=&quot;nofollow&quot;&gt;Groovy++&lt;/a&gt;? Could I start using it today without major problems with getting it working? Does it have a lot of bugs?  Does it integrate nicely with eclipse? &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4473297/cant-run-groovy-unit-tests-in-eclipse</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Can&#39;t run Groovy unit tests in Eclipse</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="unit-testing"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4473297/cant-run-groovy-unit-tests-in-eclipse" />
+        <published>2010-12-17T17:44:30Z</published>
+        <updated>2010-12-17T18:14:29Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have the Groovy Eclipse plugin 2.1.0, and writing groovy code works fine.  When I want to run all of my unit tests, that runs my groovy unit tests just fine.&lt;/p&gt;
+
+&lt;p&gt;However, when I want to run just a single unit test I get a problem.  When I mouse over the debug button in the toolbar this error shows up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nyxWz.png&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I can still click to debug the unit test, but nothing happens.   This only happens with Groovy unit tests, if its a java unit test, I have no problem.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4464407/problem-calling-an-asmx-c-webservice-from-grails</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">problem calling an asmx C# webservice from grails</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="web-services"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovygrails"/>
+        <author>
+            <name>Derek</name>
+            <uri>http://stackoverflow.com/users/229072</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4464407/problem-calling-an-asmx-c-webservice-from-grails" />
+        <published>2010-12-16T19:02:04Z</published>
+        <updated>2010-12-16T23:01:29Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello&lt;/p&gt;
+
+&lt;p&gt;I am trying to call a C# webservice from my grails project. The person who wrote the service gave me the URL to it, which I can access via my browser, and I can also get to the WSDL&lt;/p&gt;
+
+&lt;p&gt;I tried to connect to the webservice (which takes two strings, and an array of strings as parameters) using the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void setClearance(){
+    //connect to webservice and get clearance info
+    def wsdlURL = &quot;Address/to/webservice/ApplicationServices.asmx?WSDL&quot;
+    def proxy = new WSClient(wsdlURL, this.class.classLoader);
+    proxy.initialize();
+    String[] userIds = {this.id};
+    def result = proxy.GetUserInfo(&quot;string1&quot;, &quot;string2&quot;, userIds);  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and I get the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Dec 16, 2010 1:57:02 PM org.apache.cxf.bus.spring.BusApplicationContext getConfigResources
+INFO: No cxf.xml configuration file detected, relying on defaults.
+Dec 16, 2010 1:57:05 PM org.apache.cxf.endpoint.dynamic.DynamicClientFactory outputDebug
+INFO: Created classes: com.my_site.ArrayOfString, com.my_site.GetUserInfo, com.my_site.GetUserInfoResponse, com.my_site.ObjectFactory
+This id?: 518
+Dec 16, 2010 1:57:09 PM groovyx.net.ws.AbstractCXFWSClient invokeMethod
+INFO: Using SOAP version: 1.1
+Dec 16, 2010 1:57:09 PM groovyx.net.ws.AbstractCXFWSClient invokeMethod
+INFO: available method: {http://mysite.com/}GetUserInfo
+Dec 16, 2010 1:57:09 PM org.apache.cxf.phase.PhaseInterceptorChain doIntercept
+WARNING: Interceptor has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Marshalling Error: class [Ljava.lang.String; nor any of its super class is known to th
+is context.
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.marshall(JAXBEncoderDecoder.java:160)
+        at org.apache.cxf.jaxb.io.DataWriterImpl.write(DataWriterImpl.java:169)
+        at org.apache.cxf.interceptor.AbstractOutDatabindingInterceptor.writeParts(AbstractOutDatabindingInterceptor.jav
+a:105)
+        at org.apache.cxf.interceptor.BareOutInterceptor.handleMessage(BareOutInterceptor.java:68)
+        at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:236)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:478)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:308)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:260)
+        at groovyx.net.ws.AbstractCXFWSClient.invokeMethod(AbstractCXFWSClient.java:109)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+        at Employee.setClearance(Employee.groovy:110)
+        at Employee$setClearance.call(Unknown Source)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:121)
+        at FormattedDocumentController$_closure1.doCall(FormattedDocumentController.groovy:76)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:597)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSite.invoke(PogoMetaMethodSite.java:2
+25)
+        at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:51)
+        at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:44)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:143)
+        at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:151)
+        at FormattedDocumentController$_closure1.doCall(FormattedDocumentController.groovy)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:597)
+        at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:88)
+        at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1058)
+        at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1070)
+        at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:886)
+        at groovy.lang.Closure.call(Closure.java:276)
+        at groovy.lang.Closure.call(Closure.java:271)
+        at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsControllerHelper.handleAction(SimpleGrailsControllerHe
+lper.java:372)
+        at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsControllerHelper.executeAction(SimpleGrailsControllerH
+elper.java:236)
+        at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsControllerHelper.handleURI(SimpleGrailsControllerHelpe
+r.java:190)
+        at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsControllerHelper.handleURI(SimpleGrailsControllerHelpe
+r.java:129)
+        at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsController.handleRequest(SimpleGrailsController.java:7
+3)
+        at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java
+:48)
+        at org.codehaus.groovy.grails.web.servlet.GrailsDispatcherServlet.doDispatch(GrailsDispatcherServlet.java:292)
+        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:644)
+        at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:549)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+        at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+        at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+        at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+        at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:292)
+        at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:260)
+        at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:251)
+        at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:183)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:245)
+        at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:134)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.jsecurity.web.servlet.JSecurityFilter.doFilterInternal(JSecurityFilter.java:384)
+        at org.jsecurity.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:183)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.jav
+a:67)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:69
+)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:237)
+        at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:167)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+        at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:849)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+        at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:454)
+        at java.lang.Thread.run(Thread.java:662)
+Caused by: javax.xml.bind.MarshalException
+ - with linked exception:
+[javax.xml.bind.JAXBException: class [Ljava.lang.String; nor any of its super class is known to this context.]
+        at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:318)
+        at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:244)
+        at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:74)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.writeObject(JAXBEncoderDecoder.java:445)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.marshall(JAXBEncoderDecoder.java:139)
+        ... 105 more
+Caused by: javax.xml.bind.JAXBException: class [Ljava.lang.String; nor any of its super class is known to this context.
+        at com.sun.xml.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:246)
+        at com.sun.xml.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:261)
+        at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:653)
+        at com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl$1.serializeBody(ElementBeanInfoImpl.java:152)
+        at com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl$1.serializeBody(ElementBeanInfoImpl.java:189)
+        at com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl.serializeBody(ElementBeanInfoImpl.java:316)
+        at com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl.serializeRoot(ElementBeanInfoImpl.java:323)
+        at com.sun.xml.bind.v2.runtime.ElementBeanInfoImpl.serializeRoot(ElementBeanInfoImpl.java:72)
+        at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:494)
+        at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:315)
+        ... 109 more
+Caused by: javax.xml.bind.JAXBException: class [Ljava.lang.String; nor any of its super class is known to this context.
+        at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getBeanInfo(JAXBContextImpl.java:594)
+        at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:648)
+        ... 116 more
+Dec 16, 2010 1:57:09 PM groovyx.net.ws.AbstractCXFWSClient invokeMethod
+SEVERE: Could not invoke method.
+.
+.
+.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What is the root cause here? The webservice is just returning a C# string, that is in XML formatting..but it shouldnt matter for this right?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4466214/create-a-union-or-join-on-the-values-returned-from-groovy-sql-rows</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Create a union or join on the values returned from groovy sql.rows()</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="sql"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Derek</name>
+            <uri>http://stackoverflow.com/users/229072</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4466214/create-a-union-or-join-on-the-values-returned-from-groovy-sql-rows" />
+        <published>2010-12-16T23:01:32Z</published>
+        <updated>2010-12-17T08:53:43Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am using Groovy&#39;s &lt;code&gt;sql.rows(SPCallString)&lt;/code&gt; function to call a stored procedure which is returning some rows based on the arguments.&lt;/p&gt;
+
+&lt;p&gt;I am doing this for 3 different stored procedures.&lt;/p&gt;
+
+&lt;p&gt;Is there a way in groovy I can perform a &quot;union&quot; on those rows that are returned from the three calls?&lt;/p&gt;
+
+&lt;p&gt;I basically want something like this:&lt;/p&gt;
+
+&lt;p&gt;if these are the rows returned from &lt;code&gt;sql.rows&lt;/code&gt; for each of the three calls, &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-&amp;gt;&quot;X&quot;,&quot;Y&quot;, &quot;M&quot;
+-&amp;gt;&quot;X&quot;,&quot;Y&quot;, &quot;P&quot;
+-&amp;gt;&quot;X&quot;,&quot;Y&quot;, &quot;Q&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I want to return&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-&amp;gt;&quot;X&quot;,&quot;Y&quot;, &quot;M,P,Q&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4459497/using-groovy-actors-to-maximise-throughput-from-database</id>
+        <re:rank scheme="http://stackoverflow.com">2</re:rank>
+        <title type="text">Using groovy actors to maximise throughput from database?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="database"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="concurrency"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="parallel-programming"/>
+        <author>
+            <name>barrymac</name>
+            <uri>http://stackoverflow.com/users/218635</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4459497/using-groovy-actors-to-maximise-throughput-from-database" />
+        <published>2010-12-16T10:04:13Z</published>
+        <updated>2010-12-17T15:45:46Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi folks,&lt;/p&gt;
+
+&lt;p&gt;I&#39;m playing around with the GPars library while working to improve the scalability of a matching system. I&#39;d like to be able to query the database and immediately query the database while the results are being processed concurrently. The bottleneck is reading from the database so I would like to keep the database busy full time while processing the results asynchronously when they are available. I realise I may have some fundamental misunderstandings on how the actor framework works and I&#39;d be happy to be corrected! &lt;/p&gt;
+
+&lt;p&gt;In pseudo code I&#39;m trying to do the following:&lt;/p&gt;
+
+&lt;p&gt;Define two actors, One for running selects against the database and another for processing the records. &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;queryActor querys database and sends results to processorActor&lt;/li&gt;
+&lt;li&gt;queryActor immediately querys database again without waiting for processorActor to finish&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I could probably achieve the simple use case without using actors but my end goal is to have an actor pool that is always working on new queries with potentially different datasources in order to increase the throughput of the system in general.&lt;/p&gt;
+
+&lt;p&gt;The processing Actor will always be much faster than the database query so I would like to query multiple replicas concurrently in future.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;      def processor = actor {
+    loop {
+      react {querySet -&amp;gt;
+        println &quot;processing recordset&quot;
+        if (querySet instanceof Object[]) {
+          MatcherDataRowProcessor matcher = new MatcherDataRowProcessor(matchedRecords, matchedRecordSet);
+
+          matchedRecords = matcher.processRecordset(querySet);
+          reply matchedRecords
+        }
+        else {
+          println &#39;processor fed nothing, halting processor actor&#39;
+          stop()
+        }
+      }
+    }
+  }
+
+  def dbqueryer = actor {
+    println &quot;dbqueryer has started&quot;
+
+    while (batchNum.longValue() &amp;lt;= loopLimiter) {
+      println &quot;hitting db&quot;
+      Object[] querySet
+      def thisRuleBatch = new MatchRuleBatch(targetuidFrom, targetuidTo)
+      thisRuleBatch.targetuidFrom = batchNum * perBatch - perBatch
+      thisRuleBatch.targetuidTo = thisRuleBatch.targetuidFrom + perBatch
+      thisRuleBatch.targetName = targetName
+      thisRuleBatch.whereClause = whereClause
+      querySet = dao.getRecordSet(thisRuleBatch)
+      processor.send querySet
+      batchNum++
+    }
+
+    react { processedRecords -&amp;gt;
+      processor.send false
+    }
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4452797/does-grails-cascade-delete-for-belongsto-even-when-not-using-domain-delete</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Does Grails cascade delete (for belongsTo) even when not using domain.delete()?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="gorm"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="belongs-to"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="cascading-deletes"/>
+        <author>
+            <name>Igs</name>
+            <uri>http://stackoverflow.com/users/537031</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4452797/does-grails-cascade-delete-for-belongsto-even-when-not-using-domain-delete" />
+        <published>2010-12-15T17:13:30Z</published>
+        <updated>2010-12-16T17:02:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;From the Grails site: &lt;a href=&quot;http://www.grails.org/doc/1.0.x/guide/5.%20Object%20Relational%20Mapping%20(GORM).html&quot; rel=&quot;nofollow&quot;&gt;http://www.grails.org/doc/1.0.x/guide/5.%20Object%20Relational%20Mapping%20(GORM).html&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Airport {
+ String name
+ static hasMany = [flights:Flight]
+}
+class Flight {
+ String number
+ static belongsTo = [airport:Airport]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then calling &lt;code&gt;delete()&lt;/code&gt; on an instance of Airport will delete any associated Flight objects.  If I were to delete an Airport using &lt;code&gt;executeUpdate&lt;/code&gt; can I still expect it to delete the Flights?&lt;/p&gt;
+
+&lt;p&gt;Thank you&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4452593/custom-init-on-test-development-mode-in-grails</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Custom init on test/development mode in Grails</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovygrails"/>
+        <author>
+            <name>yura</name>
+            <uri>http://stackoverflow.com/users/426377</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4452593/custom-init-on-test-development-mode-in-grails" />
+        <published>2010-12-15T16:52:11Z</published>
+        <updated>2010-12-15T19:40:38Z</updated>
+        <summary type="html">
+            &lt;p&gt;I want to run specific login in BootStrap class depending on development or test mode is currently used.&lt;/p&gt;
+
+&lt;p&gt;How can I do this?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4455407/get-all-variables-from-page-in-grails-controller</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">get all variables from page in grails controller</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="javascript"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="ajax"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovygrails"/>
+        <author>
+            <name>Derek</name>
+            <uri>http://stackoverflow.com/users/229072</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4455407/get-all-variables-from-page-in-grails-controller" />
+        <published>2010-12-15T22:02:51Z</published>
+        <updated>2010-12-15T22:02:51Z</updated>
+        <summary type="html">
+            &lt;p&gt;When I have a form or formRemote in my .gsp, the action in the controller that is referenced by these gets a list of params that includes everything within the form tags. This means that all of the variables I create client side via javascript are all passed to the controller in the form of a params object upon submission of the form?&lt;/p&gt;
+
+&lt;p&gt;What can I do to replicate this feature when NOT using a form? I want to be able to have an object with say an &quot;onChange&quot; method fire off that same controller action, and the controller action have a list of all the params that are on the page. Is this possible, or will I have to build the parameter list painstakingly manually?&lt;/p&gt;
+
+&lt;p&gt;Also, when I set up my form like the following: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;g:formRemote name=&quot;myForm&quot; method=&quot;post&quot; url=&quot;[action:&#39;getParams&#39;]&quot; action=&quot;getParams&quot; update=&quot;updateMe&quot;&amp;gt;  
+&amp;lt;button style=&quot;width:auto;font-weight:bold; font-size:16px; margin-bottom:10px;padding-bottom:10px;&quot;
+   name=&quot;search&quot;
+   type=&quot;submit&quot;
+   label=&quot;Save&quot;
+   dojoType=&quot;dijit.form.Button&quot;&amp;gt;Search&amp;lt;/button&amp;gt;
+        &amp;lt;%-- QUERIES --%&amp;gt;
+        &amp;lt;fieldset style=&quot;padding: 20px,20px,20px,20px; background-color: #EAEAEA;&quot; &amp;gt;
+            &amp;lt;legend style=&quot;font-size: 14px; font-weight:bold; color: #006DBA;&quot;&amp;gt;Query&amp;lt;/legend&amp;gt; 
+            &amp;lt;g:render template=&quot;queries&quot;/&amp;gt;
+        &amp;lt;/fieldset&amp;gt;
+        &amp;lt;/g:formRemote&amp;gt;
+
+        &amp;lt;div id=&quot;updateMe&quot;&amp;gt;this div is updated by the form&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where the &quot;getParams&quot; action only renders some text back. This is taking me to a brand new page with taht rendered text, instead of just updating the text within the div tag &quot;updateMe.&quot;&lt;/p&gt;
+
+&lt;p&gt;This is obviously not idea - i thought I&#39;d be able to use this to generate a set of data and display it on my page without sending the user to the next page.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4443557/overloading-operator-for-arrays-in-groovy</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Overloading + operator for arrays in groovy</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="overloading"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="operator-keyword"/>
+        <author>
+            <name>JulioCM</name>
+            <uri>http://stackoverflow.com/users/542479</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4443557/overloading-operator-for-arrays-in-groovy" />
+        <published>2010-12-14T19:55:08Z</published>
+        <updated>2010-12-14T23:07:41Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hi there,
+I am a groovy newbie. Maybe this is a piece of cake, but I want to overload the + operator for arrays/lists to code like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def a= [1,1,1]
+def b= [2,2,2]
+
+assert [3,3,3] == a + b 
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4420334/groovy-grails-code-cleanup-suggestions-please</id>
+        <re:rank scheme="http://stackoverflow.com">4</re:rank>
+        <title type="text">Groovy/Grails code cleanup suggestions, please!</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="code"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="clean-up"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="clean-code"/>
+        <author>
+            <name>Alison</name>
+            <uri>http://stackoverflow.com/users/243164</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4420334/groovy-grails-code-cleanup-suggestions-please" />
+        <published>2010-12-12T03:50:46Z</published>
+        <updated>2010-12-13T00:13:33Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;m new to Groovy &amp;amp; Grails, and I have a feeling that things don&#39;t have to be this ugly... so how can I make this code nicer?&lt;/p&gt;
+
+&lt;p&gt;This is a Grails controller class, minus some uninteresting bits.  Try not to get too hung up that my &lt;code&gt;Car&lt;/code&gt; only has one &lt;code&gt;Wheel&lt;/code&gt; - I can deal with that later :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;changeWheel&lt;/code&gt; is an Ajax action.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class MyController {
+    ...
+    def changeWheel = {
+        if(params[&#39;wheelId&#39;]) {
+            def newWheel = Wheel.findById(params[&#39;wheelId&#39;])
+            if(newWheel) {
+                def car = Car.findById(params[&#39;carId&#39;])
+                car?.setWheel(newWheel)
+                if(car?.save()) render &#39;OK&#39;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4441203/using-groovy-eclipse-plugin-to-develop-in-grails</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Using Groovy-Eclipse plugin to develop in Grails</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Rob H</name>
+            <uri>http://stackoverflow.com/users/95699</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4441203/using-groovy-eclipse-plugin-to-develop-in-grails" />
+        <published>2010-12-14T16:05:26Z</published>
+        <updated>2010-12-14T20:16:29Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am evaluating Groovy/Grails for a new project and I am wondering: Can the free Groovy-Eclipse plugin be used to develop Grails applications, and if so, what are the limitations? I am aware of the SpringSource Tool Suite, which includes full support for Grails in Eclipse, but it also includes a bunch of other stuff I don&#39;t care about, so I&#39;m looking for a lighter-weight alternative. &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4434109/what-ide-has-better-support-for-groovy-netbeans-or-eclipse</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">What IDE has better support for groovy, Netbeans or Eclipse?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="eclipse"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="netbeans"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="ide"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4434109/what-ide-has-better-support-for-groovy-netbeans-or-eclipse" />
+        <published>2010-12-13T22:28:01Z</published>
+        <updated>2010-12-14T13:57:32Z</updated>
+        <summary type="html">
+            &lt;p&gt;What IDE has better support for groovy, Netbeans or Eclipse?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4452996/using-groovy-to-open-a-web-page-when-the-code-runs-on-a-different-computer</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Using groovy to open a web page, when the code runs on a different computer.</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Rob </name>
+            <uri>http://stackoverflow.com/users/543694</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4452996/using-groovy-to-open-a-web-page-when-the-code-runs-on-a-different-computer" />
+        <published>2010-12-15T17:30:55Z</published>
+        <updated>2010-12-15T22:27:08Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello All,&lt;/p&gt;
+
+&lt;p&gt;I have an interesting one that I am not sure how to address.  I have access to a website that provides a front end into a database.  As part of that front end I am able to write groovy code that executes on their server.  I am looking to add some capabilities that their front end does not already have.  To do so I need to direct users to another web site from within the groovy code.  &lt;strong&gt;How can I create either a pop up or re-direct to another web page from within groovy?&lt;/strong&gt;  I know how to do it in javascript, but cannot run javascript on their page.  I have spent hours looking through these pages I have not found anything to help.&lt;/p&gt;
+
+&lt;p&gt;One additional point.  I cannot just direct my users to the new page due to the passing of security information I need to inherit from the original front end.  &lt;/p&gt;
+
+&lt;p&gt;Thanks &lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4450822/grails-gorm-org-hibernate-type-at-trace-prints-nothing</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">grails / gorm / org.hibernate.type at TRACE prints nothing</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="hibernate"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="logging"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Alex</name>
+            <uri>http://stackoverflow.com/users/459849</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4450822/grails-gorm-org-hibernate-type-at-trace-prints-nothing" />
+        <published>2010-12-15T14:14:26Z</published>
+        <updated>2010-12-16T08:24:53Z</updated>
+        <summary type="html">
+            &lt;p&gt;I can&#39;t configure &lt;b&gt;org.hibernate.type&lt;/b&gt; (logging bind variables used in hibernate prepared statements) using log4j.xml, but can using the log4j DSL in Config.groovy. &lt;/p&gt;
+
+&lt;p&gt;We need to configure logging for different environments without building different WARs for each and thus need to use log4j.xml rather than the DSL, if possible.&lt;/p&gt;
+
+&lt;p&gt;Have put&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&lt;pre&gt;
+&amp;lt;logger name=&quot;org.hibernate.type&quot;&amp;gt;
+    &amp;lt;level value=&quot;TRACE&quot;/&amp;gt;
+    &amp;lt;appender-ref ref=&quot;console&quot;/&amp;gt;
+&amp;lt;/logger&amp;gt;
+&lt;/pre&gt;&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;but the bindings don&#39;t print. Previously in the DSL they did. 
+&lt;code&gt;&lt;pre&gt;
+log4j = {
+...&lt;/p&gt;
+
+&lt;p&gt;trace &#39;org.hibernate.type&#39;
+}
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;very strange, esp as other hibernate logging is controllable via log4j.xml.&lt;/p&gt;
+
+&lt;p&gt;Any thoughts much appreciated. &lt;/p&gt;
+
+&lt;p&gt;As an aside, is using the DSL within Config.groovy recommended as best practice for managing configuration accross environments flexibly - a compiled object containing configuration seems surprising - but am new to grails.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4430806/java-groovy-can-groovy-dynamically-add-or-override-a-method-on-a-pojo</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">[Java/Groovy] Can Groovy dynamically add or override a method on a POJO?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Jake</name>
+            <uri>http://stackoverflow.com/users/10675</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4430806/java-groovy-can-groovy-dynamically-add-or-override-a-method-on-a-pojo" />
+        <published>2010-12-13T16:08:02Z</published>
+        <updated>2010-12-13T16:19:41Z</updated>
+        <summary type="html">
+            &lt;p&gt;If I have&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// java
+class MyClass {
+   public String getName() {
+     return &quot;hector&quot;;
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and an instance of this class.  Can Groovy override the getName() method on the instance?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4299212/common-programming-mistakes-for-groovy-and-grails-developers-to-avoid</id>
+        <re:rank scheme="http://stackoverflow.com">10</re:rank>
+        <title type="text">Common programming mistakes for Groovy and Grails developers to avoid?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="mistakes"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="common-mistakes"/>
+        <author>
+            <name>lamalama</name>
+            <uri>http://stackoverflow.com/users/308808</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4299212/common-programming-mistakes-for-groovy-and-grails-developers-to-avoid" />
+        <published>2010-11-28T21:33:28Z</published>
+        <updated>2010-12-04T14:59:00Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;ve found the &quot;common programming mistakes for x&quot; to be very informative. So what mistakes should groovy and grails developers avoid?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4434673/utf-8-encoding-error-when-running-external-groovy-script-from-grails</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">UTF-8 Encoding Error when Running External Groovy Script from Grails</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kevin</name>
+            <uri>http://stackoverflow.com/users/541265</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4434673/utf-8-encoding-error-when-running-external-groovy-script-from-grails" />
+        <published>2010-12-13T23:57:07Z</published>
+        <updated>2010-12-14T10:39:28Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to call an external Groovy script from within a Grails application.  I have the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def initialSize = 4096
+def outStream = new ByteArrayOutputStream(initialSize)
+def errStream = new ByteArrayOutputStream(initialSize)
+def process =&quot;groovy -cp src/groovy/ src/groovy/externalscript.groovy &quot;.execute()
+process.consumeProcessOutput(outStream, errStream)
+process.waitFor()
+println &#39;out:\n&#39; + outStream
+println &#39;err:\n&#39; + errStream
+println process.exitValue()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However, I get the following exception:&lt;/p&gt;
+
+&lt;p&gt;Error occurred during initialization of VM java.nio.charset.IllegalCharsetNameException: &quot;UTF-8&quot; at java.nio.charset.Charset.checkName(Charset.java:284) at java.nio.charset.Charset.lookup2(Charset.java:458) at java.nio.charset.Charset.lookup(Charset.java:437) at java.nio.charset.Charset.defaultCharset(Charset.java:579) at sun.nio.cs.StreamEncoder.forOutputStreamWriter(StreamEncoder.java:37) at java.io.OutputStreamWriter.(OutputStreamWriter.java:94) at java.io.PrintStream.(PrintStream.java:100) at java.lang.System.initializeSystemClass(System.java:1092)&lt;/p&gt;
+
+&lt;p&gt;The script works fine outside of Grails and I am not sure where the encoding issue is coming from. I have tried saving the externalscript.groovy as UTF-8 but I run into the same issue.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4434218/how-do-i-make-a-groovyshell-have-access-to-my-applications-classes</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">How do I make a GroovyShell have access to my applications classes?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Kyle</name>
+            <uri>http://stackoverflow.com/users/243494</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4434218/how-do-i-make-a-groovyshell-have-access-to-my-applications-classes" />
+        <published>2010-12-13T22:44:40Z</published>
+        <updated>2010-12-13T22:58:22Z</updated>
+        <summary type="html">
+            &lt;p&gt;How do I make a GroovyShell have access to my applications classes? I&#39;ve got it working where I can say simple stuff like &lt;code&gt;println(&#39;5&#39;)&lt;/code&gt;, but I can&#39;t access any of my classes like &lt;code&gt;MyClass.printStuff()&lt;/code&gt;&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4423208/geb-functional-tests-in-grails-fail-because-the-web-application-has-not-been-star</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Geb functional tests in Grails fail because the web application has not been started</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Ruben</name>
+            <uri>http://stackoverflow.com/users/26919</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4423208/geb-functional-tests-in-grails-fail-because-the-web-application-has-not-been-star" />
+        <published>2010-12-12T18:24:38Z</published>
+        <updated>2010-12-13T02:35:00Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying out the Geb (0.5.1) Grails (1.3.5) integration. When using the JUnit runner (extends grails.plugin.geb.GebTests) the web application is not started before the Geb test is executed. Therefore the test fails, with Firefox saying it can&#39;t establish a connection to the server at localhost:8090.&lt;/p&gt;
+
+&lt;p&gt;In the same test-app run the functional selenium tests (selenium-rc 1.0.2 plugin) run without a problem.&lt;/p&gt;
+
+&lt;p&gt;Anybody an idea on why the grails web application is not started before the Geb functional tests, while it is correctly started for the Selenium functional tests?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import geb.*
+
+class GebTests extends grails.plugin.geb.GebTests {
+
+    void testIndexSearch() {
+        Browser.drive(&quot;http://localhost:8090/agora&quot;) {
+            go(&#39;/admin&#39;)
+            assert title == &#39;the title&#39;
+        }
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4419973/problem-with-mongo-java-driver-on-macosx</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Problem with mongo-java-driver on MacOSX</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="osx"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="mongodb"/>
+        <author>
+            <name>trnl</name>
+            <uri>http://stackoverflow.com/users/191088</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4419973/problem-with-mongo-java-driver-on-macosx" />
+        <published>2010-12-12T01:35:59Z</published>
+        <updated>2010-12-13T10:34:39Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello Gentlemen,&lt;/p&gt;
+
+&lt;p&gt;I can&#39;t connect to MongoDB from Groovy script.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Env&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;trnls-mbpro:test trnl$ sw_vers
+ProductName:    Mac OS X
+ProductVersion: 10.6.5
+BuildVersion:   10H574
+trnls-mbpro:test trnl$ java -version
+java version &quot;1.6.0_22&quot;
+Java(TM) SE Runtime Environment (build 1.6.0_22-b04-307-10M3261)
+Java HotSpot(TM) 64-Bit Server VM (build 17.1-b03-307, mixed mode)
+trnls-mbpro:test trnl$ groovy -version
+Groovy Version: 1.7.5 JVM: 1.6.0_22
+trnls-mbpro:test trnl$ mongod -version
+db version v1.6.4, pdfile version 4.5
+Sun Dec 12 03:34:32 git version: 4f5c02f8d92ff213b71b88f5eb643b7f62b50abc
+trnls-mbpro:test trnl$ 
+trnls-mbpro:env trnl$ mongod -noauth -vvv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Script test.groovy&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Mongo m = new Mongo(&quot;localhost&quot;, 27107);
+DB db = m.getDB(&quot;test&quot;);
+
+BasicDBObject info = new BasicDBObject();
+
+info.put(&quot;x&quot;, 203);
+info.put(&quot;y&quot;, 102);
+
+DBCollection collection = db.getCollection(&#39;user&#39;);
+
+collection.insert(info);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;trnls-mbpro:test trnl$ groovy -cp mongo-2.1.jar test.groovy 
+Caught: com.mongodb.MongoException$Network: can&#39;t say something
+    at test.run(test.groovy:16)
+trnls-mbpro:test trnl$ groovy -cp mongo-2.2.jar test.groovy 
+Dec 12, 2010 3:30:24 AM com.mongodb.DBTCPConnector$MyPort error
+SEVERE: MyPort.error called
+java.io.IOException: couldn&#39;t connect to [trnls-mbpro.local/192.168.1.3:27107] bc:java.net.ConnectException: Connection refused
+    at com.mongodb.DBPort._open(DBPort.java:172)
+    at com.mongodb.DBPort.go(DBPort.java:79)
+    at com.mongodb.DBPort.say(DBPort.java:60)
+    at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:151)
+    at com.mongodb.DBApiLayer$MyCollection.insert(DBApiLayer.java:154)
+    at com.mongodb.DBApiLayer$MyCollection.insert(DBApiLayer.java:110)
+    at com.mongodb.DBCollection.insert(DBCollection.java:73)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:597)
+    at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:188)
+    at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:52)
+    at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:40)
+    at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+    at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+    at test.run(test.groovy:16)
+    at groovy.lang.GroovyShell.runScriptOrMainOrTestOrRunnable(GroovyShell.java:264)
+    at groovy.lang.GroovyShell.run(GroovyShell.java:227)
+    at groovy.lang.GroovyShell.run(GroovyShell.java:157)
+    at groovy.ui.GroovyMain.processOnce(GroovyMain.java:496)
+    at groovy.ui.GroovyMain.run(GroovyMain.java:311)
+    at groovy.ui.GroovyMain.process(GroovyMain.java:297)
+    at groovy.ui.GroovyMain.processArgs(GroovyMain.java:112)
+    at groovy.ui.GroovyMain.main(GroovyMain.java:93)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:597)
+    at org.codehaus.groovy.tools.GroovyStarter.rootLoader(GroovyStarter.java:108)
+    at org.codehaus.groovy.tools.GroovyStarter.main(GroovyStarter.java:130)
+Caught: com.mongodb.MongoException$Network: can&#39;t say something
+    at test.run(test.groovy:16)
+trnls-mbpro:test trnl$ groovy -cp mongo-2.3.jar test.groovy 
+Caught: com.mongodb.MongoInternalException: DBPort.findOne failed
+    at test.run(test.groovy:6)
+trnls-mbpro:test trnl$ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Any help is appreciated.&lt;/p&gt;
+
+&lt;p&gt;-vova&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4394831/accessing-db-without-domain-classes-with-grails</id>
+        <re:rank scheme="http://stackoverflow.com">3</re:rank>
+        <title type="text">Accessing DB Without Domain Classes With Grails </title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="database"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="db2"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails-domain-class"/>
+        <author>
+            <name>jonsinfinity</name>
+            <uri>http://stackoverflow.com/users/244101</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4394831/accessing-db-without-domain-classes-with-grails" />
+        <published>2010-12-09T04:25:20Z</published>
+        <updated>2010-12-09T07:02:16Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;ve ran into an issue while trying to put together a Grails app with an AS400/DB2 database. I cannot get most of the files mapped because they do not have a unique field to use as an id. And even if they do they are a text based field and not in a format that could be converted to a long type. (I don&#39;t get why the PK has to be a long data type? If you wanted to us a sequence or AI for the pk that would make sense but what if you just needed a unique key? Am I missing something here?)&lt;/p&gt;
+
+&lt;p&gt;I&#39;m wondering if it is possible to keep the datasource that I have set up and just use it for straight SQL access to the DB without having to use domain objects?&lt;/p&gt;
+
+&lt;p&gt;Something I&#39;ve seen was setting the domain object as transient. But I don&#39;t know if you could still do something like that without an id field. Anybody know how that works?&lt;/p&gt;
+
+&lt;p&gt;Any ideas?&lt;/p&gt;
+
+&lt;p&gt;Thanks,
+Jon&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4343693/play-framework-layouts-with-different-sections</id>
+        <re:rank scheme="http://stackoverflow.com">0</re:rank>
+        <title type="text">Play! Framework: Layouts with different sections</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="playframework"/>
+        <author>
+            <name>Diego</name>
+            <uri>http://stackoverflow.com/users/152541</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4343693/play-framework-layouts-with-different-sections" />
+        <published>2010-12-03T08:27:25Z</published>
+        <updated>2010-12-13T16:03:13Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#39;m having a problem when trying to use layouts in the Play! Framework. As far as I know, a layout has a SINGLE &lt;code&gt;#{doLayout /}&lt;/code&gt; tag that specifies where all the code of the child view should be placed. This means that all the code in a particular view of, say, list of Users (list.html) gets injected in the middle of the body of the layout. Now, I find that some of my views require javascript that is particular to those views, and so I&#39;d like to include script tags only on those views and not on every single view that inherits from the layout. The Razor view engine in ASP.NET MVC allows for different sections in a layout that are filled in by a view that extends that layout, but I don&#39;t know if Play supports something like this.&lt;/p&gt;
+
+&lt;p&gt;Do you see a solution to this problem?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4413501/grails-auto-format-line-wrap</id>
+        <re:rank scheme="http://stackoverflow.com">1</re:rank>
+        <title type="text">Grails Auto-format Line wrap</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="grails"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="sts"/>
+        <author>
+            <name>Sdaf</name>
+            <uri>http://stackoverflow.com/users/538411</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4413501/grails-auto-format-line-wrap" />
+        <published>2010-12-10T21:33:04Z</published>
+        <updated>2010-12-13T08:49:15Z</updated>
+        <summary type="html">
+            &lt;p&gt;Hello,&lt;/p&gt;
+
+&lt;p&gt;I was trying to using Crtl+shift+F to format a groovy class in springsource suite tool. However, it doesn&#39;t split lines that are very long (more than 80 characters) as it does with java files.&lt;/p&gt;
+
+&lt;p&gt;I would appreciate if anybody could recommend me a tool for perform wrapping of lines in groovy files and generally grails projects.&lt;/p&gt;
+
+&lt;p&gt;Thanks in advance.&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+    <entry>
+        <id>http://stackoverflow.com/questions/4272068/is-groovy-syntax-an-exact-superset-of-java-syntax</id>
+        <re:rank scheme="http://stackoverflow.com">12</re:rank>
+        <title type="text">Is Groovy syntax an exact superset of Java syntax?</title>
+        <category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="java"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="syntax"/><category scheme="http://stackoverflow.com/feeds/tag?tagnames=groovy&amp;sort=hot/tags" term="groovy"/>
+        <author>
+            <name>Sean Patrick Floyd</name>
+            <uri>http://stackoverflow.com/users/342852</uri>
+        </author>
+        <link rel="alternate" href="http://stackoverflow.com/questions/4272068/is-groovy-syntax-an-exact-superset-of-java-syntax" />
+        <published>2010-11-24T22:20:41Z</published>
+        <updated>2010-12-03T20:04:55Z</updated>
+        <summary type="html">
+            &lt;p&gt;Being a Java programmer, I don&#39;t really have a Groovy background, but I use Groovy a lot lately to extend Maven (using GMaven). So far, I could use all the Java code I need in Groovy with the added Groovy sugar (metaclass methods, more operators, closures). My knowledge of Groovy is far from complete, but I like it, especially for Scripting purposes (I&#39;m a bit careful about using a non-static typed language in an enterprise scenario, but that&#39;s not the topic here).&lt;/p&gt;
+
+&lt;p&gt;Anyway, the question is:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Is every bit of valid Java code automatically valid Groovy code?&lt;/strong&gt; (I am talking about Source code, not compiled classes, I know Groovy can interact with Java classes.) Or are there Java constructs that are illegal in Groovy? Perhaps a reserved Groovy keyword that could be used as an identifier in Java, or something else? Or has Groovy deliberately been designed to be 100%-source compatible with Java?&lt;/p&gt;
+
+        </summary>
+    </entry>
+    
+</feed>
