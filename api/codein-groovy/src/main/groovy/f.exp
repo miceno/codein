@@ -1,0 +1,7 @@
+title   -> /title->s/^title/
+username-> /author/name->s/^name/
+summary-> /author/name
+emptylink 
+empty link -> 
+ack-> /author/name 
+acknowledge-> /author/name -> 
