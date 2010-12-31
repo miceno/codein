@@ -2,12 +2,19 @@
 * A consumer console that consumes all the message in a queue
 */
 
-import org.apache.xpath.XPathAPI
-import groovy.xml.DOMBuilder
+import groovy.xml.*
+import javax.xml.xpath.*
+
 import groovy.xml.dom.DOMCategory
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.parsers.DocumentBuilder
+
+import org.w3c.dom.Document; 
+import org.w3c.dom.NodeList; 
+import org.w3c.dom.Element; 
+import org.w3c.dom.Node; 
 
 import groovy.jms.*
-import groovy.xml.*
 import javax.jms.Message
 
 import es.tid.socialcoding.consumer.*
@@ -15,7 +22,7 @@ import es.tid.socialcoding.consumer.*
 import es.tid.socialcoding.*
 
 import org.apache.log4j.*
-import org.apache.log4j.PropertyConfigurator
+// import org.apache.log4j.PropertyConfigurator
 
 // Resource root dir
 final String RESOURCE_ROOT=".."+ File.separator + "resources"
@@ -63,9 +70,15 @@ while (true){
    {
         log.debug( "reading file: ${opt.f}" )
         messageType= "file"
-        messagePayload= new File( opt.f).text
-        log.debug messagePayload.getClass().getName()
-        feed= DOMBuilder.parse( new FileReader( opt.f))
+
+        DocumentBuilderFactory factory =
+            DocumentBuilderFactory.newInstance(); 
+        DocumentBuilder builder =
+            factory.newDocumentBuilder(); 
+        feed = builder.parse( new File( opt.f) ); 
+
+        // feed= DOMBuilder.parse( new FileReader( opt.f))
+        // feed= DOMBuilder.newInstance().parseText( messagePayload)
         log.debug feed.getClass().getName()
    }
    else
@@ -75,6 +88,8 @@ while (true){
         if( msg != null) {
            log.debug( "mensaje recibido : $msg" )
            messageType= msg.getString( CodeinJMS.MSG_TYPE)
+           if( messageType != MessageType.FEED )
+               continue
            messagePayload= msg.getString( CodeinJMS.MSG_PAYLOAD)
            feed= new XmlSlurper().parseText( messagePayload)
         }
@@ -85,17 +100,19 @@ while (true){
    log.debug( "message type: $messageType")
    log.debug( "message payload: $messagePayload")
 
-   log.debug "Feed begin".center( 40, "-")
-   log.debug feed
-   log.debug "Feed end".center( 40, "-")
+
+
+def expr     = XPathFactory.newInstance().newXPath().compile(xpath)
+def nodes    = expr.evaluate(feed, XPathConstants.NODESET)
 
    log.debug "begin parsing feed"
-
-   use( DOMCategory) {
-      XPathAPI.selectNodeList(feed.documentElement, xpath).each{ println it }
-   }
-
+   nodes.each{ log.debug "${xpath}: ${it.textContent}" }
    log.debug "end parsing feed"
+
+   log.debug "otro begin parsing feed"
+   nodes.each{ log.debug "${xpath}: $it" }
+   log.debug "otro end parsing feed"
+
    if( opt.f) break;
 }// while
 
