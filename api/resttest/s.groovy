@@ -9,7 +9,6 @@ import org.apache.log4j.PropertyConfigurator
 
 PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
-
 class GlobalFeed {
     def username
     private AtomFeedGenerator generator_

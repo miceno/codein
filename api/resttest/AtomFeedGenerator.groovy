@@ -15,6 +15,7 @@ import org.restlet.ext.atom.Feed;
 import org.restlet.ext.atom.Generator;
 import org.restlet.ext.atom.Person;
 import org.restlet.ext.atom.Text;
+import org.restlet.ext.atom.Source;
 import org.restlet.resource.StringRepresentation;
 
 import com.noelios.restlet.Engine;
@@ -35,6 +36,8 @@ public class AtomFeedGenerator {
 
 	protected int SUMMARY_LENGTH = 100;
 	
+    final String LINK_PREFIX='http://correo.tid.es'
+
 	public AtomFeedGenerator(String feedId, String feedTitle, String authorName, String authorMail){
 		this.feedId = feedId;
 		this.feedTitle = feedTitle;
@@ -76,6 +79,8 @@ public class AtomFeedGenerator {
 		entry.setPublished( date);
 		entry.setTitle( new Text(MediaType.TEXT_PLAIN, title) );
 		entry.setSummary( summarize(text) );
+        // entry.setLink( LINK_PREFIX + "/$id");
+        entry.setSource( new Source( ).setGenerator( getGenerator()));
 		
 		entries.add(entry);
 	}
