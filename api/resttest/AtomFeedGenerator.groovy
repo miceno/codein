@@ -8,6 +8,7 @@ import java.util.Vector;
 
 import org.restlet.data.MediaType;
 import org.restlet.data.Reference;
+import org.restlet.ext.atom.*
 import org.restlet.ext.atom.Category;
 import org.restlet.ext.atom.Content;
 import org.restlet.ext.atom.Entry;
@@ -50,7 +51,7 @@ public class AtomFeedGenerator {
 	public void clear(){
 		categories = new HashMap<String,Category>();
 		entries = new Vector<Entry>();
-	}
+    }
 	
 	public void addEntry(String id, String title, String text, String category, Date date){
 		// Retrieve existing category or add it to the feed
@@ -68,7 +69,7 @@ public class AtomFeedGenerator {
 		}
 
 		// Handle entry
-		Entry entry = new Entry();
+		Entry entry = new Entry( );
 		entry.getAuthors().add( getAuthor() );
 		
 		if(c!=null)
@@ -79,8 +80,12 @@ public class AtomFeedGenerator {
 		entry.setPublished( date);
 		entry.setTitle( new Text(MediaType.TEXT_PLAIN, title) );
 		entry.setSummary( summarize(text) );
-        // entry.setLink( LINK_PREFIX + "/$id");
         entry.setSource( new Source( ).setGenerator( getGenerator()));
+
+        Link l= new Link()
+        l.setRel( Relation.SELF)
+        l.setHref( new Reference( LINK_PREFIX))
+        entry.getLinks().add( l)
 		
 		entries.add(entry);
 	}
@@ -124,6 +129,7 @@ public class AtomFeedGenerator {
 	private Content getContent(String txt){
 		Content content = new Content();
         content.setInlineContent(new StringRepresentation(txt, MediaType.TEXT_PLAIN));
+        // content.setExternalRef( new Reference( LINK_PREFIX))
         return content;
 	}
 	
@@ -131,6 +137,7 @@ public class AtomFeedGenerator {
 		Person person = new Person();
 		person.setName(authorName);
 		person.setEmail(authorMail);
+		person.setUri( new Reference( LINK_PREFIX + "/$authorName"));
 		return person;
 	}
 	
@@ -142,3 +149,5 @@ public class AtomFeedGenerator {
         return generator;
 	}
 }
+
+

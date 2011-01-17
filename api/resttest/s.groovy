@@ -6,12 +6,14 @@ import org.restlet.ext.atom.Feed
 
 import org.apache.log4j.PropertyConfigurator
 
+// import GroovyLoremIpsum
 
 PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
 class GlobalFeed {
     def username
     private AtomFeedGenerator generator_
+    String text
 
     GlobalFeed( ){
         generator_ = new AtomFeedGenerator( 
@@ -19,6 +21,7 @@ class GlobalFeed {
                           "Global Feed of SocialCoding", 
                           "socialcoding", 
                           "socialcoding@example.com");
+        text= new GroovyLoremIpsum().lipsum( start: false)
     }
 
     Feed getFeed(){
@@ -37,13 +40,16 @@ class GlobalFeed {
         }
     }
     String getText(String i){
+            return text
             return "Global This is the text to read for entry number " + i;
+            // return "Global This is the text to read for entry number " + i;
     }
 }
 
 class UserFeed {
     def username
     private AtomFeedGenerator generator_
+    String text= new GroovyLoremIpsum().lipsum( start: false)
 
     UserFeed( username){
     this.username = username
@@ -65,7 +71,8 @@ class UserFeed {
     }
 
     String getText(String i){
-            return "This is the User text to read for entry number " + i;
+            return text
+            // return "This is the User text to read for entry number " + i;
     }
 
 }
@@ -99,13 +106,13 @@ final String PASSWORD= "tiger"
     application(uri:"/activity"){
         router{
             // The main activity stream
-            def activityRestlet= restlet(uri:"/", handle: activityHandle )
+            def activityRestlet= restlet(uri:"", handle: activityHandle )
 
             // The User activity stream
             restlet(uri:"/{user}", handle: userHandle)
 
             // TODO: guard access to the activity. By now, use HTTP_Basic
-            def guard = guard(uri:"/", scheme:challengeScheme.HTTP_BASIC,
+            def guard = guard(uri:"", scheme:challengeScheme.HTTP_BASIC,
                     realm:"SocialCoding")
             // TODO: get the API credentials from the database
             guard.secrets.put( USER, PASSWORD.toCharArray())
