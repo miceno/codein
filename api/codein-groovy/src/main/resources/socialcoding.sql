@@ -74,5 +74,5 @@ CREATE TABLE `UserFeed` (
 --  View structure for `userfeedview`
 -- ----------------------------
 DROP VIEW IF EXISTS `userfeedview`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `userfeedview` AS select `user`.`userId` AS `userId`,`feed`.`feedId` AS `feedId`,`user`.`UUID` AS `UUID`,`user`.`domain` AS `domain`,`feed`.`name` AS `name`,`feed`.`url` AS `url`,`feed`.`frequency` AS `frequency` from ((`userfeed` join `user`) join `feed` on(((`userfeed`.`userId` = `user`.`userId`) and (`userfeed`.`feedId` = `feed`.`feedId`))));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `userfeedview` AS select `User`.`userId` AS `userId`,`Feed`.`feedId` AS `feedId`,`User`.`UUID` AS `UUID`,`User`.`domain` AS `domain`,`Feed`.`name` AS `name`,`Feed`.`url` AS `url`,`Feed`.`frequency` AS `frequency` from ((`UserFeed` join `User`) join `Feed` on(((`UserFeed`.`userId` = `User`.`userId`) and (`UserFeed`.`feedId` = `Feed`.`feedId`))));
 
