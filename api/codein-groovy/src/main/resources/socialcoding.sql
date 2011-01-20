@@ -11,7 +11,7 @@
  Target Server Version : 50144
  File Encoding         : utf-8
 
- Date: 01/18/2011 14:00:01 PM
+ Date: 01/20/2011 14:36:22 PM
 */
 
 SET NAMES utf8;
@@ -23,14 +23,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `Entry`;
 CREATE TABLE `Entry` (
   `entryId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identify uniquelly an entry',
-  `title` varchar(255) NOT NULL,
-  `date` datetime NOT NULL COMMENT 'Date and time of the entry',
-  `body` text NOT NULL COMMENT 'Body of the entry',
-  `source` varchar(255) NOT NULL,
-  `userId` int(11) NOT NULL COMMENT 'User that created the entry',
-  `link` tinytext NOT NULL,
+  `userId` varchar(32) NOT NULL COMMENT 'User that created the entry',
+  `title` varchar(255) NOT NULL COMMENT 'Title of the entry',
+  `link` tinytext NOT NULL COMMENT 'Link to the original entry',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Updated Date and time of the entry',
+  `published` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `content` text NOT NULL COMMENT 'Body of the entry',
+  `source` varchar(255) NOT NULL COMMENT 'Source of the entry',
   UNIQUE KEY `id` (`entryId`),
-  KEY `fecha` (`date`)
+  KEY `fecha` (`updated`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Table for activity entries';
 
 -- ----------------------------
@@ -57,7 +58,7 @@ CREATE TABLE `User` (
   `urls` text NOT NULL COMMENT 'URL of a feed',
   UNIQUE KEY `id` (`UUID`,`domain`),
   KEY `userid` (`userId`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `UserFeed`
