@@ -49,8 +49,12 @@ public class ProducerConsole extends Producer
                      print ", cuerpo: " 
                      input.each{ print it}
                      println ""
+                     def mapa = input.inject([:]) { map, token -> 
+                        token.split('=').with { map[it[0]] = it[1] }
+                        map 
+                     }
                      
-                     Message msg= createMessage( messageType, input)
+                     Message msg= createMessage( messageType, mapa)
                      sendMessage( msg)
 
                  }// else
