@@ -32,20 +32,21 @@ if (opt.h) {
 
     // A closure that applies each Expression to an element
     def apply= { listExpressions, element ->
-        listExpressions.collect{ xexpression ->
-            log.debug "begin parsing feed with ${xexpression}"
+        listExpressions.inject([:]){ mapa, xexpression ->
+            log.debug "begin parsing feed with ${xexpression.value}"
             def result
             use (DOMCategory) { 
-                result= element.xpath( xexpression.XPATH, NODESET) 
+                result= element.xpath( xexpression.value.XPATH, NODESET) 
                 /* Print each element */
-                log.debug "${xexpression.XPATH}: ${result.size()}= ${result.text()}"
+                log.debug "${xexpression.value.XPATH}: ${result.size()}= ${result.text()}"
             }
-            result.text()
+            mapa[ xexpression.key]=result.text()
+            mapa
         }// lexpression.collect
     }
 def parser= new ExpressionContainer( opt.f)
     // Curry the apply to the Parser
-    def applyToElement= apply.curry( parser.expressions.values())
+    def applyToElement= apply.curry( parser.expressions)
 
 final String XPATH_EXPRESSION="//entry"
 
