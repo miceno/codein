@@ -38,6 +38,7 @@ public class AtomFeedGenerator {
 	protected int SUMMARY_LENGTH = 100;
 	
     final String LINK_PREFIX='http://correo.tid.es'
+    final String CATEGORY_PREFIX='http://correo.tid.es'
 
 	public AtomFeedGenerator(String feedId, String feedTitle, String authorName, String authorMail){
 		this.feedId = feedId;
@@ -63,7 +64,8 @@ public class AtomFeedGenerator {
 			}
 			else{
 				c = new Category();
-				c.setLabel(category);
+				c.setTerm(category);
+				c.setScheme( new Reference( CATEGORY_PREFIX + "/$category")) ;
 				categories.put(category, c);
 			}
 		}
