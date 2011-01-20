@@ -119,6 +119,17 @@ final String PASSWORD= "tiger"
             guard.next= activityRestlet
         }
     }
+    application( uri: "/atom"){
+        router{
+            restlet(uri:"/{user}", handle: userHandle)
+        }
+    }
+    application( uri: "/rss")
+    {
+        router{
+            restlet(uri:"/{user}", handle: userHandle)
+        }
+    }
 }.start()
 
 '''
