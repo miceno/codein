@@ -102,13 +102,13 @@ def listUsersHandle= listHandle.curry( 'All')
 builder.component{
     current.servers.add(protocol.HTTP, PORT)
     // The REST Application with an initial URI
-    application(uri:"/user"){
+    application(uri:"/socialcoding"){
         router{
             // a list of all users
-            restlet(uri:"", handle: listUsersHandle )
+            restlet(uri:"/user", handle: listUsersHandle )
             // The add a user
-            restlet(uri:"/{domain}", handle: listDomainHandle)
-            restlet(uri:"/{domain}/{user}", handle: addHandle)
+            restlet(uri:"/user/{domain}", handle: listDomainHandle)
+            restlet(uri:"/user/{domain}/{user}", handle: addHandle)
         }
     }
 }.start()
