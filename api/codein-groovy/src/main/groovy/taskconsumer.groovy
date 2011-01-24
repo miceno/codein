@@ -5,6 +5,7 @@
 import groovy.xml.*
 import static javax.xml.xpath.XPathConstants.*
 import javax.xml.xpath.*
+import java.text.SimpleDateFormat
 
 import groovy.xml.dom.DOMCategory
 import javax.xml.parsers.DocumentBuilderFactory
@@ -126,6 +127,7 @@ def parser= new ExpressionContainer( opt.f)
     // Curry the apply to the Parser
     def applyToElement= apply.curry( parser.expressions)
 
+    def result
     use( DOMCategory){
         nodes= doc.xpath( XPATH_EXPRESSION, NODESET)
 
@@ -140,9 +142,30 @@ def parser= new ExpressionContainer( opt.f)
 
     // TODO: Insert results in database
     log.debug( "TODO: Insert results in database") 
+    // Preprocess data
+
+    // Format Dates
+    lista= [ 'published', 'updated' ]
+
+def transformDatesList = { list, element ->
+      if ( list.isCase( element.key))
+      {
+           element.value= new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss")
+                       .parse( element.value)
+                       .getTime()
+      }
+   }
+
+def transformDates= transformDatesList.curry( lista)
+   result.each{ it.each( transformDates) }
+   log.debug( "after transform start".center( 40, '*') )
+   result.each{ it.each{ log.debug it }}
+   log.debug( "end".center( 20, '*') )
+
+    // Insert in the Database
     result.each{ 
-       // Insertar en la BD
-       table.add( it)
+         log.debug "adding $it"
+         table.add( it) 
     }
 
 }// while

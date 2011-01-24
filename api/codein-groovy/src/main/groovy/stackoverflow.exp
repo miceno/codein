@@ -1,5 +1,7 @@
 title   -> title->s/^title/
 link-> link/@href
-userId-> author/name->s/^name/
-published-> published
+authorId-> author/name->s/^name/
+authorLink-> author/uri->s/^name/
 content-> summary
+published->published
+updated->updated
