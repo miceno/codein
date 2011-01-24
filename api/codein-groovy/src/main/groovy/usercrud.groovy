@@ -49,29 +49,13 @@ def mapa= form.getValuesMap()
     // Set initial message
 String strRepresentation= 'adding user: ' + req.attributes.get( 'user')
 
-    // Check if user is same on URI and on parameters
-    if( mapa.get( 'user') != req.attributes.get( 'user')) 
-    {
-        // ERROR: change the representation and the status code
-        strRepresentation += "bad user request ${mapa.get( 'user')} != ${req.attributes.get( 'user')}"
-        resp.setStatus( Status.CLIENT_ERROR_BAD_REQUEST)
-    }
-
-    // Check if domain is same on URI and on parameters
-    if( mapa.get( 'domain') != req.attributes.get( 'domain')) 
-    {
-        // ERROR: change the representation and the status code
-        strRepresentation += "bad domain request ${mapa.get( 'domain')} != ${req.attributes.get( 'domain')}"
-        resp.setStatus( Status.CLIENT_ERROR_BAD_REQUEST)
-    }
-
     if( resp.getStatus() == Status.SUCCESS_OK)
     {
        log.debug( "adding data to User table")
        // Dar una respuesta en JSON
-       userTable.add( UUID:   mapa.get( 'user'), 
-                      domain: mapa.get( 'domain'),
-                      urls:   mapa.get( 'urls'))
+       userTable.add( UUID:   req.attributes.get( 'user'), 
+                      domain: req.attributes.get( 'domain'),
+                      urls:   mapa.get( 'urls', ""))
     }
 
     resp.setEntity( 
