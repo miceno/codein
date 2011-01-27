@@ -7,6 +7,7 @@ import groovy.xml.MarkupBuilder
 class SocialCodingAtomGenerator
 {
     static final String SOCIALCODING_CREATOR = 'socialcoding'
+    static final Integer SUMMARY_LENGTH= 50
     static final String SOCIALCODING_URL= 'http://socialcoding.tid.es'
 
     static String generateEntries(def entries, def theTitle, def theId)
@@ -23,7 +24,8 @@ class SocialCodingAtomGenerator
         MarkupBuilder xml = new MarkupBuilder(writer);
 
         // feed is the root level. In a namespace
-        xml.feed(xmlns:'http://www.w3.org/2005/Atom') {
+        xml.xml{
+          feed(xmlns:'http://www.w3.org/2005/Atom') {
 
             // add the top level information about this feed.
             title "$theTitle"
@@ -45,17 +47,28 @@ class SocialCodingAtomGenerator
                         updated sdf.format(new Date( item.updated ))
                      if ( item?.published )
                         published sdf.format(new Date( item.published))
-                     summary item.content
+                     summary SocialCodingAtomGenerator.summarize( item.content)
                      content item.content
                      link(href:item.link)
-                 }
-            }
-        }
+        }}  }    }
 
         // lastly give back a string representation of the xml.
         return writer.toString();
     }
+
+    static String summarize(String input){
+        if(input==null)
+            return "";
+
+        if(input.length()>SUMMARY_LENGTH){
+            return input.substring(0, SUMMARY_LENGTH) + "...";
+        }
+        else
+            return input;
+    }
 }
+
+
 
 /*
 mientries= [
