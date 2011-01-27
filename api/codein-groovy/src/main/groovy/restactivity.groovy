@@ -18,7 +18,7 @@ import org.restlet.data.Status
 
 import es.tid.socialcoding.dao.*
 
-final Integer PORT=8183
+final Integer PORT=8182
 
 Logger log= Logger.getLogger( getClass().getName())
 
