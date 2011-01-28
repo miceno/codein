@@ -34,7 +34,7 @@ String result= SocialCodingAtomGenerator.generateEntries( scope, title, title)
 
     log.debug( "listado= ${result}")
     resp.setEntity( new StringRepresentation( result,
-                            MediaType.TEXT_HTML) 
+                            MediaType.APPLICATION_ATOM_XML) 
                   )
     resp.setStatus( Status.SUCCESS_OK)
 }
