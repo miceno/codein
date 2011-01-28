@@ -16,11 +16,15 @@ import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
 
-import es.tid.socialcoding.dao.*
 
-final Integer PORT=8182
+import es.tid.socialcoding.dao.*
+import es.tid.socialcoding.SocialCodingConfig
 
 Logger log= Logger.getLogger( getClass().getName())
+
+       config= SocialCodingConfig.newInstance().config 
+
+final Integer PORT=config.rest.activity.port
 
 // Create EntryFeedDAO
 def helper= new DbHelper()
