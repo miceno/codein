@@ -15,21 +15,23 @@ import org.apache.log4j.Logger
 import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
+final Integer PORT=8183
 
 import es.tid.socialcoding.dao.*
-
-final Integer PORT=8183
 
 Logger log= Logger.getLogger( getClass().getName())
 
 // Create UserFeedDAO
-def helper= new DbHelper()
-def userTable= helper.db.dataSet( 'User')
+def db= new DbHelper().db
+def userTable= db.dataSet( 'User')
 
 // Add a new user to our database
 def addHandle = { req,resp->
-    log.debug( 'adding a new user')
-    log.debug( 'User = ' + req.attributes.get( 'user') )
+    newUser= req.attributes.get( 'user')
+    newDomain= req.attributes.get( 'domain')
+    // Set initial message
+String strRepresentation= 'adding user: ' + newUser
+    log.debug( strRepresentation)
     log.debug( "Req attributes".center( 40, '-'))
     req.attributes.each{ log.debug( "attribute:" + it) }
 
@@ -38,28 +40,38 @@ def addHandle = { req,resp->
 def form = req.getEntityAsForm()
     log.debug "Form: " + form
 def mapa= form.getValuesMap()
-    log.debug( "mapa de valores= $mapa")
     mapa.each{ 
          key, value -> log.debug( "params: $key = $value" ) 
     }
 
-    // Set status to OK
-    resp.setStatus( Status.SUCCESS_OK)
-
-    // Set initial message
-String strRepresentation= 'adding user: ' + req.attributes.get( 'user')
-
-    if( resp.getStatus() == Status.SUCCESS_OK)
+    // TODO: Check if user already exists
+String checkUserQuery="""
+    select * from User where UUID='$newUser' and domain='$newDomain'
+""" 
+    log.debug( "Query $checkUserQuery")
+    if( !db.rows( checkUserQuery).size() )
     {
-       log.debug( "adding data to User table")
+       // User does not exists 
+       log.debug( "adding User $newUser")
        // Dar una respuesta en JSON
-       userTable.add( UUID:   req.attributes.get( 'user'), 
-                      domain: req.attributes.get( 'domain'),
+       userTable.add( UUID:   newUser,
+                      domain: newDomain,
                       urls:   mapa.get( 'urls', ""))
+    }
+    else{
+       // User does not exists 
+       log.debug( "updating User $newUser")
+       String updateUserStm="""
+          update User 
+             set urls='${mapa.get( 'urls', "")}'
+             where UUID='$newUser' and domain='$newDomain'
+       """
+       db.execute updateUserStm
     }
 
     resp.setEntity( 
         new StringRepresentation( strRepresentation, MediaType.TEXT_HTML ))
+    resp.setStatus( Status.SUCCESS_OK)
 }
 
 // List of all users
