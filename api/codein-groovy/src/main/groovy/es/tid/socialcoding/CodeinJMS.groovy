@@ -87,11 +87,12 @@ public class CodeinJMS
         //Mandamos en funcion de la cola necesaria.
         Message msg = session.createMapMessage()
 
-        // Set msg type
-        msg.setString( MSG_TYPE, type)
-    
         // Set message body
         input.each{ key,value -> msg.setString( key, value.toString()) }
+
+        // Set msg type
+        msg.setString( MSG_TYPE, type)
+
         return msg
     }
 
