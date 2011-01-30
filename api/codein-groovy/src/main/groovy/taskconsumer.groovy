@@ -23,43 +23,32 @@ import groovy.jms.*
 import javax.jms.Message
 
 import es.tid.socialcoding.consumer.*
+import es.tid.socialcoding.producer.*
 
 import es.tid.socialcoding.*
 
 import org.apache.log4j.*
-// import org.apache.log4j.PropertyConfigurator
 
-// Resource root dir
-final String RESOURCE_ROOT=".."+ File.separator + "resources"
-// Default XPATH expression
-final String XPATH_EXPRESSION = "//entry"
-
-//Carga de la configuracion de los logs
-String configFile= RESOURCE_ROOT + File.separator + 'log4j.properties'
-final String URL_FIELD= 'url'
-
-println "about to read $configFile"
-PropertyConfigurator.configure(new File( configFile).toURL())
-
-def cli = new CliBuilder( usage: 'groovy consumerconsole' )
-
-cli.h(longOpt: 'help', 'usage information')
-cli.c(argName:'configfile', longOpt:'config', required: true,
-      args: 1, 'Configuration filename')
-cli.f(argName:'expressionfile', longOpt:'expfile', required: false,
-      args: 1, 'expression file')
-
-def opt = cli.parse(args)
-if (!opt) return
-if (opt.h) {
-   cli.usage()
-   return null
-}
-
+// Start logging
+PropertyConfigurator.configure(new File( 'log4j.properties').toURL())
 Logger log= Logger.getLogger( getClass().getName())
 
-c= new Consumer( opt.c)
-def waitTime= 10* 1000
+// Read configuration
+def config= SocialCodingConfig.newInstance().config
+
+// Resource root dir
+final String RESOURCE_PATH=config.root.resources_path
+
+// Default XPATH expression
+final String XPATH_EXPRESSION = config.consumer.xpath_entry_selector
+
+//Carga de la configuracion de los logs
+final String URL_FIELD= config.consumer.url_field_name
+
+log.debug "Reading configuration from $config.consumer.consumer_config_file"
+c= new Consumer( config.consumer.consumer_config_file)
+errorQueue= new Producer( config.consumer.producer_config_file)
+def waitTime= config.consumer.wait_time
 
 Message msg
 String messageType
@@ -68,7 +57,7 @@ def feed
 
 // Create UserFeedDAO
 def helper= new DbHelper()
-String tablename= 'Entry'
+String tablename= config.consumer.table_name
 def table= helper.db.dataSet( tablename)
 
 while (true){
@@ -85,27 +74,47 @@ while (true){
    msg.getPropertyNames().each{ log.debug( "property= $it" ) }
    log.debug( "names" )
    msg.getMapNames().each{ 
-        log.debug( "$it = ${msg.getObject( it ).toString()}" )
+        log.debug( "name $it = ${msg.getObject( it ).toString()}" )
    }
 
    messageType= msg.getString( CodeinJMS.MSG_TYPE)
    log.debug( "Mensaje de tipo: $messageType")
-   if( messageType != MessageType.FEED_TASK)
+   if( messageType != config.consumer.message_type)
+   {
+       log.debug( "$messageType != ${config.consumer.message_type}")
        continue
+   }
 
    // TODO: check how to get all the names of the keys of the MessageMap
    // TODO: get the URL string
    def url= msg.getString( URL_FIELD)
 
    // Get XML feed
-   feed = DOMBuilder.parse(
+   try{
+      feed = DOMBuilder.parse(
               new InputStreamReader( url.toURL().openStream()),
               false,
               false)
+   }
+   catch(e){
+      String errorText= "Unable to download $url"
+      log.debug errorText
+      Map map=[:]
+      map[ 'errorText']= errorText
+      msg.getMapNames().each{ 
+        log.debug( "name $it = ${msg.getObject( it ).toString()}" )
+        map[ (it)]= msg.getObject( it )
+      }
+      log.debug "mapa a enviar ${ map.collect{ k,v -> "clave $k: $v" } }"
+      Message errorMsg= errorQueue.createMessage( MessageType.ERROR_MESSAGE, map)
+      errorQueue.sendMessage( errorMsg)
+      continue
+   }
+
 def doc = feed.documentElement
 
    // Get Parser
-def parser= new ExpressionContainer( opt.f)
+def parser= new ExpressionContainer( config.consumer.parser_file)
    
    // Parse Text
 
@@ -129,6 +138,7 @@ def parser= new ExpressionContainer( opt.f)
 
     def result
     use( DOMCategory){
+        // First, obtain the nodes relevant 
         nodes= doc.xpath( XPATH_EXPRESSION, NODESET)
 
         // For each node, extract all the expressions
@@ -145,7 +155,7 @@ def parser= new ExpressionContainer( opt.f)
     // Preprocess data
 
     // Format Dates
-    lista= [ 'published', 'updated' ]
+    lista= config.consumer.transform_date_fields
 
 def transformDatesList = { list, element ->
       if ( list.isCase( element.key))
@@ -164,7 +174,7 @@ def transformDates= transformDatesList.curry( lista)
 
     // Insert in the Database
     result.each{ 
-         log.debug "adding $it"
+         log.debug "adding row to $tablename: $it"
          table.add( it) 
     }
 
