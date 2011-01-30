@@ -120,7 +120,9 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
 
     // A closure that applies each Expression to an element
     def apply= { listExpressions, element ->
-        listExpressions.inject([:]){ mapa, xexpression ->
+        defaultMap=[ownerId:     msg.getString('userId'),
+                    ownerDomain: msg.getString( 'domain') ] 
+        listExpressions.inject(defaultMap){ mapa, xexpression ->
             log.debug "begin parsing feed with ${xexpression.value}"
             def result
             use (DOMCategory) {
@@ -156,13 +158,17 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
 
     // Format Dates
     lista= config.consumer.transform_date_fields
+    log.debug( "Transform dates of fields: $lista") 
 
 def transformDatesList = { list, element ->
       if ( list.isCase( element.key))
       {
-           element.value= new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss")
+           if( element.value)
+               element.value= new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss")
                        .parse( element.value)
                        .getTime()
+           else
+               element.value=0
       }
    }
 
