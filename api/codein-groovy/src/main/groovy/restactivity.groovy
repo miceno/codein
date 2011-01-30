@@ -1,58 +1,72 @@
 
-import org.restlet.ext.atom.*
 import org.lpny.groovyrestlet.GroovyRestlet
 import java.io.File
-
-import org.apache.log4j.PropertyConfigurator
-
-
-PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
 String script= '''
 
 import org.apache.log4j.PropertyConfigurator
+PropertyConfigurator.configure(new File('log4j.properties').toURL())
+
 import org.apache.log4j.Logger
 import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
 
-
 import es.tid.socialcoding.dao.*
 import es.tid.socialcoding.SocialCodingConfig
-
 Logger log= Logger.getLogger( getClass().getName())
 
-       config= SocialCodingConfig.newInstance().config 
+def config= SocialCodingConfig.newInstance().config 
 
 final Integer PORT=config.rest.activity.port
 
-// Create EntryFeedDAO
-def helper= new DbHelper()
-def entryTable= helper.db.dataSet( 'Entry')
+// Create Database Connection
+def db= new DbHelper().db
 
 // List of all entries
-def listHandle = { title,scope,req,resp->
+def listHandle = { title,entries,req,resp->
     log.debug 'Listing -> ' + title
     
-String result= SocialCodingAtomGenerator.generateEntries( scope, title, title)
+String result= SocialCodingAtomGenerator.generateEntries( entries, title, title)
 
     log.debug( "listado= ${result}")
-    resp.setEntity( new StringRepresentation( result,
-                            MediaType.APPLICATION_ATOM_XML) 
+    resp.setEntity( result,
+                    MediaType.APPLICATION_ATOM_XML
                   )
     resp.setStatus( Status.SUCCESS_OK)
 }
 
 // Closure for the list of all entries
-def listAllActivity= listHandle.curry( "All", entryTable.findAll())
+def listAllActivity= listHandle.curry( "All", db.dataSet('Entry').findAll())
 
 // Closure for the list of users
 def listUserActivity= { req,resp->
     
-def userEntries= entryTable.findAll( )
-    listUser= listHandle.curry( "User "+ req.attributes.get( 'user'), 
-                                userEntries)
-    listUser.call( req, resp)
+    user= req.attributes.get( 'user')
+    domain= req.attributes.get( 'domain')
+    log.debug "user $user , domain $domain"
+
+    // findAll has a bug that prevents it using a variable in the expression
+    // findAll{ it.ownerId == user } will not work
+    // findAll{ it.ownerId == 'orestes'} will work
+    // So I decided to change to directly querying the database
+String filterTmpl= """
+  select * from Entry 
+  where 
+    ownerId = '$user' 
+    && ownerDomain= '$domain'
+"""
+
+List userEntries= db.rows( filterTmpl)
+
+    if ( userEntries.size())
+    {
+        listUser= listHandle.curry( "User $user of domain $domain",  
+                                    userEntries)
+        listUser.call( req, resp)
+    }
+    else
+        resp.setEntity( "No hay datos", MediaType.TEXT_HTML)
 }
 
 builder.component{
@@ -62,7 +76,7 @@ builder.component{
         router{
             // The add a user
             restlet(uri:"/activity", handle: listAllActivity)
-            restlet(uri:"/activity/{user}", handle: listUserActivity)
+            restlet(uri:"/activity/{domain}/{user}", handle: listUserActivity)
         }
     }
 }.start()

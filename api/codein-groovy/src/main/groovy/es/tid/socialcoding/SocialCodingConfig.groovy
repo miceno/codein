@@ -1,7 +1,5 @@
 package es.tid.socialcoding
 
-import org.apache.log4j.PropertyConfigurator
-
 class SocialCodingConfig{
     def config
 
