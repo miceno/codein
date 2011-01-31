@@ -40,7 +40,7 @@ class SocialCodingAtomGenerator
             entries.each { item ->
                  entry {
                      title item.title
-                     id item.entryId
+                     id item.id
                      if ( item?.authorId )
                         author{ name item.authorId; uri item.authorLink; }
                      if ( item?.updated )
