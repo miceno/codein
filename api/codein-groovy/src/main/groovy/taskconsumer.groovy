@@ -85,8 +85,8 @@ while (true){
        continue
    }
 
-   // TODO: check how to get all the names of the keys of the MessageMap
-   // TODO: get the URL string
+   // check how to get all the names of the keys of the MessageMap
+   // get the URL string
    def url= msg.getString( URL_FIELD)
 
    // Get XML feed
@@ -152,8 +152,8 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
         log.debug( "END".center( 20, '*') )
     }// use
 
-    // TODO: Insert results in database
-    log.debug( "TODO: Insert results in database") 
+    // Insert results in database
+    log.debug( "Insert results in database") 
     // Preprocess data
 
     // Format Dates
