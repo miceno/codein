@@ -30,11 +30,13 @@ import es.tid.socialcoding.*
 import org.apache.log4j.*
 
 // Start logging
-PropertyConfigurator.configure(new File( 'log4j.properties').toURL())
+PropertyConfigurator.configure( new File( 'log4j.properties').toURL())
 Logger log= Logger.getLogger( getClass().getName())
 
 // Read configuration
 def config= SocialCodingConfig.newInstance().config
+
+String tablename= config.consumer.table_name
 
 // Resource root dir
 final String RESOURCE_PATH=config.root.resources_path
@@ -57,7 +59,6 @@ def feed
 
 // Create UserFeedDAO
 def helper= new DbHelper()
-String tablename= config.consumer.table_name
 def table= helper.db.dataSet( tablename)
 
 while (true){
@@ -89,6 +90,7 @@ while (true){
    // get the URL string
    def url= msg.getString( URL_FIELD)
 
+    println "start to parse $url"
    // Get XML feed
    try{
       feed = DOMBuilder.parse(
@@ -120,7 +122,7 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
 
     // A closure that applies each Expression to an element
     def apply= { listExpressions, element ->
-        defaultMap=[ownerId:     msg.getString('userId'),
+        defaultMap=[ownerId:     msg.getString('UUID'),
                     ownerDomain: msg.getString( 'domain') ] 
         listExpressions.inject(defaultMap){ mapa, xexpression ->
             log.debug "begin parsing feed with ${xexpression.value}"
@@ -178,11 +180,35 @@ def transformDates= transformDatesList.curry( lista)
    result.each{ it.each{ log.debug it }}
    log.debug( "end".center( 20, '*') )
 
-    // Insert in the Database
-    result.each{ 
-         log.debug "adding row to $tablename: $it"
-         table.add( it) 
+
+def exists= {t, key, record ->
+String query= """
+ select * from $tablename where $key = '${record.get( key)}'
+"""
+    log.debug "Query to exists: '$query'"
+    result= t.firstRow( query)
+    log.debug "Result : '$result'"
+    return result?."$key"
+}
+
+def addOrInsert = { t, key, record ->
+        if( exists( t, key, record))
+        {
+            log.debug "register already exists in $tablename: $record"
+        String deleteStm="""
+delete from $tablename where $key = '${record.get( key)}'
+"""
+            log.debug "querying: $deleteStm"
+             t.execute( deleteStm)
+        }
+        log.debug "adding row to $tablename: $record"
+        t.add( record) 
     }
+
+    // Insert in the Database
+    result.each( addOrInsert.curry( table, 'id'))
+
+    println "finished parsing $url"
 
 }// while
 
