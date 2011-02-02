@@ -2,35 +2,36 @@
 * A consumer of tasks that consumes all the message in a queue
 */
 
+import org.apache.log4j.*
+
 import groovy.xml.*
 import static javax.xml.xpath.XPathConstants.*
 import javax.xml.xpath.*
-import java.text.SimpleDateFormat
-
 import groovy.xml.dom.DOMCategory
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.parsers.DocumentBuilder
+import org.w3c.dom.Document
+import org.w3c.dom.NodeList
+import org.w3c.dom.Element 
+import org.w3c.dom.Node
 
-import es.tid.socialcoding.dao.*
-
-
-import org.w3c.dom.Document; 
-import org.w3c.dom.NodeList; 
-import org.w3c.dom.Element; 
-import org.w3c.dom.Node; 
+import java.text.SimpleDateFormat
 
 import groovy.jms.*
 import javax.jms.Message
 
+import es.tid.socialcoding.*
+import es.tid.socialcoding.dao.*
 import es.tid.socialcoding.consumer.*
 import es.tid.socialcoding.producer.*
 
-import es.tid.socialcoding.*
-
-import org.apache.log4j.*
-
 // Start logging
-PropertyConfigurator.configure( new File( 'log4j.properties').toURL())
+String logConfigFile= 'log4j.properties'
+String logFilename= getClass().getName() + ".log"
+
+System.setProperty("log.filename", logFilename)
+PropertyConfigurator.configure( new File( logConfigFile).toURL())
+
 Logger log= Logger.getLogger( getClass().getName())
 
 // Read configuration
@@ -47,10 +48,15 @@ final String XPATH_EXPRESSION = config.consumer.xpath_entry_selector
 //Carga de la configuracion de los logs
 final String URL_FIELD= config.consumer.url_field_name
 
-log.debug "Reading configuration from $config.consumer.consumer_config_file"
-c= new Consumer( config.consumer.consumer_config_file)
-errorQueue= new Producer( config.consumer.producer_config_file)
-def waitTime= config.consumer.wait_time
+final String consumerConfigFile= config.consumer.consumer_config_file
+final String producerConfigFile= config.consumer.producer_config_file
+final String MESSAGE_TYPE= config.consumer.message_type
+final Integer WAIT_TIME= config.consumer.wait_time
+
+log.debug "Reading Consumer configuration from $consumerConfigFile"
+c= new Consumer( consumerConfigFile)
+log.debug "Reading Producert configuration from $producerConfigFile"
+errorQueue= new Producer( producerConfigFile)
 
 Message msg
 String messageType
@@ -62,27 +68,24 @@ def helper= new DbHelper()
 def table= helper.db.dataSet( tablename)
 
 while (true){
-   log.debug( "esperando recibir mensaje... $waitTime")
+   log.debug( "Esperando recibir mensaje... $WAIT_TIME")
 
    // Read a message
-   msg = c.getNextMessage( waitTime)
+   msg = c.getNextMessage( WAIT_TIME)
 
    if( !msg) {
+       log.debug "No message received"
        continue
    }
-   log.debug( "mensaje recibido : $msg" )
-   log.debug( "properties" )
-   msg.getPropertyNames().each{ log.debug( "property= $it" ) }
-   log.debug( "names" )
-   msg.getMapNames().each{ 
-        log.debug( "name $it = ${msg.getObject( it ).toString()}" )
-   }
+
+   log.debug( showMsg( msg))
 
    messageType= msg.getString( CodeinJMS.MSG_TYPE)
    log.debug( "Mensaje de tipo: $messageType")
-   if( messageType != config.consumer.message_type)
+   if( messageType != MESSAGE_TYPE)
    {
-       log.debug( "$messageType != ${config.consumer.message_type}")
+       log.debug( "Do not process this kind of message: $messageType != ${MESSAGE_TYPE}")
+       log.debug( "TODO: Insert the message again")
        continue
    }
 
@@ -90,7 +93,7 @@ while (true){
    // get the URL string
    def url= msg.getString( URL_FIELD)
 
-    println "start to parse $url"
+   log.info "Start to parse $url"
    // Get XML feed
    try{
       feed = DOMBuilder.parse(
@@ -99,7 +102,7 @@ while (true){
               false)
    }
    catch(e){
-      String errorText= "Unable to download $url"
+      String errorText= "Unable to download $url: e.toString()"
       log.debug errorText
       Map map=[:]
       map[ 'errorText']= errorText
@@ -122,10 +125,11 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
 
     // A closure that applies each Expression to an element
     def apply= { listExpressions, element ->
+        // TODO: Function to load a default map
         defaultMap=[ownerId:     msg.getString('UUID'),
                     ownerDomain: msg.getString( 'domain') ] 
         listExpressions.inject(defaultMap){ mapa, xexpression ->
-            log.debug "begin parsing feed with ${xexpression.value}"
+            log.debug "Begin parsing feed with ${xexpression.value}"
             def result
             use (DOMCategory) {
                 result= element.xpath( xexpression.value.XPATH, NODESET)
@@ -143,24 +147,27 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
     def result
     use( DOMCategory){
         // First, obtain the nodes relevant 
+        log.debug( "Getting all nodes that matches $XPATH_EXPRESSION")
         nodes= doc.xpath( XPATH_EXPRESSION, NODESET)
 
         // For each node, extract all the expressions
         result= nodes.collect( applyToElement)
-        log.debug( "Listing elements")
-        result.each{ 
-            it.each {log.debug "$it.key =$it.value" } 
-        }
+        dbgStr= result.collect{ 
+            it.collect{ """${it.key} =${it.value.substring( 0,  
+                                  it.value.length()<200? it.value.length():200)}""" 
+                      }.join( ",\n\t") 
+        }.join( "\n" + "Entry".center( 20, '-') + "\n")
+        log.debug( "Matching nodes\n" + dbgStr)
         log.debug( "END".center( 20, '*') )
     }// use
 
     // Insert results in database
-    log.debug( "Insert results in database") 
+    log.info( "Inserting results in database") 
     // Preprocess data
 
     // Format Dates
-    lista= config.consumer.transform_date_fields
-    log.debug( "Transform dates of fields: $lista") 
+    listaCamposFecha= config.consumer.transform_date_fields
+    log.debug( "Transform dates of fields: $listaCamposFecha") 
 
 def transformDatesList = { list, element ->
       if ( list.isCase( element.key))
@@ -174,7 +181,7 @@ def transformDatesList = { list, element ->
       }
    }
 
-def transformDates= transformDatesList.curry( lista)
+def transformDates= transformDatesList.curry( listaCamposFecha)
    result.each{ it.each( transformDates) }
    log.debug( "after transform start".center( 40, '*') )
    result.each{ it.each{ log.debug it }}
@@ -213,3 +220,14 @@ delete from $tablename where $key = '${record.get( key)}'
 }// while
 
 System.exit(0)
+
+String showMsg( def msg){
+   result= "mensaje recibido : $msg\n"
+   dbgStr= msg.getPropertyNames().collect{ it }.join(",\n\t")
+   result+= "Properties: $dbgStr\n" 
+   dbgStr= msg.getMapNames().collect{ 
+        "name $it = ${msg.getObject( it ).toString()}" 
+   }.join(",\n\t")
+   result+= "Names: $dbgStr\n"
+   return result
+}
