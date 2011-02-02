@@ -102,8 +102,8 @@ while (true){
               false)
    }
    catch(e){
-      String errorText= "Unable to download $url: e.toString()"
-      log.debug errorText
+      String errorText= "Unable to download $url: ${e.getClass().getName()}"
+      log.error errorText
       Map map=[:]
       map[ 'errorText']= errorText
       msg.getMapNames().each{ 
@@ -161,6 +161,7 @@ def parser= new ExpressionContainer( config.consumer.parser_file)
         log.debug( "END".center( 20, '*') )
     }// use
 
+    log.info "Total matching nodes: ${result.size()}"
     // Insert results in database
     log.info( "Inserting results in database") 
     // Preprocess data
@@ -198,6 +199,8 @@ String query= """
     return result?."$key"
 }
 
+    updatedRecords= 0
+    insertedRecords= 0
 def addOrInsert = { t, key, record ->
         if( exists( t, key, record))
         {
@@ -207,14 +210,17 @@ delete from $tablename where $key = '${record.get( key)}'
 """
             log.debug "querying: $deleteStm"
              t.execute( deleteStm)
+            updatedRecords++
         }
         log.debug "adding row to $tablename: $record"
         t.add( record) 
+        insertedRecords++
     }
 
     // Insert in the Database
     result.each( addOrInsert.curry( table, 'id'))
 
+    log.info "Total new entries: ${insertedRecords - updatedRecords}"
     println "finished parsing $url"
 
 }// while
