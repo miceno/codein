@@ -11,7 +11,7 @@
  Target Server Version : 50144
  File Encoding         : utf-8
 
- Date: 01/20/2011 14:36:22 PM
+ Date: 02/02/2011 11:07:24 AM
 */
 
 SET NAMES utf8;
@@ -23,16 +23,22 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `Entry`;
 CREATE TABLE `Entry` (
   `entryId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identify uniquelly an entry',
-  `userId` varchar(32) NOT NULL COMMENT 'User that created the entry',
+  `id` tinytext NOT NULL COMMENT 'Text ID',
+  `authorId` varchar(32) NOT NULL COMMENT 'User that created the entry',
+  `authorLink` tinytext NOT NULL,
   `title` varchar(255) NOT NULL COMMENT 'Title of the entry',
   `link` tinytext NOT NULL COMMENT 'Link to the original entry',
-  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Updated Date and time of the entry',
-  `published` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated` bigint(15) DEFAULT NULL COMMENT 'Updated Date and time of the entry',
+  `published` bigint(15) DEFAULT NULL COMMENT 'Published date',
   `content` text NOT NULL COMMENT 'Body of the entry',
-  `source` varchar(255) NOT NULL COMMENT 'Source of the entry',
+  `source` varchar(255) DEFAULT NULL COMMENT 'Source of the entry',
+  `ownerId` varchar(255) NOT NULL COMMENT 'User that requested the entry',
+  `ownerDomain` varchar(64) NOT NULL COMMENT 'Domain of the user that requested the entry',
+  PRIMARY KEY (`entryId`),
   UNIQUE KEY `id` (`entryId`),
-  KEY `fecha` (`updated`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Table for activity entries';
+  KEY `fecha` (`updated`),
+  KEY `titulo` (`title`)
+) ENGINE=MyISAM AUTO_INCREMENT=2121 DEFAULT CHARSET=utf8 COMMENT='Table for activity entries';
 
 -- ----------------------------
 --  Table structure for `Feed`
@@ -53,12 +59,13 @@ CREATE TABLE `Feed` (
 DROP TABLE IF EXISTS `User`;
 CREATE TABLE `User` (
   `userId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique id',
-  `UUID` varchar(32) NOT NULL COMMENT 'UUID of the user, may be duplicate across domains',
+  `UUID` varchar(64) NOT NULL COMMENT 'UUID of the user, may be duplicate across domains',
   `domain` varchar(255) DEFAULT '' COMMENT 'Domain name',
   `urls` text NOT NULL COMMENT 'URL of a feed',
+  PRIMARY KEY (`userId`),
   UNIQUE KEY `id` (`UUID`,`domain`),
   KEY `userid` (`userId`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `UserFeed`
@@ -70,10 +77,4 @@ CREATE TABLE `UserFeed` (
   UNIQUE KEY `user feeds` (`userId`,`feedId`),
   KEY `feedid` (`feedId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
---  View structure for `userfeedview`
--- ----------------------------
-DROP VIEW IF EXISTS `userfeedview`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `userfeedview` AS select `User`.`userId` AS `userId`,`Feed`.`feedId` AS `feedId`,`User`.`UUID` AS `UUID`,`User`.`domain` AS `domain`,`Feed`.`name` AS `name`,`Feed`.`url` AS `url`,`Feed`.`frequency` AS `frequency` from ((`UserFeed` join `User`) join `Feed` on(((`UserFeed`.`userId` = `User`.`userId`) and (`UserFeed`.`feedId` = `Feed`.`feedId`))));
 
