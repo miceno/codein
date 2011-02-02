@@ -29,13 +29,16 @@ import es.tid.socialcoding.producer.*
 String logConfigFile= 'log4j.properties'
 String logFilename= getClass().getName() + ".log"
 
-System.setProperty("log.filename", logFilename)
+System.setProperty("socialcoding.log.filename", logFilename)
 PropertyConfigurator.configure( new File( logConfigFile).toURL())
 
 Logger log= Logger.getLogger( getClass().getName())
 
 // Read configuration
 def config= SocialCodingConfig.newInstance().config
+Level log_level= Level.toLevel( config.root.log_level.toString())
+    log.setLevel( log_level)
+    log.info "Log level set to ${log_level}"
 
 String tablename= config.consumer.table_name
 
@@ -55,7 +58,7 @@ final Integer WAIT_TIME= config.consumer.wait_time
 
 log.debug "Reading Consumer configuration from $consumerConfigFile"
 c= new Consumer( consumerConfigFile)
-log.debug "Reading Producert configuration from $producerConfigFile"
+log.debug "Reading Producer configuration from $producerConfigFile"
 errorQueue= new Producer( producerConfigFile)
 
 Message msg
@@ -68,7 +71,10 @@ def helper= new DbHelper()
 def table= helper.db.dataSet( tablename)
 
 while (true){
-   log.debug( "Esperando recibir mensaje... $WAIT_TIME")
+   log.info "Reloading configuration"
+   reloadConfig( config, log)
+
+   log.info( "Esperando recibir mensaje... $WAIT_TIME")
 
    // Read a message
    msg = c.getNextMessage( WAIT_TIME)
@@ -223,6 +229,7 @@ delete from $tablename where $key = '${record.get( key)}'
     log.info "Total new entries: ${insertedRecords - updatedRecords}"
     println "finished parsing $url"
 
+
 }// while
 
 System.exit(0)
@@ -236,4 +243,13 @@ String showMsg( def msg){
    }.join(",\n\t")
    result+= "Names: $dbgStr\n"
    return result
+}
+
+def reloadConfig( config, log)
+{
+    config= new SocialCodingConfig().config
+    config.each{ log.debug( "Configuration: $it") }
+    log_level= Level.toLevel( config.root.log_level.toString())
+    log.info "Log level set to ${log_level}"
+    log.setLevel( log_level)
 }

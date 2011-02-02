@@ -1,5 +1,7 @@
 package es.tid.socialcoding
 
+import org.apache.log4j.Logger
+
 class SocialCodingConfig{
     def config
 
@@ -10,8 +12,9 @@ class SocialCodingConfig{
          return instance_ ?: (instance_= new SocialCodingConfig( configFile_))
     }
  
-    SocialCodingConfig( configFile){
+    SocialCodingConfig( configFile= "socialcoding.config"){
         config = new ConfigSlurper().parse(new File( configFile).toURL())
+        Logger.getLogger( getClass().getName()).debug( "configuration: $config")
     }
 }
 
