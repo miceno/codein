@@ -16,6 +16,8 @@ import es.tid.socialcoding.dao.*
  * Read a feed and map elements to fields
  */
 
+String logFilename= getClass().getName() + ".log"
+System.setProperty("log.filename", logFilename)
 
 def cli = new CliBuilder( usage: 'groovy ' )
 
