@@ -1,6 +1,8 @@
 
 import java.text.*
 import groovy.xml.MarkupBuilder
+import org.apache.commons.lang.StringEscapeUtils
+
 
 // this is the atom generator thats going to do the hard
 // work, of converting entries into atom.
@@ -24,7 +26,7 @@ class SocialCodingAtomGenerator
         MarkupBuilder xml = new MarkupBuilder(writer);
 
         // feed is the root level. In a namespace
-        xml.xml{
+        xml.xml(version:"1.0", encoding:"utf-8"){
           feed(xmlns:'http://www.w3.org/2005/Atom') {
 
             // add the top level information about this feed.
@@ -42,13 +44,28 @@ class SocialCodingAtomGenerator
                      title item.title
                      id item.id
                      if ( item?.authorId )
-                        author{ name item.authorId; uri item.authorLink; }
+                        author{ 
+                           name { mkp.yieldUnescaped( 
+                                  StringEscapeUtils.escapeXml( 
+                                      item.authorId )) 
+                           }
+                           uri item.authorLink; 
+                        }
                      if ( item?.updated )
                         updated sdf.format(new Date( item.updated ))
                      if ( item?.published )
                         published sdf.format(new Date( item.published))
-                     summary SocialCodingAtomGenerator.summarize( item.content)
-                     content item.content
+                     summary { 
+                              mkp.yieldUnescaped( 
+                                  StringEscapeUtils.escapeXml( 
+                                      SocialCodingAtomGenerator.summarize( item.content))) 
+                     }
+
+                     content { 
+                              mkp.yieldUnescaped( 
+                                  StringEscapeUtils.escapeXml( item.content)
+                             ) 
+                     }
                      link(href:item.link)
         }}  }    }
 
