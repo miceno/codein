@@ -8,15 +8,28 @@ import org.apache.log4j.PropertyConfigurator
 PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
 import org.apache.log4j.Logger
+import org.apache.log4j.Level
 import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
 
 import es.tid.socialcoding.dao.*
 import es.tid.socialcoding.SocialCodingConfig
+
+
+String logConfigFile= 'log4j.properties'
+String logFilename= getClass().getName() + ".log"
+
+System.setProperty("socialcoding.log.filename", logFilename)
+PropertyConfigurator.configure( new File( logConfigFile).toURL())
+
 Logger log= Logger.getLogger( getClass().getName())
 
 def config= SocialCodingConfig.newInstance().config 
+
+Level log_level= Level.toLevel( config.root.log_level.toString())
+    log.setLevel( log_level)                                  
+    log.info "Log level set to ${log_level}"                  
 
 final Integer PORT=config.rest.activity.port
 
