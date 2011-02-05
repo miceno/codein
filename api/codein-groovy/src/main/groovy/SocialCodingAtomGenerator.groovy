@@ -1,6 +1,6 @@
 
 import java.text.*
-import groovy.xml.MarkupBuilder
+import groovy.xml.*
 import org.apache.commons.lang.StringEscapeUtils
 
 
@@ -23,12 +23,13 @@ class SocialCodingAtomGenerator
 
         // create the builder as before.
         StringWriter writer = new StringWriter();
-        MarkupBuilder xml = new MarkupBuilder(writer);
+        def xml = new StreamingMarkupBuilder();
 
+        xml.encoding= "UTF-8"
         // feed is the root level. In a namespace
-        xml.xml(version:"1.0", encoding:"utf-8"){
-          feed(xmlns:'http://www.w3.org/2005/Atom') {
-
+        def generatedFeed = {
+            mkp.xmlDeclaration( version: '1.0') 
+        feed(xmlns:'http://www.w3.org/2005/Atom') {
             // add the top level information about this feed.
             title "$theTitle"
             id "$theId"
@@ -41,7 +42,10 @@ class SocialCodingAtomGenerator
             // for each entry we need to create an entry element
             entries.each { item ->
                  entry {
-                     title item.title
+                     title { mkp.yieldUnescaped( 
+                                 StringEscapeUtils.escapeXml( 
+                                      item.title )) 
+                           }
                      id item.id
                      if ( item?.authorId )
                         author{ 
@@ -67,10 +71,11 @@ class SocialCodingAtomGenerator
                              ) 
                      }
                      link(href:item.link)
-        }}  }    }
+        }}  } }
 
         // lastly give back a string representation of the xml.
-        return writer.toString();
+        writer << xml.bind( generatedFeed)
+        return writer.toString()
     }
 
     static String summarize(String input){

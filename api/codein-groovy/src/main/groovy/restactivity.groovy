@@ -2,10 +2,14 @@
 import org.lpny.groovyrestlet.GroovyRestlet
 import java.io.File
 
+String logFileName= 'activitystream.log'
+System.setProperty("socialcoding.log.filename", logFileName)
+
 String script= '''
 
 import org.apache.log4j.PropertyConfigurator
-PropertyConfigurator.configure(new File('log4j.properties').toURL())
+String logFileName= 'activitystream.log'
+PropertyConfigurator.configure(new File(logFileName).toURL())
 
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
