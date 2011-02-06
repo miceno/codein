@@ -21,24 +21,38 @@ package es.tid.socialcoding.dao
  *      }
  */
 
+import org.apache.log4j.Logger
+
 abstract class SocialCodingDAO { 
     def db
-    abstract List getFields()
+    List fields = []
+    private log= Logger.getLogger( getClass().getName())
+    SocialCodingDAO( db= null) { init() }
+
+    List getFields() { fields.size()? fields: init()}
 
     def dataSet()    { db.dataSet(tablename) } 
     def getIdField() { tablename.toLowerCase() + 'Id' } 
     def getWhereId() { "WHERE $idField = ?"}
+    def init(){
+       if ( !db) db= new DbHelper().db;
+       fields= db.rows('describe '+tablename).collect{ it }
+       log.debug "Fields: $fields"
+    }
+
+    def sanitizeFields( args){
+        List argfields= args.keySet().toList()
+        List intersection= getFieldNames().intersect( argfields)
+        List oddFields= argfields - intersection
+        if( oddFields.size())
+            log.debug "Odd Fields in operation: $oddFields"
+        return args.subMap( intersection)
+    }
 
     String getTablename() { 
         def name = this.getClass().name 
         return name[name.lastIndexOf('.')+1..-4]
     }
-
-    def create(List args) {
-        Map argMap = [:]
-        args.eachWithIndex { arg, i -> argMap[fieldNames[i]] = arg }
-        dataSet().add argMap
-    } 
 
     Map getSchema() {
         Map result = [:] 
@@ -48,23 +62,72 @@ abstract class SocialCodingDAO {
 
     List getFieldNames() {
         List result = [] 
-        0.step(fields.size(),2) { result << fields[it] } 
-        return result
+        return fields*.Field
     }
 
-
-    def update(field, newValue, id) {
-        def stmt = "UPDATE $tablename SET $field = ? $whereId" 
-        db.executeUpdate stmt, [newValue, id]
+    def create(Map args) {
+        args= sanitizeFields( args)
+        dataSet().add args
     } 
 
-    def delete(id) {
-        def stmt = "DELETE FROM $tablename $whereId" 
+    private def composeFieldStmt = { k, v -> "$k = '$v'"}
+
+    def update( newValues, condition) {
+        def whereStmt= buildWhereStmt( condition)
+
+        newValues= sanitizeFields( newValues)
+        def setStmt= newValues.collect( composeFieldStmt).join( ',')
+        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt" 
+
+        log.debug( "DAO update: $stmt")
+        db.executeUpdate stmt
+    } 
+
+    def delete(String id) {
+        String stmt = "DELETE FROM $tablename $whereId" 
+        log.debug( "DAO delete: $stmt")
         db.executeUpdate stmt, [id]
     }
 
+    def delete(Map condition) {
+        def whereStmt= buildWhereStmt( condition)
+        if( !whereStmt.size() )
+        {
+            log.error "Trying to delete all records from a table"
+            return 0
+        }
+        String stmt = "DELETE FROM $tablename $whereStmt" 
+        log.debug( "DAO delete from map: $stmt")
+        db.executeUpdate stmt
+    }
 
-    def all(sortField) {
+    def findBy( condition= [:]){
+        def whereStmt = buildWhereStmt( condition)
+        def selects = fieldNames + idField
+        def result= []
+        def stmt = "SELECT " + selects.join(',') +
+                   " FROM $tablename $whereStmt"
+        log.debug( "DAO findBy: $stmt")
+        db.eachRow(stmt.toString()){ rs -> 
+            Map businessObject = [:] 
+            selects.each { businessObject[it] = rs[it] } 
+            result << businessObject
+        }
+        log.debug "FindBy: result = $result"
+        return result
+    }
+
+    def find(id){
+        def selects = fieldNames + idField
+        def stmt = "SELECT " + selects.join(',') +
+                   " FROM $tablename $whereId"
+        log.debug( "DAO find: $stmt")
+        def result= db.firstRow( stmt.toString(), [id])
+        log.debug "Find: result = $result"
+        return result
+    }
+
+    def findAll(condition, sortField) {
         def selects = fieldNames + idField 
         def result = [] 
         def stmt = "SELECT " + selects.join(',') +
@@ -75,5 +138,12 @@ abstract class SocialCodingDAO {
             result << businessObject
         } 
         return result
+    }
+
+    String buildWhereStmt( def condition){
+        if( ! condition?.size()) return ""
+        condition= sanitizeFields( condition)
+        def result=[]
+        "WHERE " + condition.collect( composeFieldStmt).join( ' and ')
     }
 }

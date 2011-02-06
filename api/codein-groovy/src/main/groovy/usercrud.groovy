@@ -1,34 +1,40 @@
 
-import org.restlet.ext.atom.*
+// import org.restlet.ext.atom.*
 import org.lpny.groovyrestlet.GroovyRestlet
 import java.io.File
 
-import org.apache.log4j.PropertyConfigurator
 
+String logFileName= 'usercrud.log'
+System.setProperty("socialcoding.log.filename", logFileName)
 
-PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
 String script= '''
 
 import org.apache.log4j.PropertyConfigurator
+PropertyConfigurator.configure(new File('log4j.properties').toURL())
+
 import org.apache.log4j.Logger
 import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
-final Integer PORT=8183
 
 import es.tid.socialcoding.dao.*
+import es.tid.socialcoding.SocialCodingConfig
 
 Logger log= Logger.getLogger( getClass().getName())
+def config= SocialCodingConfig.newInstance().config
+
+final Integer PORT=config.rest.user.port
 
 // Create UserFeedDAO
-def db= new DbHelper().db
-def userTable= db.dataSet( 'User')
+def database= new DbHelper().db
+def userTable= new UserDAO( db: database)
 
 // Add a new user to our database
 def addHandle = { req,resp->
     newUser= req.attributes.get( 'user')
     newDomain= req.attributes.get( 'domain')
+
     // Set initial message
 String strRepresentation= 'adding user: ' + newUser
     log.debug( strRepresentation)
@@ -45,28 +51,25 @@ def mapa= form.getValuesMap()
     }
 
     // TODO: Check if user already exists
-String checkUserQuery="""
-    select * from User where UUID='$newUser' and domain='$newDomain'
-""" 
+def checkUserQuery= [ UUID:newUser, domain:newDomain ]
     log.debug( "Query $checkUserQuery")
-    if( !db.rows( checkUserQuery).size() )
+    if( !userTable.findBy( checkUserQuery).size() )
     {
-       // User does not exists 
-       log.debug( "adding User $newUser")
+       // User does not exist
+       log.info( "adding User $newUser")
        // Dar una respuesta en JSON
-       userTable.add( UUID:   newUser,
-                      domain: newDomain,
-                      urls:   mapa.get( 'urls', ""))
+       userTable.create( [ UUID:   newUser,
+                           domain: newDomain,
+                           urls:   mapa.get( 'urls', "")
+                         ] )
     }
     else{
-       // User does not exists 
-       log.debug( "updating User $newUser")
-       String updateUserStm="""
-          update User 
-             set urls='${mapa.get( 'urls', "")}'
-             where UUID='$newUser' and domain='$newDomain'
-       """
-       db.execute updateUserStm
+       // User exists 
+       log.info( "updating User $newUser")
+       def conditionStmt =[ UUID:   newUser,
+                            domain: newDomain]
+       def updateUserStmt=[ urls:   mapa.get( 'urls', "")]
+       userTable.update( updateUserStmt, conditionStmt)
     }
 
     resp.setEntity( 
@@ -75,16 +78,27 @@ String checkUserQuery="""
 }
 
 // List of all users
-def listHandle = { type,req,resp->
-    log.debug 'Listing -> ' + type
+def listHandle = { req,resp->
+def type = "All"
+Map filtro= [:]
 def writer = new StringWriter()
-def html = new groovy.xml.MarkupBuilder(writer)
-    html.html{
+def builder= new groovy.xml.MarkupBuilder(writer)
+
+    theDomain= req.attributes.get( 'domain')
+    if( theDomain)
+    {  
+       type= "Domain $theDomain"
+       filtro += [ domain: theDomain ]
+    }
+
+    log.debug "Listing -> $type"
+
+    builder.html{
       head { title "$type" }
       body {
           h1 "$type Users"
           p "This is the list of all the $type users available"
-          ul { userTable.each{ li "${it.domain}:${it.UUID}\\n" } }
+          ul { userTable.findBy(filtro).each{ li "${it.domain}:${it.UUID}\\n" } }
       }
     }
     log.debug( "listado= ${writer.toString()}")
@@ -92,18 +106,15 @@ def html = new groovy.xml.MarkupBuilder(writer)
     resp.setStatus( Status.SUCCESS_OK)
 }
 
-def listDomainHandle= listHandle.curry( 'Domain')
-def listUsersHandle= listHandle.curry( 'All')
-
 builder.component{
     current.servers.add(protocol.HTTP, PORT)
     // The REST Application with an initial URI
     application(uri:"/socialcoding"){
         router{
             // a list of all users
-            restlet(uri:"/user", handle: listUsersHandle )
+            restlet(uri:"/user", handle: listHandle )
             // The add a user
-            restlet(uri:"/user/{domain}", handle: listDomainHandle)
+            restlet(uri:"/user/{domain}", handle: listHandle)
             restlet(uri:"/user/{domain}/{user}", handle: addHandle)
         }
     }
