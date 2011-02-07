@@ -1,11 +1,13 @@
 
 import org.restlet.data.MediaType;
 import org.restlet.resource.DomRepresentation;
+import org.w3c.dom.Document
 
 
 DomRepresentation representation = new DomRepresentation( MediaType.TEXT_XML);
 
-def builder=groovy.xml.DOMBuilder.newInstance( false, false)
+Document doc= representation.getDocument()
+def builder=new groovy.xml.DOMBuilder( doc)
 
 def dom= builder.html{
        body{
@@ -16,26 +18,24 @@ def dom= builder.html{
        }
 }
 
+  doc.appendChild( dom)
 // dom.metaClass.methods.each { println it}
 
 println "dom class = ${dom.getClass().getName()}"
-def document= dom.getOwnerDocument()
-println "document class = ${document.getClass().getName()}"
+
+   println "debug document = " + dom.textContent
 
 use( groovy.xml.dom.DOMCategory){
-    println document.'*'.size()
-    def body = document.html.body
-    body.each{ println it }
-
+   println dom.'**'.h1.text()
 }
 
-representation.setDocument( document)
 def newdoc= representation.getDocument( )
 println "new document class = ${newdoc.getClass().getName()}"
 
 println "DOM".center( 40, "*")
-// println dom
+println dom
 
 println "representation".center( 40, "*")
-representation.write( new File( 'representation.dom').newOutputStream())
+// representation.write( new File( 'representation.dom').newOutputStream())
+representation.write( System.out)
 
