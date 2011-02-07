@@ -98,7 +98,7 @@ def builder= new groovy.xml.MarkupBuilder(writer)
       body {
           h1 "$type Users"
           p "This is the list of all the $type users available"
-          ul { userTable.findBy(filtro).each{ li "${it.domain}:${it.UUID}\\n" } }
+          ul { userTable.findBy(filtro).each{ li "${it.domain}:${it.UUID}:${it.urls}\\n" } }
       }
     }
     log.debug( "listado= ${writer.toString()}")
