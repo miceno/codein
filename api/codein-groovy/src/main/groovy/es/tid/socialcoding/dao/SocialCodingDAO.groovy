@@ -67,6 +67,7 @@ abstract class SocialCodingDAO {
 
     def create(Map args) {
         args= sanitizeFields( args)
+        log.debug( "INSERT $args")
         dataSet().add args
     } 
 

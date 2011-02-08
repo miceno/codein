@@ -50,7 +50,7 @@ class UsersResource extends Resource
         if (MediaType.TEXT_XML.equals(variant.getMediaType())) {  
             try {  
 
-                def rep= buildAtomRepresentation( this.domain)
+                def rep= buildHtmlRepresentation( this.domain)
                 
 
                 // Returns the XML representation of this document.  
@@ -63,10 +63,10 @@ class UsersResource extends Resource
         return null;  
     }  
 
-    def buildAtomRepresentation( dominio)
+    def buildHtmlRepresentation( dominio)
     {
         Map filtro= [:]
-        log.info( "buildAtomRepresentation: $dominio")
+        log.info( "buildHtmlRepresentation: $dominio")
     def titulo=""
         if( dominio)
         {   
