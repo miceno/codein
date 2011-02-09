@@ -55,6 +55,7 @@ class UserResource extends Resource
     /** 
      * Returns a listing of the element. 
      */  
+/*
     Representation represent(Variant variant) throws ResourceException {  
         // Generate the right representation according to its media type.  
         if (MediaType.TEXT_HTML.equals(variant.getMediaType())) {  
@@ -71,12 +72,13 @@ class UserResource extends Resource
   
         return null;  
     }  
+*/
 
     def buildHtmlRepresentation( userModel)
     {
         assert userModel != null
     String userString= "${userModel.domain}:${userModel.UUID}"
-        log.info( "buildHtmlRepresentation: ${userString}")
+        log.info( "buildHtmlRepresentation: user ${userString}")
     def titulo= "User ${userString}"
     
         def writer= new StringWriter ()
@@ -102,7 +104,8 @@ class UserResource extends Resource
     public void acceptRepresentation( Representation r)
     {
         // Set initial message
-        log.info( "POST user $domain:$user")
+    String userString= "${domain}:${user}"
+        log.info( "POST user $userString")
         def req= getRequest()
         def resp= getResponse()
         try {
@@ -111,21 +114,21 @@ class UserResource extends Resource
             log.debug( "Start to process form: $form")
             if( form.size()){
                 // {save the new user to the database}
-                def checkUserQuery= [ UUID:user, domain: domain ]
+                def checkUserQuery= [ UUID: user, domain: domain ]
+                def updateUserStmt= [ urls: form.getFirstValue( 'urls', "") ]
                 if( !userModel){
                     // User does not exist
-                    log.info( "adding User $domain:$user")
-                def createUserQuery = checkUserQuery + [ urls:   form.getFirstValue( 'urls', "") ]
+                    log.info( "Adding User $userString")
+                def createUserQuery = checkUserQuery + updateUserStmt
                     userTable.create( createUserQuery)
                 }
                 else{
                     // User exists 
-                    log.info( "updating User $domain:$user")
-                    def updateUserStmt=[ urls:   mapa.get( 'urls', "")]
-                    userTable.update( checkUserQuery, conditionStmt)
+                    log.info( "Updating User $userString")
+                    userTable.update( updateUserStmt, checkUserQuery)
                 }
-                userModel= checkUserQuery + conditionStmt
-                log.debug( "Updated userModel: $userModel")
+                userModel= checkUserQuery + updateUserStmt
+                log.debug( "New values userModel: $userModel")
                 resp.setStatus(Status.SUCCESS_OK);
                 // You could support multiple representation by using a
                 // parameter
