@@ -21,17 +21,9 @@ import javax.jms.Message
 public class Producer extends CodeinJMS
 {
          
-    public Producer( String configFile) {
-        super( configFile)
-        db = [  url         : config.bd.url,
-                user        : config.bd.user,
-                password    : config.bd.password,
-                driver      : config.bd.driver]
-        
+    public Producer( String queueUrl) {
+        super( queueUrl)        
     } 
-         
-    //Mysql Configuration
-    def  db
     
 }
 

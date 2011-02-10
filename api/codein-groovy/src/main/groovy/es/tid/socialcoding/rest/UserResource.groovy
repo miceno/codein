@@ -16,7 +16,9 @@ import org.restlet.resource.Variant;
 
 import org.apache.log4j.Logger
 
+import es.tid.socialcoding.SocialCodingConfig
 import es.tid.socialcoding.dao.*
+import es.tid.socialcoding.producer.*
 
 class UserResource extends Resource
 {
@@ -127,8 +129,14 @@ class UserResource extends Resource
                     log.info( "Updating User $userString")
                     userTable.update( updateUserStmt, checkUserQuery)
                 }
+
+                // userModel of the new representation
                 userModel= checkUserQuery + updateUserStmt
-                log.debug( "New values userModel: $userModel")
+                
+                // Enqueue a task for all the feeds of the user
+                new FeedTaskProducer().produceUserTask( userModel)
+                // Show representation of new resource
+                log.debug( "New userModel: $userModel")
                 resp.setStatus(Status.SUCCESS_OK);
                 // You could support multiple representation by using a
                 // parameter

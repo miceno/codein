@@ -32,32 +32,28 @@ public class CodeinJMS
     
     // Configuration
     def  config
-    
-    /**
-     * Name of the property file
-     */
-    String configFile;
-    
+        
     // Variables for JMS connection
     ConnectionFactory jms
     Session session
+    Queue queue
+    
     /**
      * JMS Broker URL
      */
     String brokerUrl;
     
-    public CodeinJMS( String configFile){
-        this.configFile= configFile
-        loadConfig( this.configFile)
-        init()
+    public CodeinJMS( String queueUrl){
+        loadConfig( )
+        init( queueUrl)
     }
     
     /**
      * Load configuration for Logging and for the application
      */
-    private void loadConfig( String configFile){
+    private void loadConfig( ){
         // Carga propertyFile
-        config = new ConfigSlurper().parse(new File( configFile).toURL())
+        config = SocialCodingConfig.newInstance().config
         // Get brokerUrl from config
         brokerUrl = config.activemq.brokerUrl 
         
@@ -68,14 +64,16 @@ public class CodeinJMS
     /**
      * Initiatize JMS session
      */
-    private void  init(){
+    private void  init( String queueUrl){
                                     
         //ActiveMQ Configuration
         use( JMS){
             jms = new ActiveMQConnectionFactory( brokerUrl);
-            assert jms != null, 'jms parameter must not be null'
+            assert jms != null, 'jms parameter must not be null'            
             Connection connection= jms.connect()
             session = connection.session()
+            
+            queue = jms.queue( queueUrl)
         }
     }
      
@@ -100,15 +98,30 @@ public class CodeinJMS
      * @param queue Destination queue to send the message to
      * @param msg Message to send
      */
-    void sendMessage( Message msg, String queue= null){
-        if( queue == null)
-            queue = config.activemq.destinationQueue
+    void sendMessage( Message msg){
         // Send message
         logger.debug( "about to send message: queue -> " + queue + ", message -> "+ msg)
         use( JMS){
-            session.queue( queue ).send( msg)
+            queue.send( msg)
         }
     }
+
+    /**
+     * Run the application to collect messages and send them to the queue
+     */
+     
+     Message getNextMessage( Integer waitTime = null)
+     {
+     Message msg
+
+        logger.debug( "waiting for a message in queue $SocialCodingConfig.activemq.destinationQueue" )
+     
+        use( JMS){ msg = queue.receive( waitTime) }
+        
+        logger.debug( "received message: " + msg )
+        return msg
+     }
+       
         
 }
 
