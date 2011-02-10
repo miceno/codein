@@ -7,31 +7,23 @@ System.setProperty("socialcoding.log.filename", logFileName)
 
 String script= '''
 
-import org.apache.log4j.PropertyConfigurator
-String logFileName= 'activitystream.log'
-PropertyConfigurator.configure(new File(logFileName).toURL())
+import es.tid.socialcoding.SocialCodingConfig
+
+def config= SocialCodingConfig.newInstance().config
 
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import org.restlet.resource.StringRepresentation
 import org.restlet.data.MediaType
 import org.restlet.data.Status
+import org.restlet.Router;  
 
 import es.tid.socialcoding.dao.*
-import es.tid.socialcoding.SocialCodingConfig
-
-
-String logConfigFile= 'log4j.properties'
-String logFilename= getClass().getName() + ".log"
-
-System.setProperty("socialcoding.log.filename", logFilename)
-PropertyConfigurator.configure( new File( logConfigFile).toURL())
+import es.tid.socialcoding.rest.*
 
 Logger log= Logger.getLogger( getClass().getName())
-
-def config= SocialCodingConfig.newInstance().config 
-
 Level log_level= Level.toLevel( config.root.log_level.toString())
+
     log.setLevel( log_level)                                  
     log.info "Log level set to ${log_level}"                  
 
@@ -86,15 +78,14 @@ List userEntries= db.rows( filterTmpl)
         resp.setEntity( "No hay datos", MediaType.TEXT_HTML)
 }
 
+Router r
 builder.component{
     current.servers.add(protocol.HTTP, PORT)
     // The REST Application with an initial URI
     application(uri:"/socialcoding"){
-        router{
-            // The add a user
-            restlet(uri:"/activity", handle: listAllActivity)
-            restlet(uri:"/activity/{domain}/{user}", handle: listUserActivity)
-        }
+        r= router{ }
+        r.attach( "/activity", ActivityStreamResource.class)
+        r.attach( "/activity/{domain}/{user}", ActivityStreamResource.class)
     }
 }.start()
 
