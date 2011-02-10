@@ -1,5 +1,4 @@
 
-// import org.restlet.ext.atom.*
 
 import org.lpny.groovyrestlet.GroovyRestlet
 import java.io.File
@@ -26,11 +25,14 @@ import org.apache.log4j.PropertyConfigurator
 PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
 import org.apache.log4j.Logger
-import org.restlet.resource.StringRepresentation
+import org.restlet.Router;  
+import org.restlet.resource.Resource
 import org.restlet.data.MediaType
 import org.restlet.data.Status
+import org.restlet.resource.StringRepresentation
 
 import es.tid.socialcoding.dao.*
+import es.tid.socialcoding.rest.*
 import es.tid.socialcoding.SocialCodingConfig
 
 Logger log= Logger.getLogger( getClass().getName())
@@ -41,18 +43,20 @@ final Integer PORT=9999
 class UserResource{
 }
 
+Router r
 builder.component{
     current.servers.add(protocol.HTTP, PORT)
     // The REST Application with an initial URI
     application(uri:"/socialcoding"){
-        router{
-            // a list of all users
-            resource( uri:"/user", ofClass:UsersResource.class)
-            // a list of domain users
-            resource( uri:"/user/{domain}",        ofClass:UsersResource)
-            // The add a user
-            resource( uri:"/user/{domain}/{user}", ofClass:UserResource)
+        r= router{
+/*
+            listUser = resource( uri:"/user/{domain}/{user}", ofClass:UserResource)
+            println listUser.getClass().getName()
+*/
         }
+        // a list of all users
+        r.attach( "/user", UsersResource.class)
+        r.attach( "/user/{domain}", UsersResource.class)
     }
 }.start()
 

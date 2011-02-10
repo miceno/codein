@@ -20,40 +20,9 @@ import javax.jms.Message
 public class Consumer extends CodeinJMS
 {
           
-    //Mysql Configuration
-    def  db
-         
-    public Consumer( String configFile) {
-        super( configFile)
-        db = [  url         : config.bd.url,
-                user        : config.bd.user,
-                password    : config.bd.password,
-                driver      : config.bd.driver]
-        
+    public Consumer( String queueUrl) {
+        super( queueUrl)        
     } 
-         
-    
-     
-    /**
-     * Run the application to collect messages and send them to the queue
-     */
-     
-     Message getNextMessage( Integer waitTime = null)
-     {
-     Message msg
-
-        logger.debug( "waiting for a message in queue $config.activemq.destinationQueue" )
-     
-        use( JMS){ msg = session.queue( config.activemq.destinationQueue).receive( waitTime) }
-        
-        logger.debug( "received message: " + msg )
-        return msg
-     }
     
 }
 
-/*
-def c = new ConsumerConsole( 'socialcoding.properties')
-      
-    c.run()      
-*/
