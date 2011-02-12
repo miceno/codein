@@ -18,17 +18,18 @@ import org.apache.log4j.Logger
 
 import es.tid.socialcoding.dao.*
 
-class UsersResource extends Resource
+class UsersResource extends PaginateResource
 {
      private Logger log = Logger.getLogger( getClass().getName())
      private String domain
+     private final String STR_DOMAIN=    'domain'
 
      UsersResource(Context context, Request request, Response response) {  
         super(context, request, response);  
   
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  
-        this.domain = (String) getRequest().getAttributes().get("domain");  
+        this.domain = (String) getRequest().getAttributes().get( STR_DOMAIN);  
         
         log.info( "Listing for domain '$domain'")
 
@@ -46,21 +47,24 @@ class UsersResource extends Resource
      * Returns a listing of all registered items. 
      */  
     Representation represent(Variant variant) throws ResourceException {  
+         def result= null
+         log.info "Represent: ${variant.dump()}"
+
         // Generate the right representation according to its media type.  
         if (MediaType.TEXT_XML.equals(variant.getMediaType())) {  
             try {  
 
-                def rep= buildHtmlRepresentation( this.domain)
+                result= buildHtmlRepresentation( this.domain)
                 
-
-                // Returns the XML representation of this document.  
-                return rep;  
             } catch (IOException e) {  
                 e.printStackTrace();  
             }  
         }  
-  
-        return null;  
+        else{
+            log.debug "Request for non valid representation: ${variant.dump()}"
+        } 
+
+        return result;  
     }  
 
     def buildHtmlRepresentation( dominio)
@@ -81,6 +85,7 @@ class UsersResource extends Resource
         // Generate a DOM document representing the list of  
         // items.  
         def userTable= new UserDAO( db: new DbHelper().db)
+        setPagination( userTable)
 
         def writer= new StringWriter ()
         def builder= new groovy.xml.MarkupBuilder( writer)
