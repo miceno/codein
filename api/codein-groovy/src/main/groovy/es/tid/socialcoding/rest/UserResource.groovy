@@ -24,7 +24,7 @@ class UserResource extends Resource
 {
      private Logger log = Logger.getLogger( getClass().getName())
      private def userModel
-     private def user
+     private def uuid
      private def domain
      
      // Generate a DOM document representing the list of  
@@ -37,10 +37,10 @@ class UserResource extends Resource
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  
         domain = (String) getRequest().getAttributes().get("domain");  
-        user   = (String) getRequest().getAttributes().get("user");  
+        uuid   = (String) getRequest().getAttributes().get("uuid");  
         
         this.userModel= null
-        def query= [ UUID: user, domain: domain ]
+        def query= [ UUID: uuid, domain: domain ]
         def result= userTable.findBy( query )
         this.userModel = result?.size() > 0 ? result[0] : null
         
@@ -106,7 +106,7 @@ class UserResource extends Resource
     public void acceptRepresentation( Representation r)
     {
         // Set initial message
-    String userString= "${domain}:${user}"
+    String userString= "${domain}:${uuid}"
         log.info( "POST user $userString")
         def req= getRequest()
         def resp= getResponse()
@@ -116,7 +116,7 @@ class UserResource extends Resource
             log.debug( "Start to process form: $form")
             if( form.size()){
                 // {save the new user to the database}
-                def checkUserQuery= [ UUID: user, domain: domain ]
+                def checkUserQuery= [ UUID: uuid, domain: domain ]
                 def updateUserStmt= [ urls: form.getFirstValue( 'urls', "") ]
                 if( !userModel){
                     // User does not exist
@@ -155,7 +155,7 @@ class UserResource extends Resource
 
     // PUT is the same as a POST
     public void storeRepresentation( Representation r){
-        log.info( "PUT user $domain:$user")
+        log.info( "PUT user $domain:$uuid")
         acceptRepresentation( r)
     }
     

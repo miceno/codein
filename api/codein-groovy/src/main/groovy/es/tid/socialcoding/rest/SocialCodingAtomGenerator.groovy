@@ -1,4 +1,6 @@
 
+package es.tid.socialcoding.rest
+
 import java.text.*
 import groovy.xml.*
 import org.apache.commons.lang.StringEscapeUtils

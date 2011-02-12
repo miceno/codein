@@ -21,19 +21,31 @@ package es.tid.socialcoding.dao
  *      }
  */
 
-import org.apache.log4j.Logger
+import groovy.util.logging.Log4j
 
+@Log4j
 abstract class SocialCodingDAO { 
     def db
-    List fields = []
-    private log= Logger.getLogger( getClass().getName())
+    private List fields = []
+    Integer offset= 0
+    Integer limit= Integer.MAX_VALUE
+    
     SocialCodingDAO( db= null) { init() }
 
     List getFields() { fields.size()? fields: init()}
 
-    def dataSet()    { db.dataSet(tablename) } 
-    def getIdField() { tablename.toLowerCase() + 'Id' } 
-    def getWhereId() { "WHERE $idField = ?"}
+    def dataSet()        { db.dataSet(tablename) } 
+    def getIdField()     { tablename.toLowerCase() + 'Id' } 
+    def getWhereId()     { "WHERE $idField = ?"}
+    def getLimitClause() { "LIMIT $offset, $limit" }
+    
+    String getWhere( def condition){
+        if( ! condition?.size()) return ""
+        condition= sanitizeFields( condition)
+        def result=[]
+        "WHERE " + condition.collect( composeFieldStmt).join( ' and ')
+    }
+    
     def init(){
        if ( !db) db= new DbHelper().db;
        fields= db.rows('describe '+tablename).collect{ it }
@@ -74,11 +86,11 @@ abstract class SocialCodingDAO {
     private def composeFieldStmt = { k, v -> "$k = '$v'"}
 
     def update( newValues, condition) {
-        def whereStmt= buildWhereStmt( condition)
+        def whereStmt= getWhere( condition)
 
         newValues= sanitizeFields( newValues)
         def setStmt= newValues.collect( composeFieldStmt).join( ',')
-        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt" 
+        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt $l" 
 
         log.debug( "DAO update: $stmt")
         db.executeUpdate stmt
@@ -91,7 +103,7 @@ abstract class SocialCodingDAO {
     }
 
     def delete(Map condition) {
-        def whereStmt= buildWhereStmt( condition)
+        def whereStmt= getWhere( condition)
         if( !whereStmt.size() )
         {
             log.error "Trying to delete all records from a table"
@@ -103,11 +115,12 @@ abstract class SocialCodingDAO {
     }
 
     def findBy( condition= [:]){
-        def whereStmt = buildWhereStmt( condition)
+        def whereStmt = getWhere( condition)
         def selects = fieldNames + idField
         def result= []
+        def l= getLimitClause()
         def stmt = "SELECT " + selects.join(',') +
-                   " FROM $tablename $whereStmt"
+                   " FROM $tablename $whereStmt $l"
         log.debug( "DAO findBy: $stmt")
         db.eachRow(stmt.toString()){ rs -> 
             Map businessObject = [:] 
@@ -131,8 +144,9 @@ abstract class SocialCodingDAO {
     def findAll(condition, sortField) {
         def selects = fieldNames + idField 
         def result = [] 
+        def l= getLimitClause()
         def stmt = "SELECT " + selects.join(',') +
-                   " FROM $tablename ORDER BY $sortField"
+                   " FROM $tablename ORDER BY $sortField $l"
         db.eachRow(stmt.toString()){ rs -> 
             Map businessObject = [:] 
             selects.each { businessObject[it] = rs[it] } 
@@ -141,10 +155,4 @@ abstract class SocialCodingDAO {
         return result
     }
 
-    String buildWhereStmt( def condition){
-        if( ! condition?.size()) return ""
-        condition= sanitizeFields( condition)
-        def result=[]
-        "WHERE " + condition.collect( composeFieldStmt).join( ' and ')
-    }
 }
