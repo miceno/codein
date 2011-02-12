@@ -27,8 +27,8 @@ import groovy.util.logging.Log4j
 abstract class SocialCodingDAO { 
     def db
     private List fields = []
-    private Integer offset= 0
-    private Integer limit= Integer.MAX_VALUE
+    Integer offset= 0
+    Integer limit= Integer.MAX_VALUE
     
     SocialCodingDAO( db= null) { init() }
 

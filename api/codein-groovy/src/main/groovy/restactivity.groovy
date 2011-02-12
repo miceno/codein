@@ -85,7 +85,7 @@ builder.component{
     application(uri:"/socialcoding"){
         r= router{ }
         r.attach( "/activity", ActivityStreamResource.class)
-        r.attach( "/activity/{domain}/{user}", ActivityStreamResource.class)
+        r.attach( "/activity/{domain}/{uuid}", ActivityStreamResource.class)
     }
 }.start()
 
