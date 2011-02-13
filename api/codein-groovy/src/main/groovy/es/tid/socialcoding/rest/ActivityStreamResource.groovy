@@ -42,6 +42,7 @@ class ActivityStreamResource extends PaginateResource
         
      ActivityStreamResource(Context context, Request request, Response response) {  
         super(context, request, response);  
+        SocialCodingConfig.newInstance().reload()
         config= SocialCodingConfig.newInstance().config
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  

@@ -19,7 +19,7 @@ import es.tid.socialcoding.dao.*
 class taskproducer{
     
     static main(args) {
-        String logFilename= getClass().getName() + ".log"
+        String logFilename= "taskproducer"+ ".log"
         System.setProperty("socialcoding.log.filename", logFilename)
         
         println "probando... $logFilename"

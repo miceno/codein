@@ -10,7 +10,7 @@ import es.tid.socialcoding.dao.*
 import es.tid.socialcoding.consumer.*
 
 @Log4j
-class taskconsumertest{
+class taskconsumerClass{
     
     def run(){
 
@@ -23,6 +23,9 @@ class taskconsumertest{
             
             if( task)
                 f.processTask( task)
+                
+            // Reload configuration 
+            SocialCodingConfig.newInstance().reload()
         }
         
         System.exit(0)
@@ -33,5 +36,5 @@ class taskconsumertest{
 String logFilename= getClass().getName() + ".log"
 System.setProperty("socialcoding.log.filename", logFilename)
 
-new taskconsumertest().run()
+new taskconsumerClass().run()
 
