@@ -39,11 +39,11 @@ abstract class SocialCodingDAO {
     def getWhereId()     { "WHERE $idField = ?"}
     def getLimitClause() { "LIMIT $offset, $limit" }
     
-    String getWhere( def condition){
-        if( ! condition?.size()) return ""
+    def getWhere( def condition){
+        if( ! condition?.size()) 
+            return [ where: "", params: []]
         condition= sanitizeFields( condition)
-        def result=[]
-        "WHERE " + condition.collect( composeFieldStmt).join( ' and ')
+        [ where: "WHERE " + condition.collect( composeFieldStmt).join( ' and '), params: condition.values().toArray()]
     }
     
     def init(){
@@ -80,20 +80,34 @@ abstract class SocialCodingDAO {
     def create(Map args) {
         args= sanitizeFields( args)
         log.debug( "INSERT $args")
-        dataSet().add args
+        try{
+            dataSet().add args
+        }catch( e){
+            log.error "Error executing INSERT: $args"
+            log.error e
+        }
     } 
 
-    private def composeFieldStmt = { k, v -> "$k = '$v'"}
+    private def composeFieldStmt = { k, v -> "$k = ?"}
 
     def update( newValues, condition) {
         def whereStmt= getWhere( condition)
+        log.debug( "DAO update WHERE: ${whereStmt}")
 
         newValues= sanitizeFields( newValues)
         def setStmt= newValues.collect( composeFieldStmt).join( ',')
-        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt" 
+        def setValues= newValues.values()
+        log.debug( "DAO update SET: $setStmt, parameters $setValues")
+        String stmt   = "UPDATE $tablename SET $setStmt ${whereStmt?.where}" 
 
-        log.debug( "DAO update: $stmt")
-        db.executeUpdate stmt
+        List params= setValues+ whereStmt?.params
+        log.debug( "DAO update: $stmt, parameters $params")
+        try{
+            db.executeUpdate stmt, params
+        }catch( e){
+            log.error "Error executing UPDATE: $stmt, parameters $params"
+            log.error e
+        }
     } 
 
     def delete(String id) {
@@ -104,25 +118,29 @@ abstract class SocialCodingDAO {
 
     def delete(Map condition) {
         def whereStmt= getWhere( condition)
-        if( !whereStmt.size() )
+        if( ! (whereStmt?.where?.size()) )
         {
             log.error "Trying to delete all records from a table"
             return 0
         }
-        String stmt = "DELETE FROM $tablename $whereStmt" 
+        String stmt = "DELETE FROM $tablename ${whereStmt?.where}" 
         log.debug( "DAO delete from map: $stmt")
-        db.executeUpdate stmt
+        db.executeUpdate stmt, whereStmt?.params
     }
 
     def findBy( condition= [:]){
         def whereStmt = getWhere( condition)
+        log.debug( "DAO findBy WHERE: ${whereStmt}")
+        
         def selects = fieldNames + idField
         def result= []
         def l= getLimitClause()
         def stmt = "SELECT " + selects.join(',') +
-                   " FROM $tablename $whereStmt $l"
-        log.debug( "DAO findBy: $stmt")
-        db.eachRow(stmt.toString()){ rs -> 
+                   " FROM $tablename ${whereStmt?.where} $l"
+        log.debug( "DAO findBy: $stmt, parameters ${whereStmt?.params}")
+        List params= whereStmt?.params
+        
+        db.eachRow(stmt.toString(), params){ rs -> 
             Map businessObject = [:] 
             selects.each { businessObject[it] = rs[it] } 
             result << businessObject
