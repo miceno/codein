@@ -90,7 +90,7 @@ abstract class SocialCodingDAO {
 
         newValues= sanitizeFields( newValues)
         def setStmt= newValues.collect( composeFieldStmt).join( ',')
-        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt $l" 
+        String stmt   = "UPDATE $tablename SET $setStmt $whereStmt" 
 
         log.debug( "DAO update: $stmt")
         db.executeUpdate stmt

@@ -10,7 +10,7 @@ import javax.jms.Message
 import org.apache.log4j.Logger
 import groovy.util.logging.Log4j
 
-import es.tid.socialcoding.CodeinJMS
+import es.tid.socialcoding.jms.CodeinJMS
 import es.tid.socialcoding.MessageType
 import es.tid.socialcoding.SocialCodingConfig
 import es.tid.socialcoding.producer.Producer

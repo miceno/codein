@@ -7,7 +7,7 @@
 
 package es.tid.socialcoding.producer;
 
-import es.tid.socialcoding.CodeinJMS
+import es.tid.socialcoding.jms.CodeinJMS
 
 import groovy.jms.JMS
 import javax.jms.*
