@@ -66,8 +66,9 @@ class FeedProcessor{
     /**
      * Process a task
      * @param task Task to process, Map of values, includes the owner user and the url to parse
+     * @return void
      */
-    def processTask( def task){
+    void processTask( def task){
         if( !task)
             return 
         def url= task?.url
@@ -78,6 +79,10 @@ class FeedProcessor{
          */
         def doc= readFeed( url)
 
+        if( !doc){
+            log.error "Unable to build a DOM representation from $url"
+            return
+        }
         /**
          * Get a Parser
          */
@@ -160,14 +165,14 @@ class FeedProcessor{
                 new InputStreamReader( url.toURL().openStream()),
                 false,
                 false)
-            result= feed.documentElement    
+            result= feed?.documentElement    
         }
         catch(e){
             new FeedProcessorException()
         }
         use( DOMCategory){
             log.debug "Feed: $feed"
-            log.debug "Read feed content: ${result.text()}"
+            log.debug "Read feed content: ${result?.text()}"
         }
         return result
     }
