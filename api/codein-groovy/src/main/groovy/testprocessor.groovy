@@ -4,6 +4,24 @@ import es.tid.socialcoding.consumer.*
 
 class TestProcessor{
 
+    def testTaskStack= [ 
+                    UUID: 'orestes', 
+                    domain: 'bluevia', 
+                    url: 'http://stackoverflow.com/feeds/tag/groovy'
+    ]
+
+    def testTaskMailnator= [ 
+                    UUID: 'orestes', 
+                    domain: 'bluevia', 
+                    url: 'http://www.mailinator.com/atom.jsp?email=oronegro'
+    ]
+
+    def testTaskGitHub= [ 
+                    UUID: 'orestes', 
+                    domain: 'bluevia', 
+                    url: 'https://github.com/miceno/codein/commits/master.atom'
+    ]
+
 
       TestProcessor(){
           String logFilename= getClass().getName() + ".log"
@@ -13,12 +31,7 @@ class TestProcessor{
       def testCreateTask(){
           def f = new FeedProcessor()
 
-          def testTask= [ 
-                          UUID: 'orestes', 
-                          domain: 'bluevia', 
-                          url: 'http://www.mailinator.com/atom.jsp?email=oronegro'
-          ]
-
+          def testTask= testTaskStack
           println "processing $testTask"
           f.processTask( testTask)
       }
@@ -26,11 +39,7 @@ class TestProcessor{
       def testUpdateTask(){
           def f = new FeedProcessor()
 
-          def testTask= [ 
-                          UUID: 'orestes', 
-                          domain: 'bluevia', 
-                          url: 'http://www.mailinator.com/atom.jsp?email=oronegro'
-          ]
+          def testTask= testTaskStack
 
           (1..2).each{ 
               println "processing $it: $testTask"
