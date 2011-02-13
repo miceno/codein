@@ -1,0 +1,8 @@
+title   -> title->s/^title/
+link-> link/@href
+authorId-> author/name->s/^name/
+authorLink-> author/uri->s/^name/
+content-> summary
+published->published
+updated->updated
+id -> id

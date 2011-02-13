@@ -18,5 +18,9 @@ class SocialCodingConfig{
         PropertyConfigurator.configure(new File('log4j.properties').toURL())
         Logger.getLogger( getClass().getName()).debug( "configuration: $config")
     }
+    
+    def reload(){
+        config = new ConfigSlurper().parse(new File( configFile).toURL())
+    }
 }
 

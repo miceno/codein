@@ -7,7 +7,7 @@
 
 package es.tid.socialcoding.consumer
 
-import es.tid.socialcoding.CodeinJMS
+import es.tid.socialcoding.jms.CodeinJMS
 import groovy.jms.*
 import javax.jms.*
 import javax.jms.Message

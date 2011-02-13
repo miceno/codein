@@ -5,7 +5,8 @@
 //  Copyright (c) 2010 Telefónica I+D. All rights reserved.
 //
 
-package es.tid.socialcoding
+package es.tid.socialcoding.jms
+import es.tid.socialcoding.*
 
 import org.apache.activemq.ActiveMQConnectionFactory
 import groovy.jms.JMS
@@ -114,7 +115,7 @@ public class CodeinJMS
      {
      Message msg
 
-        logger.debug( "waiting for a message in queue $SocialCodingConfig.activemq.destinationQueue" )
+        logger.debug( "waiting for a message in queue ${queue.queueName}" )
      
         use( JMS){ msg = queue.receive( waitTime) }
         
