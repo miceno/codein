@@ -1,0 +1,4 @@
+
+backend : Script to launch the Backend RESTlets
+taskproducer:   Script to create feed tasks for all users
+taskconsumer:   Script to listen to feed tasks and process them
