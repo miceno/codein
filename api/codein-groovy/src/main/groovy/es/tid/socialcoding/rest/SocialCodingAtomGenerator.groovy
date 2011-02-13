@@ -33,8 +33,11 @@ class SocialCodingAtomGenerator
             mkp.xmlDeclaration( version: '1.0') 
         feed(xmlns:'http://www.w3.org/2005/Atom') {
             // add the top level information about this feed.
-            title "$theTitle"
-            id "$theId"
+            title { 
+                mkp.yieldUnescaped( 
+                    StringEscapeUtils.escapeXml( theTitle))  
+            }
+            id { mkp.yieldUnescaped( StringEscapeUtils.escapeXml( theId))  }
             link(href: SOCIALCODING_URL)
             author {
                name( SOCIALCODING_CREATOR)
@@ -44,33 +47,30 @@ class SocialCodingAtomGenerator
             // for each entry we need to create an entry element
             entries.each { item ->
                  entry {
-                     title { mkp.yieldUnescaped( 
-                                 StringEscapeUtils.escapeXml( 
-                                      item.title )) 
-                           }
+                     title { 
+                        mkp.yieldUnescaped( StringEscapeUtils.escapeXml(
+                             item.title))
+                     }
                      id item.id
                      if ( item?.authorId )
                         author{ 
-                           name { mkp.yieldUnescaped( 
-                                  StringEscapeUtils.escapeXml( 
-                                      item.authorId )) 
-                           }
+                           name { 
+                            mkp.yieldUnescaped( 
+                                StringEscapeUtils.escapeXml( item.authorId)) 
+                            }
                            uri item.authorLink; 
                         }
                      if ( item?.updated )
                         updated sdf.format(new Date( item.updated ))
                      if ( item?.published )
-                        published sdf.format(new Date( item.published))
+                        published sdf.format(new Date( item.published)) 
                      summary { 
-                              mkp.yieldUnescaped( 
-                                  StringEscapeUtils.escapeXml( 
-                                      SocialCodingAtomGenerator.summarize( item.content))) 
+                         mkp.yieldUnescaped( 
+                             StringEscapeUtils.escapeXml( item.content)) 
                      }
 
-                     content { 
-                              mkp.yieldUnescaped( 
-                                  StringEscapeUtils.escapeXml( item.content)
-                             ) 
+                     content { mkp.yieldUnescaped(
+                                StringEscapeUtils.escapeXml( item.content)) 
                      }
                      link(href:item.link)
         }}  } }
