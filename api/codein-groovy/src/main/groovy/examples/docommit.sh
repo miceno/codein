@@ -1,3 +1,4 @@
+#!/bin/bash
 
 DATE=$(date "+%F-%T")
 touch prueba.$DATE
