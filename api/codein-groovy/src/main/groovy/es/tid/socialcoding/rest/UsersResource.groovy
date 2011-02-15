@@ -95,12 +95,12 @@ class UsersResource extends PaginateResource
               h1 "$dominio Users"
               p "This is the list of $titulo users available"
               ul { 
-                  userTable.findBy(filtro).each{ 
-                     it.each{ k, v -> "$k: v" }
-                 }
+                    userTable.findBy(filtro).each{
+                      li it.collect{ k, v -> "$k: $v"}.join( ', ')
+                    }
               }
-          }   
-        }
+          }
+        }   
         Representation representation = new StringRepresentation( 
                                                 writer.toString(), 
                                                 MediaType.TEXT_HTML);  

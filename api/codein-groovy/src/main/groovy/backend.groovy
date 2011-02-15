@@ -1,53 +1,84 @@
 
+import org.restlet.Router 
+import org.restlet.data.Protocol 
+import org.restlet.Application
+import org.restlet.Component
+import org.restlet.Restlet
 
-import org.lpny.groovyrestlet.GroovyRestlet
-import java.io.File
-
-String logFileName= 'backend.log'
-System.setProperty("socialcoding.log.filename", logFileName)
-
-
-String script= '''
+import groovy.util.logging.Log4j
 
 import org.apache.log4j.PropertyConfigurator
-PropertyConfigurator.configure(new File('log4j.properties').toURL())
 
-import org.apache.log4j.Logger
-import org.restlet.Router;  
-import org.restlet.resource.Resource
-import org.restlet.data.MediaType
-import org.restlet.data.Status
-import org.restlet.resource.StringRepresentation
-
-import es.tid.socialcoding.dao.*
 import es.tid.socialcoding.rest.*
+import es.tid.socialcoding.push.*
 import es.tid.socialcoding.SocialCodingConfig
 
-Logger log= Logger.getLogger( getClass().getName())
 
-def config= SocialCodingConfig.newInstance().config
-final Integer PORT=config.rest.backend.port
+/**
+ * BackendApplication: Application object
+ */
 
-Router r
-builder.component{
-    current.servers.add(protocol.HTTP, PORT)
-    // The REST Application with an initial URI
-    application(uri:"/socialcoding"){
-        r= router{ }
-        // a list of all users
-        r.attach( "/user",                  UsersResource.class)
-        r.attach( "/user/{domain}",         UsersResource.class)
-        r.attach( "/user/{domain}/{uuid}",  UserResource.class)
+@Log4j
+class BackendApplication extends Application {  
+
+    Restlet createRoot() {  
+        // Create a router Restlet that defines routes.  
+        Router router = new Router(getContext())  
+  
+        // User BE: listing and CRUD
+        router.attach( "/user",                  UsersResource.class)
+        router.attach( "/user/{domain}",         UsersResource.class)
+        router.attach( "/user/{domain}/{uuid}",  UserResource.class)
         // Activity BE
-        r.attach( "/activity",              ActivityStreamResource.class)
-        r.attach( "/activity/{domain}/{uuid}", ActivityStreamResource.class)
-
+        router.attach( "/activity",              ActivityStreamResource.class)
+        router.attach( "/activity/{domain}/{uuid}", ActivityStreamResource.class)
+          
+        return router;  
     }
-}.start()
+}
 
-'''
 
-InputStream is = new ByteArrayInputStream(script.getBytes("UTF-8"));
+/**
+ * Backend:     Launcher of the REST push service
+ */
 
-gr= new GroovyRestlet()
-gr.build( is)
+public class Backend {
+    final String     APPLICATION_URL     = "/socialcoding"
+    final Integer    DEFAULT_PORT        = 8010
+    
+    def config
+
+    def init(){
+        String logFileName= this.class.name.toLowerCase() + '.log'
+        System.setProperty("socialcoding.log.filename", logFileName)
+
+        config= SocialCodingConfig.newInstance().config
+        
+    }
+    
+    def main(args) throws Exception {
+        
+        init( )
+
+        final Integer PORT = ( config?.rest?."${this.class.name.toLowerCase()}"?.port ?: 
+                               ( config?.rest?.port ?: DEFAULT_PORT) )
+                               
+        println "escuchando puerto $PORT"
+
+        // Create a new Component.
+        Component component = new Component();
+
+        // Add a new HTTP server listening on port 8182.
+        component.getServers().add( Protocol.HTTP, PORT);
+
+        // Attach the sample application.
+        component.getDefaultHost().attach( APPLICATION_URL,
+                                            new BackendApplication());
+
+        // Start the component.
+        component.start();
+    }
+
+}
+
+new Backend().main()
