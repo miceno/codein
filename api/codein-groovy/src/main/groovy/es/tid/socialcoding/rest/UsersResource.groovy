@@ -94,8 +94,10 @@ class UsersResource extends PaginateResource
           body {
               h1 "$dominio Users"
               p "This is the list of $titulo users available"
-              ul { userTable.findBy(filtro).each{ 
-                     li "${it.domain}:${it.UUID}:${it.urls}" } 
+              ul { 
+                  userTable.findBy(filtro).each{ 
+                     it.each{ k, v -> "$k: v" }
+                 }
               }
           }   
         }

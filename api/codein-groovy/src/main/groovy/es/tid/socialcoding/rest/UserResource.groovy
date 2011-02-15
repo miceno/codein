@@ -117,7 +117,7 @@ class UserResource extends Resource
             if( form.size()){
                 // {save the new user to the database}
                 def checkUserQuery= [ UUID: uuid, domain: domain ]
-                def updateUserStmt= [ urls: form.getFirstValue( 'urls', "") ]
+                def updateUserStmt= form.getValuesMap()
                 if( !userModel){
                     // User does not exist
                     log.info( "Adding User $userString")
