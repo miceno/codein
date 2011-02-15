@@ -36,13 +36,13 @@ class WebPushApplication extends Application {
  */
 
 public class WebPush {
-    static final String     APPLICATION_URL     = "/socialcoding"
-    static final Integer    DEFAULT_PORT        = 8010
+    final String     APPLICATION_URL     = "/socialcoding"
+    final Integer    DEFAULT_PORT        = 8010
     
-    static def config
+    def config
 
-    static init(){
-        String logFileName= 'webpush.log'
+    def init(){
+        String logFileName= this.class.name.toLowerCase() + '.log'
         System.setProperty("socialcoding.log.filename", logFileName)
 
         config= SocialCodingConfig.newInstance().config
@@ -50,13 +50,14 @@ public class WebPush {
         PushFinder.reloadPlugins()
     }
     
-    static main(args) throws Exception {
+    def main(args) throws Exception {
         
         init( )
 
-        final Integer PORT = ( config?.rest?."${getClass().getName()}"?.port ?: 
+        final Integer PORT = ( config?.rest?."${this.class.name.toLowerCase()}"?.port ?: 
                                ( config?.rest?.port ?: DEFAULT_PORT) )
-
+                        
+        println "Listening to port $PORT"
         // Create a new Component.
         Component component = new Component();
 
@@ -73,4 +74,4 @@ public class WebPush {
 
 }
 
-WebPush.main()
+new WebPush().main()
