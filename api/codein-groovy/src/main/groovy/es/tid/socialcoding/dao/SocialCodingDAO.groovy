@@ -43,7 +43,10 @@ abstract class SocialCodingDAO {
         if( ! condition?.size()) 
             return [ where: "", params: []]
         condition= sanitizeFields( condition)
-        [ where: "WHERE " + condition.collect( composeFieldStmt).join( ' and '), params: condition.values().toArray()]
+        [ 
+        where: "WHERE " + condition.collect( composeFieldStmt).join( ' and '), 
+        params: condition.values().toList()
+        ]
     }
     
     def init(){
@@ -96,11 +99,11 @@ abstract class SocialCodingDAO {
 
         newValues= sanitizeFields( newValues)
         def setStmt= newValues.collect( composeFieldStmt).join( ',')
-        def setValues= newValues.values()
+        def setValues= newValues.values().toList()
         log.debug( "DAO update SET: $setStmt, parameters $setValues")
         String stmt   = "UPDATE $tablename SET $setStmt ${whereStmt?.where}" 
 
-        List params= setValues+ whereStmt?.params
+        def params= (setValues + whereStmt?.params)
         log.debug( "DAO update: $stmt, parameters $params")
         try{
             db.executeUpdate stmt, params
