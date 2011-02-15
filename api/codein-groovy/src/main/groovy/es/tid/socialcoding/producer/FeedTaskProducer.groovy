@@ -43,7 +43,7 @@ class FeedTaskProducer{
         log.info "User Task for user: $userModel"
         
         // Split all the urls
-        def listaUrls= userModel.urls.split(/\|/).collect{ it.trim()}
+        def listaUrls= userModel?.urls?.split(/\|/).collect{ it.trim()}
         
         // Remove empty URL
         listaUrls.removeAll( [''] )
