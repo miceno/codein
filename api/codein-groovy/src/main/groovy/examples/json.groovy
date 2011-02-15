@@ -143,12 +143,11 @@ def TAG = /.*${ETIQUETA}?/
 // Get all messages that matches the tag
     println "Messages".center( 40, '*')
     root.commits.message.each{ println it}
+    
     println "Messages with $TAG".center( 40, '*')
-    
-def l= root.commits.message
-    l.grep( ~TAG).each{ println it }
-    
-    
-    def twister = 'she sells sea shells by the sea shore' // contains word 'shore' assert twister =~ 'shore' // contains 'sea' twice (two ways)
-    assert (twister =~ 'sea').count == 2 
-    twister.split(/ /).grep(~/sh/).each { println it }
+    // Allow to get all messages that matches the TAG
+    root.commits.findAll{
+        it.message =~ TAG
+    }.each{
+        println "${it.message}"
+    }
