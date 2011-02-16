@@ -60,7 +60,8 @@ class PushFinder extends Resource{
         log.debug "service=${service}, token=${token}"
 
         // Entity is a transient one and once read, it cannot be read again
-        def payload= entity.getText()
+        def form= new Form( entity)
+        def payload= form.getFirstValue( "payload")
         log.debug "Entity Payload=${payload}"
         
         def resp= getResponse()
@@ -103,7 +104,7 @@ class PushFinder extends Resource{
         }
     } catch (Throwable e) {
         resp.setStatus( Status.SERVER_ERROR_INTERNAL);
-        resp.setEntity( new StringRepresentation (e.toString()))
+        resp.setEntity( new StringRepresentation ( "${e.toString()}: ${e.getStackTrace()}"))
     }
     }
     

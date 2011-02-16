@@ -35,6 +35,7 @@ class WebPushApplication extends Application {
  * WebPush:     Launcher of the REST push service
  */
 
+@Log4j
 public class WebPush {
     final String     APPLICATION_URL     = "/socialcoding"
     final Integer    DEFAULT_PORT        = 8010
@@ -57,7 +58,7 @@ public class WebPush {
         final Integer PORT = ( config?.rest?."${this.class.name.toLowerCase()}"?.port ?: 
                                ( config?.rest?.port ?: DEFAULT_PORT) )
                         
-        println "Listening to port $PORT"
+        log.debug "Listening to port $PORT"
         // Create a new Component.
         Component component = new Component();
 
@@ -73,5 +74,8 @@ public class WebPush {
     }
 
 }
+
+String logFileName= this.class.name.toLowerCase() + '.log'
+System.setProperty("socialcoding.log.filename", logFileName)
 
 new WebPush().main()
