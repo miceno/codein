@@ -5,6 +5,7 @@ import org.restlet.Context;
 import org.restlet.data.Form;  
 import org.restlet.data.MediaType;  
 import org.restlet.data.Request;  
+import org.restlet.data.Reference
 import org.restlet.data.Response;  
 import org.restlet.data.Status;  
 import org.restlet.resource.Resource
@@ -22,14 +23,15 @@ class UsersResource extends PaginateResource
 {
      private Logger log = Logger.getLogger( getClass().getName())
      private String domain
-     private final String STR_DOMAIN=    'domain'
 
      UsersResource(Context context, Request request, Response response) {  
         super(context, request, response);  
   
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  
-        this.domain = (String) getRequest().getAttributes().get( STR_DOMAIN);  
+        // The domain and uuid are optional, but should be Url decoded
+        domain= (String) request.getAttributes().get( RestHelper.STR_DOMAIN, null)
+        domain= domain ? Reference.decode( domain) : domain
         
         log.info( "Listing for domain '$domain'")
 

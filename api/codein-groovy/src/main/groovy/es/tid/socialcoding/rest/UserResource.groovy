@@ -5,7 +5,8 @@ import org.restlet.Context;
 import org.restlet.data.Form;  
 import org.restlet.data.MediaType;  
 import org.restlet.data.Request;  
-import org.restlet.data.Response;  
+import org.restlet.data.Response;
+import org.restlet.data.Reference  
 import org.restlet.data.Status;  
 import org.restlet.resource.Resource
 import org.restlet.resource.DomRepresentation;  
@@ -36,8 +37,12 @@ class UserResource extends Resource
   
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  
-        domain = (String) getRequest().getAttributes().get("domain");  
-        uuid   = (String) getRequest().getAttributes().get("uuid");  
+        // The domain and uuid are optional, but should be Url decoded
+        domain= (String) request.getAttributes().get( RestHelper.STR_DOMAIN, null)
+        domain= domain ? Reference.decode( domain) : domain
+        
+        uuid = (String) request.getAttributes().get( RestHelper.STR_UUID, null)
+        uuid= uuid ? Reference.decode( uuid) : uuid
         
         this.userModel= null
         def query= [ UUID: uuid, domain: domain ]

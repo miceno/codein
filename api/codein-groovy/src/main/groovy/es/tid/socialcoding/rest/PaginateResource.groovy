@@ -21,9 +21,6 @@ import es.tid.socialcoding.SocialCodingConfig
 @Log4j
 class PaginateResource extends Resource
 {
-    private final String STR_SIZE=      'size'
-    private final String STR_START=     'start'
-    
     private final String DEFAULT_SIZE=  '100'
     private final String DEFAULT_START= '0'
 
@@ -48,8 +45,8 @@ class PaginateResource extends Resource
             form= request.getResourceRef().getQueryAsForm();
         else
             form= new Form( request.getEntity())
-        this.start = form.getFirstValue( STR_START, DEFAULT_START) as Integer
-        this.size = form.getFirstValue( STR_SIZE, DEFAULT_SIZE) as Integer
+        this.start = form.getFirstValue( RestHelper.STR_START, DEFAULT_START) as Integer
+        this.size = form.getFirstValue( RestHelper.STR_SIZE, DEFAULT_SIZE) as Integer
         
         log.info( "Paginate Resource [start=$start, size=$size]")
     }  

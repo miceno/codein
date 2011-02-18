@@ -1,20 +1,10 @@
 
 package es.tid.socialcoding.rest
 
-import org.restlet.Context;  
-import org.restlet.data.Form;  
-import org.restlet.data.MediaType;  
-import org.restlet.data.Method;  
-import org.restlet.data.Request;  
-import org.restlet.data.Response;  
-import org.restlet.data.Status;  
-import org.restlet.data.CharacterSet;  
-import org.restlet.resource.Resource
-import org.restlet.resource.DomRepresentation;  
-import org.restlet.resource.StringRepresentation;  
-import org.restlet.resource.Representation;  
-import org.restlet.resource.ResourceException;  
-import org.restlet.resource.Variant;  
+import org.restlet.*
+import org.restlet.data.*
+import org.restlet.resource.*
+import org.restlet.data.Reference
 
 import org.apache.log4j.Logger
 
@@ -26,8 +16,6 @@ import es.tid.socialcoding.SocialCodingConfig
 @Log4j( 'mylog')
 class ActivityStreamResource extends PaginateResource
 {
-    private final String STR_UUID=      'uuid'
-    private final String STR_DOMAIN=    'domain'
 
     // How long to cache the All activity Stream
     private final Integer DEFAULT_ALL_DURATION= 15
@@ -47,9 +35,11 @@ class ActivityStreamResource extends PaginateResource
         // Get the "itemName" attribute value taken from the URI template  
         // /items/{itemName}.  
                 
-        // The domain and uuid are optional
-        this.domain= (String) request.getAttributes().get( STR_DOMAIN, null)
-        this.uuid = (String) request.getAttributes().get( STR_UUID, null)
+        // The domain and uuid are optional, but should be Url decoded
+        domain= (String) request.getAttributes().get( RestHelper.STR_DOMAIN, null)
+        domain= Reference.decode( domain)
+        uuid = (String) request.getAttributes().get( RestHelper.STR_UUID, null)
+        uuid= Reference.decode( uuid)
                 
         String userMessage
         
