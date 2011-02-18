@@ -16,6 +16,7 @@ import es.tid.socialcoding.dao.*
 class PushFinder extends Resource{
     
     final String TOKEN_ATTRIBUTE    = "token"
+    final String PAYLOAD_ATTRIBUTE  = "payload"
     final String SERVICE_ATTRIBUTE  = "service"
 
     def userTable
@@ -60,8 +61,7 @@ class PushFinder extends Resource{
         log.debug "service=${service}, token=${token}"
 
         // Entity is a transient one and once read, it cannot be read again
-        def form= new Form( entity)
-        def payload= form.getFirstValue( "payload")
+        def payload= getPayload( entity)
         log.debug "Entity Payload=${payload}"
         
         def resp= getResponse()
@@ -71,9 +71,9 @@ class PushFinder extends Resource{
         if( !isValidService( service))
             throw new Error( "Non-valid service $service")
             
-        // Check the referrer 
-        if( !isValidReferrer( req, service))
-            throw new Error( "Bad referrer")
+        // Check the remote host 
+        if( !isValidRemoteHost( req, service))
+            throw new Error( "Bad remote host")
     
         // Authenticate the user
         def userModel= getUser( token)
@@ -129,21 +129,22 @@ class PushFinder extends Resource{
      * Obtain the payload of an entity
      */
     def getPayload( entity) {
+        def result= ""
         Form form = new Form( entity);
         log.debug( "Start to process form: $form")
-        if( form.size()){
-            
             // Get parameter payload
-        def payload= form.getFirstValue( "payload", "")
-               
-        }
+        result= form.getFirstValue( PAYLOAD_ATTRIBUTE, "")
     }
     
-    private def isValidReferrer( req, service) {
-        Reference ref= new Reference( PushFinder.plugins?."$service"?.referrer)
-        log.debug "Referrer for $service is $ref"
-        log.debug "Referrer from request is ${req.getReferrerRef()}"
-        return ( ref== req.getReferrerRef() )
+    private def isValidRemoteHost( req, service) {
+        def requestHostname= req.getRootRef().getHostDomain(true)
+
+        def serviceHostname= PushFinder.plugins?."$service"?.remoteHost
+        
+        log.debug "Remote host for $service is $serviceHostname"
+        log.debug "Remote host request is $requestHostname"
+        
+        return ( serviceHostname == requestHostname )
     }
     
     private def isValidService( service){
