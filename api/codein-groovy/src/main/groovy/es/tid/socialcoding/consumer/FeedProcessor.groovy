@@ -9,7 +9,6 @@ import groovy.xml.*
 import groovy.util.logging.Log4j
 import groovy.xml.dom.DOMCategory
 
-import java.text.SimpleDateFormat
 
 import static javax.xml.xpath.XPathConstants.*
 import javax.xml.xpath.*
@@ -210,9 +209,7 @@ class FeedProcessor{
             if ( list.isCase( column.key))
             {
                 column.value= ( !column.value ? 0 : 
-                    new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss")
-                    .parse( column.value)
-                    .getTime() )
+                    Helper.getDate( column.value).getTime() )
             }
             log.trace "transformDate after $column"
         }
