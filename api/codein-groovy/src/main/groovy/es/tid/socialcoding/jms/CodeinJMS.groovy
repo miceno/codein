@@ -104,6 +104,7 @@ public class CodeinJMS
         logger.debug( "about to send message: queue -> " + queue + ", message -> "+ msg)
         use( JMS){
             queue.send( msg)
+            session.close()
         }
     }
 
