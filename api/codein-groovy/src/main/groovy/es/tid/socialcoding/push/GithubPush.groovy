@@ -10,6 +10,7 @@ import org.restlet.data.*
 import org.restlet.resource.*
 
 import es.tid.socialcoding.*
+import es.tid.socialcoding.dao.*
 
 @Log4j
 class GithubPush{
@@ -24,23 +25,27 @@ class GithubPush{
      * @return Map      It is a Map of elements: [  message: String, status: Status , mediatype: MediaType]
     */
     
+    def entryTable
+    
     GithubPush(){
         SocialCodingConfig.newInstance().reload()
         config= SocialCodingConfig.newInstance().config
+        entryTable= new EntryDAO( db: new DbHelper().db)
     }
 
     Map process( def userModel, String payload){
-        def result= []
-        log.debug "processing ${this.class.name}"
+        def result= [ message: "Success", status: Status.SUCCESS_OK , mediatype: MediaType.TEXT_PLAIN ]
+        log.debug "Web Push process ${this.class.name}"
         log.trace "userModel= $userModel, payload='$payload'"
         
         def root = new JsonSlurper().parseText( payload)
-        log.debug "root= $root"
+        
+        log.debug "JSON parsed object= $root"
         // Get all overall data from JSON
     def metadata= [
                     ownerId     : userModel.UUID,
                     ownerDomain : userModel.domain,
-                    source: "${getSourceId()}:${root.repository.name}"
+                    source      : "${getSourceId()}:${root.repository.name}".toString()
     ]
         log.debug "metadata=$metadata"
 
@@ -52,6 +57,7 @@ class GithubPush{
         def messages= root.commits.findAll{ 
             it.message =~ TAG
             }.each{ // each commit that matches the TAG
+                                
                 // Remap properties to create an entry
                 log.debug "commit= $it"
                 def entry= createEntry( it)
@@ -64,11 +70,11 @@ class GithubPush{
                 // Format a text based on the commit
                 def message= createText( it, root)
                 entry.put( "content", message)
-                log.debug "Entry with message=$entry"
-                
+                log.debug "Entry with message=${entry}"
+                                
                 // TODO: Create store method to allow an update in case 
                 // the record exists or an insert if it doesn't
-                log.debug "TODO: storeEntry( metadata)"
+                storeEntry( entry)
             }
             
         // Process each matching commit and produce an Entry
@@ -78,14 +84,16 @@ class GithubPush{
     }
     
     def getSourceId(){
-        return "${this.class.name.toLowerCase()}"
+        return this.class.simpleName.toLowerCase()
     }
     /**
      * createText: get a string from a commit
      */
     def createText( commit, root) {
-        def template= """New commit from <a href="mailto:${commit.author.email}">${commit.author.name}</a> 
-               @<a href="${root.repository.url}">${root.repository.name}</a>: ${commit.message}
+        def template= """New commit from
+        <a href="mailto:${commit.author.email.toString()}">${commit.author.name.toString()}</a> 
+               @<a href="${root.repository.url.toString()}">${root.repository.name.toString()}</a>: 
+               ${commit.message.toString()}
         """
         return template.toString()
     }
@@ -98,24 +106,31 @@ class GithubPush{
         
         def entry=[:]
         entry.with{
-            id= commit.url
-            authorId= commit.author.name 
-            authorLink= "mailto:${commit.author.email}"
-            link= commit.url
-            updated= commit.timestamp
-            published= commit.timestamp
+            id= commit.url.toString()
+            authorId= commit.author.name.toString()
+            title= "New commit from GitHub"
+            authorLink= commit.author.email.toString()
+            link= commit.url.toString()
+            published = es.tid.socialcoding.Helper.getDate( commit.timestamp).getTime()
+            updated= published
         }
         return entry
      }
      
      /**
       * storeEntry: store an Entry in the DB.
-      * allow an update in case 
-      * the record exists or an insert if it doesn't
+      *             allow an update in case the
+      *             record exists or an insert if it doesn't
       */
-     def method() {
-        
+     def storeEntry( entry) {
+        if( entryTable.findBy( [ id: entry.id]).size()){
+            log.debug "UPDATING entry with id=${entry.id}"
+            entryTable.update( entry, [ id: entry.id])
+        }
+        else{
+            log.debug "INSERTING entry with id=${entry.id}"
+            entryTable.create( entry)
+        }
      }
-     
      
 }
