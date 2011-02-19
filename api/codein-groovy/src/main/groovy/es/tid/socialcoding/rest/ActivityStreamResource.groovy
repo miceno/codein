@@ -37,9 +37,9 @@ class ActivityStreamResource extends PaginateResource
                 
         // The domain and uuid are optional, but should be Url decoded
         domain= (String) request.getAttributes().get( RestHelper.STR_DOMAIN, null)
-        domain= Reference.decode( domain)
+        domain= domain ? Reference.decode( domain): domain
         uuid = (String) request.getAttributes().get( RestHelper.STR_UUID, null)
-        uuid= Reference.decode( uuid)
+        uuid= uuid ? Reference.decode( uuid): uuid
                 
         String userMessage
         
