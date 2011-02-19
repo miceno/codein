@@ -14,6 +14,7 @@ class SocialCodingAtomGenerator
     static final Integer SUMMARY_LENGTH= 50
     static final String SOCIALCODING_URL= 'http://socialcoding.tid.es'
 
+
     static String generateEntries(def entries, def theTitle, def theId)
     {
         // TODO: Load SOCIALCODING_URL from configuration. It is the root of
@@ -25,58 +26,75 @@ class SocialCodingAtomGenerator
 
         // create the builder as before.
         StringWriter writer = new StringWriter();
-        def xml = new StreamingMarkupBuilder();
+        def builder = new StreamingMarkupBuilder();
 
-        xml.encoding= "UTF-8"
+        builder.encoding= "UTF-8"
         // feed is the root level. In a namespace
         def generatedFeed = {
+            def escape= { text->  mkp.yieldUnescaped( StringEscapeUtils.escapeXml(text)) }
+            
             mkp.xmlDeclaration( version: '1.0') 
         feed(xmlns:'http://www.w3.org/2005/Atom') {
+            // Feed metadata
             // add the top level information about this feed.
             title { 
-                mkp.yieldUnescaped( 
-                    StringEscapeUtils.escapeXml( theTitle))  
+                escape( theTitle)
             }
-            id { mkp.yieldUnescaped( StringEscapeUtils.escapeXml( theId))  }
-            link(href: SOCIALCODING_URL)
+            // Id of the feed
+            id { escape( theId)  }
+            // Link of the feed
+            link( rel: "alternate", href: SOCIALCODING_URL)
+            // Author Person
             author {
                name( SOCIALCODING_CREATOR)
             }
+            // Updated date, but not published date
             updated sdf.format(new Date());
 
             // for each entry we need to create an entry element
             entries.each { item ->
                  entry {
+                     // Title
                      title { 
-                        mkp.yieldUnescaped( StringEscapeUtils.escapeXml(
-                             item.title))
+                        escape( item.title)
                      }
+                     // Entry Id
                      id item.id
+                     
+                     // Author Person
                      if ( item?.authorId )
                         author{ 
                            name { 
-                            mkp.yieldUnescaped( 
-                                StringEscapeUtils.escapeXml( item.authorId)) 
+                            escape( item.authorId)
                             }
                            uri item.authorLink; 
                         }
+                     // Owner/contributor Person 
+                     // it is the User that contributed the entry to SocialCoding
+                     if( item?.ownerId)
+                         contributor { 
+                            name { escape( item.ownerId) }
+                         }
+                         
+                     // Published date in case it exists
+                     if ( item?.published )
+                            published sdf.format(new Date( item.published)) 
+                     // Updated date in case it exists
                      if ( item?.updated )
                         updated sdf.format(new Date( item.updated ))
-                     if ( item?.published )
-                        published sdf.format(new Date( item.published)) 
+                     // Summary of the entry
                      summary { 
-                         mkp.yieldUnescaped( 
-                             StringEscapeUtils.escapeXml( item.content)) 
+                         escape( SocialCodingAtomGenerator.summarize( item.content))
                      }
-
-                     content { mkp.yieldUnescaped(
-                                StringEscapeUtils.escapeXml( item.content)) 
-                     }
-                     link(href:item.link)
+                     
+                     // Content as html
+                     content ( type: "html"){ escape( item.content) }
+                     // Link 
+                     link(rel: "alternate", href:item.link)
         }}  } }
 
         // lastly give back a string representation of the xml.
-        writer << xml.bind( generatedFeed)
+        writer << builder.bind( generatedFeed)
         return writer.toString()
     }
 
