@@ -133,7 +133,7 @@ class FeedProcessor{
             log.debug "dump entry: ${entry.dump()}"
 
             // Insert results in database
-            log.info( "Inserting results in database") 
+            log.info( "Inserting entry: ${entry.get( 'id')}") 
             def result= addOrInsert( entry)
             updatedRecords += ( result == DbStatus.DB_UPDATE ? 1 : 0)
 
@@ -143,7 +143,7 @@ class FeedProcessor{
             log.info "Total matching nodes: ${nodes.size()}"
             log.info "Total new entries: ${nodes.size() - updatedRecords}"
         }
-        println "finished parsing $url"
+        log.info "finished parsing $url"
 
 
     }// processTask
@@ -220,7 +220,7 @@ class FeedProcessor{
      * @param record    Values of the record we would like to check
      */
     def exists( record, key = 'id'){
-        def result= entryTable.findBy( [(key): record."$key"])
+        def result= entryTable.findBy( [(key): record.get( key, "")])
         log.debug "Result : '$result'"
         (result.size()> 0)
     }
@@ -265,7 +265,7 @@ class FeedProcessor{
      * @return operation    Returns whether it was an update or an insert operation
      */
     def addOrInsert( entry){
-        def STR_KEY_FIELD = 'link'
+        def STR_KEY_FIELD = 'id'
         def result= DbStatus.NO_VALUE
         if( exists( entry, STR_KEY_FIELD))
         {
@@ -337,16 +337,16 @@ class FeedProcessor{
             doc.'*'.findAll{ ! ( it.nodeName == parser.filterExpression) }.collect{ node->
                 log.debug "linea: " + node
                 def a= node.attributes
-                println "number of attributes: " + a.size()
+                log.debug "number of attributes: " + a.size()
                 def map= [:]
                 map= 
                             (0..<a.size()).inject( map){ attributeMap, index -> 
                                 def n= a.item( index)
-                                println "attribute $index: ${n}" 
+                                log.debug "attribute $index: ${n}" 
                                 attributeMap += [ (n.nodeName): n.nodeValue ]
                             }
-                println "attributeMap= ${map}"
-                println "fin".center( 20, '*')
+                log.debug "attributeMap= ${map}"
+                log.debug "fin".center( 20, '*')
                 [ name: node.nodeName, attributes: map, text: node.text()]
             }
         }
