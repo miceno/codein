@@ -49,6 +49,12 @@ class FeedProcessor{
 
     private def entryTable
 
+    private final enum DbStatus {
+        DB_UPDATE,
+        DB_INSERT,
+        NO_VALUE
+    }
+    
     FeedProcessor( ){
         // Read configuration
         config= SocialCodingConfig.newInstance().config
@@ -91,60 +97,52 @@ class FeedProcessor{
          * Parse the feed
          */
 
-        def result= [:]
+        def nodes
         use( DOMCategory){
             // First, obtain the nodes relevant 
             log.debug( "Getting all nodes that matches ${parser.filterExpression}")
-            def nodes= doc.xpath( parser.filterExpression, NODESET)
+            nodes= doc.xpath( parser.filterExpression, NODESET)
             log.debug( "# nodes that matches '${parser.filterExpression}'= ${nodes.size()}")
+        }
+        
+        // Metadata is the owner and the source
+        def metadataMap= [ ownerId:     task.UUID,
+                           ownerDomain: task.domain ]
 
-            // For each node, extract all the expressions
-            result= parser.apply( nodes)
-            log.debug( "# nodes that matches the parser=${result.size()}")
-            
-            def defaultMap= [ ownerId:     task.UUID,
-                              ownerDomain: task.domain ]
-                          
-            // For each entry add the owner
-            result.each{ it.putAll( defaultMap) }
-            
-            // Show trace
-            def dbgStr= result.collect{ 
-                it.collect{ """${it.key} =${it.value.substring( 0,  
-                                      it.value.length()<100? it.value.length():100)}""" 
-                          }.join( ",\n\t") 
-            }.join( "\n" + "Entry".center( 20, '-') + "\n")
-            log.trace( "Matching nodes\n" + dbgStr)
-            log.trace( "END".center( 20, '*') )
-        }// use
-
-
-
-        /**
-         * manipulate the entries to make some filtering and adaptation
-         * @param entries input entries
-         * @return entries Output entries
-         */
-
-        // Format Dates
+        // TODO: get metadata
+        
+        
         def listaCamposFecha= config?.consumer?.transform_date_fields
-        log.debug( "Transform dates of fields: $listaCamposFecha") 
-        result.each{ transformDate( listaCamposFecha, it) }
+        def updatedRecords = 0
+        def entry
+        // For each node, 
+        nodes.each{ node ->
+            
+            // extract all the expressions
+            entry= parser.apply( node)
+                                  
+            // add the owner and the metadata
+            entry.putAll( metadataMap)
+        
+            // Show trace
+            log.debug "entry with metadata: " + entryToString( entry)
 
-        log.debug( "after transform".center( 40, '*') )
-        result.each{ it.each{ log.debug it }}
-        log.debug( "end".center( 20, '*') )
+            // Format Dates
+            log.debug( "Transform dates of fields: $listaCamposFecha") 
+            transformDate( listaCamposFecha, entry)
+            log.debug "dump entry: ${entry.dump()}"
 
-        /**
-         * Insert entries in database
-         */
+            // Insert results in database
+            log.info( "Inserting results in database") 
+            def result= addOrInsert( entry)
+            updatedRecords += ( result == DbStatus.DB_UPDATE ? 1 : 0)
 
-        // Insert results in database
-        log.info( "Inserting results in database") 
-
-        // Insert in the Database
-        addOrInsert( result)
-
+        }
+        
+        use( DOMCategory){
+            log.info "Total matching nodes: ${nodes.size()}"
+            log.info "Total new entries: ${nodes.size() - updatedRecords}"
+        }
         println "finished parsing $url"
 
 
@@ -246,29 +244,41 @@ class FeedProcessor{
     /**
      * Add or insert records in the Entry table
      */
-    def addOrInsert( entries){
+    def addOrInsertAll( entries){
 
         def updatedRecords= 0
-        def insertedRecords= 0
-    
-        entries.each{ record ->
-            if( exists( record, 'link'))
-            {
-                log.debug "register already exists: $record"
-                entryTable.update( record, [ id: record.id])
-                updatedRecords++
-            }
-            else
-            {
-                log.debug "adding row: $record"
-                entryTable.create( record) 
-                insertedRecords++
-            }
+        def result= 0
+        
+        entries.each{ entry ->
+            result= addOrInsert( entry)
+            updatedRecords += ( result == DbStatus.DB_UPDATE ? 1 : 0)
         }
 
         log.info "Total matching nodes: ${entries.size()}"
-        log.info "Total new entries: ${insertedRecords - updatedRecords}"
+        log.info "Total new entries: ${entries.size() - updatedRecords}"
     
+    }
+
+    /**
+     * Add or insert a record in the Entry table
+     * @param Entry         An entry as a map of field and values
+     * @return operation    Returns whether it was an update or an insert operation
+     */
+    def addOrInsert( entry){
+        def STR_KEY_FIELD = 'link'
+        def result= DbStatus.NO_VALUE
+        if( exists( entry, STR_KEY_FIELD))
+        {
+            log.debug "updating: $entry"
+            entryTable.update( entry, [ id: entry.id])
+            result= DbStatus.DB_UPDATE
+        }
+        else
+        {
+            log.debug "new record: $entry"
+            entryTable.create( entry) 
+            result= DbStatus.DB_INSERT
+        }
     }
 
     /**
@@ -313,5 +323,54 @@ class FeedProcessor{
         parser.filterExpression= '//item'
         return parser
     }
+    
+    /**
+     * Get all the metadata of a feed
+     * @param doc       DocumentElement
+     * @param parser    Parser used to filter expressions
+     * @return List     A list of entries, where is entry is a map like:
+     *                  [ name: "name", attributes: [att1: "value1"], text: "text"]
+     */
+    def getMetadata( def doc, def parser){
+
+        use( DOMCategory){
+            doc.'*'.findAll{ ! ( it.nodeName == parser.filterExpression) }.collect{ node->
+                log.debug "linea: " + node
+                def a= node.attributes
+                println "number of attributes: " + a.size()
+                def map= [:]
+                map= 
+                            (0..<a.size()).inject( map){ attributeMap, index -> 
+                                def n= a.item( index)
+                                println "attribute $index: ${n}" 
+                                attributeMap += [ (n.nodeName): n.nodeValue ]
+                            }
+                println "attributeMap= ${map}"
+                println "fin".center( 20, '*')
+                [ name: node.nodeName, attributes: map, text: node.text()]
+            }
+        }
+    }
+    
+    /**
+     * showEntries: show a log debug of a set of entries
+     */
+    private def showEntries( def entries){
+        def dbgStr= entries.collect{
+            entryToString( it)
+        }.join( "\n" + "Entry".center( 20, '-') + "\n")
+        log.trace( "Matching nodes\n" + dbgStr)
+        log.trace( "END".center( 20, '*') )
+    }
+
+    /**
+     * showEntry: show a log debug of an entry
+     */
+    private def entryToString( def entry){
+        entry.collect{ """${it.key} =${it.value.substring( 0,  
+                                  it.value.length()<100? it.value.length():100)}""" 
+                      }.join( ",\n\t")
+    }
+    
 }// FeedProcessor
 

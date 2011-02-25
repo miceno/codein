@@ -48,24 +48,36 @@ class ExpressionContainer{
      * @param entries       List of SyndEntry to parse (SyndEntry means an RSS Item or an Atom Entry)
      * @return list         List of entryModels
      */
-    def apply( syndEntries){
+    def applyAll( syndEntries){
         
         // For each entry, apply all the expressions
         syndEntries.collect{ syndEntry ->
             log.debug "About to apply parser to entry: $syndEntry"
             // Apply each expression to the entries
-            expressions.inject([:]){ mapa, expression ->
-                log.debug "Begin parsing feed with ${expression.value}"
-                def result
-                use (DOMCategory) {
-                    result= syndEntry.xpath( expression.value.XPATH, NODESET)
-                    /* Print each element */
-                    log.debug "Parsing ${expression.value.XPATH}: ${result.size()}= ${result.text()}"
-                    // Results are acumulated in this variable
-                    mapa+= [ (expression.key): result.text() ]
-                }     
-            }// inject
+            apply( syndEntry)
         }
+    }
+    
+    /**
+     * A closure that parses each element with a parser
+     * @param syndEntry     Entry to parse (SyndEntry means an RSS Item or an Atom Entry)
+     * @return map          Map of an entry
+     */
+    def apply( syndEntry){
+        
+        log.debug "About to apply parser to entry: $syndEntry"
+        // Apply each expression to the entries
+        expressions.inject([:]){ mapa, expression ->
+            log.debug "Begin parsing feed with ${expression.value}"
+            def result
+            use (DOMCategory) {
+                result= syndEntry.xpath( expression.value.XPATH, NODESET)
+                /* Print each element */
+                log.debug "Parsing ${expression.value.XPATH}: ${result.size()}= ${result.text()}"
+                // Results are acumulated in this variable
+                mapa+= [ (expression.key): result.text() ]
+            }     
+        }// inject
     }
     
 }

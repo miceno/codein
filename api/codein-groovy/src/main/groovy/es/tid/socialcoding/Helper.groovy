@@ -1,4 +1,6 @@
 
+package es.tid.socialcoding
+
 import java.text.SimpleDateFormat
 
 class Helper{
