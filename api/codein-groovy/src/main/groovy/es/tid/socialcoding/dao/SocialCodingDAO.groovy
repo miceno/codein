@@ -123,7 +123,7 @@ abstract class SocialCodingDAO {
         def whereStmt= getWhere( condition)
         if( ! (whereStmt?.where?.size()) )
         {
-            log.error "Trying to delete all records from a table"
+            log.warn "Trying to delete all records from a table"
             return 0
         }
         String stmt = "DELETE FROM $tablename ${whereStmt?.where}" 

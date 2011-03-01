@@ -9,5 +9,6 @@ class RestHelper{
     static final String STR_SIZE=      'size'
     static final String STR_START=     'start'
     
+    static final String STR_ID=         'id'
     
 }

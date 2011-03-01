@@ -25,13 +25,22 @@ class BackendApplication extends Application {
         // Create a router Restlet that defines routes.  
         Router router = new Router(getContext())  
   
-        // User BE: listing and CRUD
-        router.attach( "/user",                  UsersResource.class)
-        router.attach( "/user/{domain}",         UsersResource.class)
-        router.attach( "/user/{domain}/{uuid}",  UserResource.class)
-        // Activity BE
-        router.attach( "/activity",              ActivityStreamResource.class)
-        router.attach( "/activity/{domain}/{uuid}", ActivityStreamResource.class)
+        // User BE: listing
+        router.attach( "/user/list",                  UsersResource.class)
+        router.attach( "/user/list/{domain}",         UsersResource.class)
+
+        // User BE: CRUD
+        router.attach( "/user/user/{domain}/{uuid}",  UserResource.class)
+        
+        // Entry BE: listing
+        router.attach( "/activity/list",                    ActivityStreamResource.class)
+        router.attach( "/activity/list/{domain}/{uuid}",    ActivityStreamResource.class)
+
+        // Entry BE: CRUD
+        router.attach( "/activity/entry/{id}",              EntryResource.class)
+
+        // TODO: implement a search capability
+        // router.attach( "/activity/search/{query}",          SearchResource.class)
           
         return router;  
     }

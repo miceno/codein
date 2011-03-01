@@ -62,24 +62,36 @@ class UserResource extends Resource
     /** 
      * Returns a listing of the element. 
      */  
-/*
+
     Representation represent(Variant variant) throws ResourceException {  
         // Generate the right representation according to its media type.  
         if (MediaType.TEXT_HTML.equals(variant.getMediaType())) {  
+            def rep
             try {  
 
-                def rep= buildHtmlRepresentation( this.userModel) 
+                if( this.userModel){
+                    rep= buildHtmlRepresentation( this.userModel) 
+                }
+                else{
+                    throw new ResourceException( Status.CLIENT_ERROR_NOT_FOUND, 
+                        "Resource does not exists!!!")
+                }
 
                 // Returns the XML representation of this document.  
                 return rep;  
-            } catch (IOException e) {  
-                e.printStackTrace();  
+            }
+            catch( ResourceException e){
+                getResponse().setStatus( e.status);
+                getResponse().setEntity( new StringRepresentation (e.message))                  
             }  
+            catch (Exception e) {
+                    getResponse().setStatus( Status.SERVER_ERROR_INTERNAL);
+                    getResponse().setEntity( new StringRepresentation (e.toString()))
+            }
         }  
   
         return null;  
     }  
-*/
 
     def buildHtmlRepresentation( userModel)
     {
@@ -113,47 +125,48 @@ class UserResource extends Resource
         // Set initial message
     String userString= "${domain}:${uuid}"
         log.info( "POST user $userString")
+        log.debug( "Representation ${r.dump()}")
         def req= getRequest()
         def resp= getResponse()
+        // {save the new user to the database}
         try {
-            log.debug( "Representation ${r.dump()}")
             Form form = new Form(r);
             log.debug( "Start to process form: $form")
-            if( form.size()){
-                // {save the new user to the database}
-                def checkUserQuery= [ UUID: uuid, domain: domain ]
-                def updateUserStmt= form.getValuesMap()
-                if( !userModel){
-                    // User does not exist
-                    log.info( "Adding User $userString")
-                def createUserQuery = checkUserQuery + updateUserStmt
-                    userTable.create( createUserQuery)
-                }
-                else{
-                    // User exists 
-                    log.info( "Updating User $userString")
-                    userTable.update( updateUserStmt, checkUserQuery)
-                }
-
-                // userModel of the new representation
-                userModel= checkUserQuery + updateUserStmt
-                
-                // Enqueue a task for all the feeds of the user
-                new FeedTaskProducer().produceUserTask( userModel)
-                // Show representation of new resource
-                log.debug( "New userModel: $userModel")
-                resp.setStatus(Status.SUCCESS_OK);
-                // You could support multiple representation by using a
-                // parameter
-                // in the request like "?response_format=xml"
-                Representation rep = buildHtmlRepresentation(userModel);
-                resp.setEntity(rep);
-            } else {
-                    resp.setStatus(Status.CLIENT_ERROR_BAD_REQUEST);
+            def checkUserQuery= [ UUID: uuid, domain: domain ]
+            def updateUserStmt= form.getValuesMap()
+            if( !userModel){
+                // User does not exist
+                log.info( "Adding User $userString")
+            def createUserQuery = checkUserQuery + updateUserStmt
+                userTable.create( createUserQuery)
             }
-        } catch (Exception e) {
-                    resp.setStatus(Status.SERVER_ERROR_INTERNAL);
-                    resp.setEntity( new StringRepresentation (e.toString()))
+            else{
+                // User exists 
+                log.info( "Updating User $userString")
+                userTable.update( updateUserStmt, checkUserQuery)
+            }
+
+            // userModel of the new representation
+            userModel= checkUserQuery + updateUserStmt
+            
+            // Enqueue a task for all the feeds of the user
+            new FeedTaskProducer().produceUserTask( userModel)
+            // Show representation of new resource
+            log.debug( "New userModel: $userModel")
+            resp.setStatus(Status.SUCCESS_OK);
+            // You could support multiple representation by using a
+            // parameter
+            // in the request like "?response_format=xml"
+            Representation rep = buildHtmlRepresentation(userModel);
+            resp.setEntity(rep);
+        } 
+        catch( ResourceException e){
+            getResponse().setStatus( e.status);
+            getResponse().setEntity( new StringRepresentation (e.message))                  
+        } 
+        catch (Exception e) {
+            getResponse().setStatus( Status.SERVER_ERROR_INTERNAL);
+            getResponse().setEntity( new StringRepresentation (e.toString()))
         }
     }
 
@@ -172,18 +185,29 @@ class UserResource extends Resource
      * @throws ResourceException
      */
      public void removeRepresentations() throws ResourceException {
+         def userQuery= [ domain: domain, UUID: uuid ]
+         
+         log.info "DELETE entry: ${userQuery}"
          try {
-             getResponse().setEntity( new StringRepresentation( "Pending TODO Delete operation"));
              if (null == this.userModel) {
-                 getResponse().setStatus(Status.CLIENT_ERROR_BAD_REQUEST);
+                 throw new ResourceException( Status.CLIENT_ERROR_NOT_FOUND, 
+                     "Resource does not exists!!!")
                  return;
              }
-             // :TODO {delete the user from the database}
+
+             // Delete the entry
+             userTable.delete( userQuery)
              getResponse().setStatus(Status.SUCCESS_OK);
-             } catch (Exception e) {
-                 getResponse().setStatus(Status.SERVER_ERROR_INTERNAL);
+
+         } 
+         catch( ResourceException e){
+             getResponse().setStatus( e.status);
+             getResponse().setEntity( new StringRepresentation (e.message))                  
+         } 
+         catch (Exception e) {
+             getResponse().setStatus( Status.SERVER_ERROR_INTERNAL);
+             getResponse().setEntity( new StringRepresentation (e.toString()))
          }
      }
-    
 }
 
