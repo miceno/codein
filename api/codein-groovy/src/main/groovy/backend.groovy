@@ -31,7 +31,14 @@ class BackendApplication extends Application {
 
         // User BE: CRUD
         router.attach( "/user/user/{domain}/{uuid}",  UserResource.class)
+
+        // Token BE: listing
+//        router.attach( "/token/list/{domain}/{uuid}",  ListTokenResource.class)
+//        router.attach( "/token/list/{domain}",         ListTokenResource.class)
         
+        // Token BE: CRUD
+        router.attach( "/token/user/{domain}/{uuid}",  TokenResource.class)
+
         // Entry BE: listing
         router.attach( "/activity/list",                    ActivityStreamResource.class)
         router.attach( "/activity/list/{domain}/{uuid}",    ActivityStreamResource.class)
