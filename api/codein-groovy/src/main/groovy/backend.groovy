@@ -32,7 +32,7 @@ class BackendApplication extends Application {
         // User BE: CRUD
         router.attach( "/user/user/{domain}/{uuid}",  UserResource.class)
 
-        // Token BE: listing
+        // :TODO Token BE: listing
 //        router.attach( "/token/list/{domain}/{uuid}",  ListTokenResource.class)
 //        router.attach( "/token/list/{domain}",         ListTokenResource.class)
         
