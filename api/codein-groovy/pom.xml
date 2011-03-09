@@ -7,112 +7,96 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>es.tid.socialcoding</groupId>
     <artifactId>codein-groovy</artifactId>
-    <name>Example Project</name>
+    <name>SocialCoding</name>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
-	
-        <dependency>
-            <groupId>org.codehaus.groovy.maven.runtime</groupId>
-            <artifactId>gmaven-runtime-1.6</artifactId>
-            <version>1.0</version>
-        </dependency>
+	<organization>
+		<name>Telefonica I+D</name>
+		<url>http://www.tid.es</url>
+	</organization>
 
-        <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
-          <version>1.6.1</version>
-        </dependency>
-
-    <dependency>
-      <groupId>org.w3c</groupId>
-      <artifactId>dom</artifactId>
-      <version>2.3.0-jaxb-1.0.6</version>
-    </dependency>
-
-        <dependency>
-          <groupId>javax.jms</groupId>
-          <artifactId>jms</artifactId>
-          <version>1.1</version>
-        </dependency>
-
-        <dependency>
-          <groupId>javax.jms</groupId>
-          <artifactId>jms</artifactId>
-          <version>1.1</version>
-        </dependency>
-
-        <dependency>
-          <groupId>xml-apis</groupId>
-          <artifactId>xml-apis</artifactId>
-          <version>2.0.2</version>
-        </dependency>
-
-        <dependency>
-          <groupId>xalan</groupId>
-          <artifactId>xalan</artifactId>
-          <version>2.7.1</version>
-        </dependency>
-
-        <dependency>
-          <groupId>commons-lang</groupId>
-          <artifactId>commons-lang</artifactId>
-          <version>2.3</version>
-        </dependency>
-
-        <dependency>
-          <groupId>org.lpny</groupId>
-          <artifactId>groovyrestlet</artifactId>
-          <version>0.3-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-          <groupId>org.restlet</groupId>
-          <artifactId>org.restlet</artifactId>
-          <version>1.1.10</version>
-        </dependency>
-
-        <dependency>
-          <groupId>org.codehaus.groovy.modules.http-builder</groupId>
-          <artifactId>http-builder</artifactId>
-          <version>0.5.1</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-<!--
-        <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring</artifactId>
-          <version>2.5.6</version>
-        </dependency>
-        
-        <dependency>
-          <groupId>javax.ws.rs</groupId>
-          <artifactId>jsr311-api</artifactId>
-          <version>1.1.1</version>
-        </dependency>
-
--->
-
-    </dependencies>
+    <repositories>
+		<repository>
+			<id>opentel-repository</id>
+			<url>${continuousIntegrationUrl}/nexus/content/groups/public</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>groovy-snapshots</id>
+			<url>http://snapshots.repository.codehaus.org/</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>opentel-thirdparty</id>
+			<url>${continuousIntegrationUrl}/nexus/content/repositories/thirdparty</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+        <repository>  
+           <id>maven-restlet</id>  
+           <name>Public online Restlet repository</name>  
+           <url>http://maven.restlet.org</url>  
+        </repository>  
+    </repositories>
 
     <build>
+        <finalName>
+            socialcodingbe
+        </finalName>
+        
+        <!--      
         <resources>
-<!--          <resource>
-          </resource> -->
+        <resource>
+        </resource> 
         </resources>
+        -->
+
         <plugins>
+			<!-- para ensamblar los jars -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+					<ignoreDirFormatExtensions>true</ignoreDirFormatExtensions>
+				</configuration>
+			</plugin>
             <plugin>
-                <groupId>org.codehaus.groovy.maven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>1.0</version>
+                <groupId>org.codehaus.gmaven</groupId> 
+                <artifactId>gmaven-plugin</artifactId> 
+                <version>${gmaven-version}</version> 
+                <configuration> 
+                  <providerSelection>1.7</providerSelection> 
+                </configuration> 
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.gmaven.runtime</groupId>
+						<artifactId>gmaven-runtime-1.7</artifactId>
+        				<version>${gmaven-version}</version>
+						<exclusions>
+							<exclusion>
+								<groupId>org.codehaus.groovy</groupId>
+								<artifactId>groovy-all</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+					<dependency>
+						<groupId>org.codehaus.groovy</groupId>
+						<artifactId>groovy-all</artifactId>
+						<version>${groovy-version}</version>
+					</dependency>
+				</dependencies>
                 <executions>
                     <execution>
                         <goals>
@@ -124,14 +108,108 @@
                     </execution>
                 </executions>
             </plugin>
+<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>main.groovy</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>notificationClient/</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+-->
         </plugins>
     </build>
 
-<repositories>
-<repository>  
-   <id>maven-restlet</id>  
-   <name>Public online Restlet repository</name>  
-   <url>http://maven.restlet.org</url>  
-</repository>  
-</repositories>
+    <dependencies>
+	
+	<!--
+        <dependency>
+            <groupId>org.codehaus.groovy.maven.runtime</groupId>
+            <artifactId>gmaven-runtime-1.6</artifactId>
+            <version>1.0</version>
+        </dependency>
+    -->
+
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>${slf4j-version}</version>
+			<type>jar</type>
+        </dependency>
+
+        <dependency>
+          <groupId>javax.jms</groupId>
+          <artifactId>jms</artifactId>
+          <version>${jms-version}</version>
+			<type>jar</type>
+        </dependency>
+
+        <dependency>
+          <groupId>commons-lang</groupId>
+          <artifactId>commons-lang</artifactId>
+          <version>${commons-lang-version}</version>
+			<type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.restlet</groupId>
+            <artifactId>org.restlet</artifactId>
+            <version>${restlet-version}</version>
+            <type>jar</type>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>${activemq-version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.13</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+        <!--
+            <dependency>
+              <groupId>org.w3c</groupId>
+              <artifactId>dom</artifactId>
+              <version>2.3.0-jaxb-1.0.6</version>
+            </dependency>
+        -->
+ 
+        <!--       
+        <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+        </dependency>
+        -->
+    </dependencies>
+
+
+    <properties>
+    	<activemq-version>5.4.1</activemq-version>
+    	<commons-lang-version>    	   2.5    	</commons-lang-version>
+    	<continuousIntegrationUrl>            http://ce1.hi.inet    	</continuousIntegrationUrl>
+    	<gmaven-version>    	   1.3    	</gmaven-version>
+    	<groovy-version>    	    1.8.0-beta-4-SNAPSHOT    	</groovy-version>
+    	<jms-version>    	    1.1    	</jms-version>
+    	<mysql-version>            5.1.13    	</mysql-version>
+    	<project.build.sourceEncoding>    	    UTF-8    	</project.build.sourceEncoding>
+    	<restlet-version>     	    1.1.10    	</restlet-version>
+    	<slf4j-version>    	    1.6.1    	</slf4j-version> 	
+    </properties>
+
 </project>
